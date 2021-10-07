@@ -3,7 +3,7 @@ import sbtassembly.AssemblyPlugin.defaultUniversalScript
 
 ThisBuild / version       := "1.0"
 ThisBuild / scalaVersion  := "2.13.1"
-ThisBuild / organization  := "kr.ac.kaist.jiset"
+ThisBuild / organization  := "kr.ac.kaist.jsgen"
 ThisBuild / useSuperShell := false
 ThisBuild / scalacOptions := Seq(
   "-deprecation", "-feature", "-language:postfixOps",
@@ -57,10 +57,10 @@ lazy val checkerJsonTest = taskKey[Unit]("Launch json type checker tests (middle
 lazy val checkerStringifierTest = taskKey[Unit]("Launch stringifier type checker tests (tiny)")
 lazy val checkerParseTest = taskKey[Unit]("Launch parse type checker tests (tiny)")
 
-// jiset
-lazy val jiset = (project in file("."))
+// jsgen
+lazy val jsgen = (project in file("."))
   .settings(
-    name := "JISET",
+    name := "JSGen",
     libraryDependencies ++= Seq(
       "io.circe" %%% "circe-core" % "0.14.1",
       "io.circe" %%% "circe-generic" % "0.14.1",
@@ -87,7 +87,7 @@ lazy val jiset = (project in file("."))
     ).mkString(" ", " ", "")).value,
     // assembly setting
     test in assembly := {},
-    assemblyOutputPath in assembly := file("bin/jiset"),
+    assemblyOutputPath in assembly := file("bin/jsgen"),
     assemblyOption in assembly := (assemblyOption in assembly).value
       .copy(prependShellScript = Some(defaultUniversalScript(shebang = false))),
     // size

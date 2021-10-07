@@ -1,0 +1,122 @@
+# `complete` for zsh
+if type complete &>/dev/null; then
+  :
+else
+  autoload bashcompinit
+  bashcompinit
+fi
+
+# completion for jsgen
+_jsgen_completions() {
+  local cur prev opts lastc informats outformats datafiles
+  cur="${COMP_WORDS[COMP_CWORD]}"
+  prev="${COMP_WORDS[COMP_CWORD-1]}"
+
+  cmdList="help extract gen-model compile-repl gen-test parse load eval repl analyze filter-meta parse-ir load-ir eval-ir repl-ir build-cfg type-check "
+  globalOpt="-silent -debug -view -partial -interactive -no-bugfix -log -time "
+  helpOpt=""
+  extractOpt="-extract:version -extract:query -extract:load -extract:json -extract:detail "
+  genmodelOpt="-gen-model:parser "
+  compilereplOpt="-compile-repl:version -compile-repl:detail "
+  gentestOpt=""
+  parseOpt="-parse:json -parse:pprint -parse:esparse -parse:test262 "
+  loadOpt="-load:cursor "
+  analyzeOpt="-analyze:repl -analyze:exec-level -analyze:gc -analyze:inf-sens -analyze:loop-iter -analyze:loop-depth -analyze:js-k-cfa -analyze:ir-k-cfa -analyze:timeout "
+  parseirOpt=""
+  loadirOpt=""
+  evalirOpt="-eval-ir:timeout "
+  replirOpt=""
+  buildcfgOpt="-build-cfg:dot -build-cfg:pdf "
+  typecheckOpt="-type-check:dot -type-check:pdf -type-check:no-prune -type-check:insens -type-check:check-bug -type-check:target -type-check:repl -type-check:partial-model -type-check:load -type-check:dump "
+
+  # completion for commands
+  case "${COMP_CWORD}" in
+    1)
+      COMPREPLY=($(compgen -W "${cmdList}" "${cur}"))
+      return 0
+      ;;
+  esac
+  cmd="${COMP_WORDS[1]}"
+
+  # completion for options
+  case "${cur}" in
+    -*)
+      case "${cmd}" in
+        help)
+          COMPREPLY=($(compgen -W "${globalOpt} ${helpOpt}"))
+          return 0
+          ;;
+        extract)
+          COMPREPLY=($(compgen -W "${globalOpt} ${extractOpt}"))
+          return 0
+          ;;
+        gen-model)
+          COMPREPLY=($(compgen -W "${globalOpt} ${genmodelOpt} ${extractOpt}"))
+          return 0
+          ;;
+        compile-repl)
+          COMPREPLY=($(compgen -W "${globalOpt} ${compilereplOpt}"))
+          return 0
+          ;;
+        gen-test)
+          COMPREPLY=($(compgen -W "${globalOpt} ${gentestOpt}"))
+          return 0
+          ;;
+        parse)
+          COMPREPLY=($(compgen -W "${globalOpt} ${parseOpt}"))
+          return 0
+          ;;
+        load)
+          COMPREPLY=($(compgen -W "${globalOpt} ${loadOpt} ${parseOpt}"))
+          return 0
+          ;;
+        eval)
+          COMPREPLY=($(compgen -W "${globalOpt} ${evalirOpt} ${loadOpt} ${parseOpt}"))
+          return 0
+          ;;
+        repl)
+          COMPREPLY=($(compgen -W "${globalOpt} ${replirOpt} ${loadOpt} ${parseOpt}"))
+          return 0
+          ;;
+        analyze)
+          COMPREPLY=($(compgen -W "${globalOpt} ${analyzeOpt} ${parseOpt}"))
+          return 0
+          ;;
+        filter-meta)
+          COMPREPLY=($(compgen -W "${globalOpt} ${filtermetaOpt}"))
+          return 0
+          ;;
+        parse-ir)
+          COMPREPLY=($(compgen -W "${globalOpt} ${parseirOpt}"))
+          return 0
+          ;;
+        load-ir)
+          COMPREPLY=($(compgen -W "${globalOpt} ${loadirOpt} ${parseirOpt}"))
+          return 0
+          ;;
+        eval-ir)
+          COMPREPLY=($(compgen -W "${globalOpt} ${evalirOpt} ${loadirOpt} ${parseirOpt}"))
+          return 0
+          ;;
+        repl-ir)
+          COMPREPLY=($(compgen -W "${globalOpt} ${replirOpt} ${loadirOpt} ${parseirOpt}"))
+          return 0
+          ;;
+        build-cfg)
+          COMPREPLY=($(compgen -W "${globalOpt} ${buildcfgOpt} ${extractOpt}"))
+          return 0
+          ;;
+        type-check)
+          COMPREPLY=($(compgen -W "${globalOpt} ${typecheckOpt} ${buildcfgOpt} ${extractOpt}"))
+          return 0
+          ;;
+      esac
+      return 0
+      ;;
+  esac
+
+  COMPREPLY=( $(compgen -X '' -f "${cur}") )
+}
+
+# completion setting
+complete -o filenames -o bashdefault -F _jsgen_completions jsgen

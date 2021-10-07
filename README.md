@@ -1,52 +1,39 @@
-# JISET: JavaScript IR-based Semantics Extraction Toolchain
+# JSGen: JavaScript Program Generator
 
-**JISET** is a **J**avaScript **I**R-based **S**emantics **E**xtraction
-**T**oolchain. It is the first tool that automatically synthesizes parsers and
-AST-IR translators directly from a given language specification, ECMAScript.
-
-## Publications
-
-Details of the JISET framework are available in our papers:
-- [ASE 2020] [JISET: JavaScript IR-based Semantics Extraction
-  Toolchain](https://doi.org/10.1145/3324884.3416632)
-- [ICSE 2021] [JEST: N+1-version Differential Testing of Both JavaScript
-  Engines](https://doi.org/10.1109/ICSE43902.2021.00015)
-- [ASE 2021] JSTAR: JavaScript Specification Type Analyzer using Refinement
-
-## Overall Structure
-
-![image](https://user-images.githubusercontent.com/6766660/124231185-e91d3380-db4a-11eb-95b5-dc43f4341ff2.png)
+**JSGen** is a **J**ava**S**cript Program **Gen**erator. It generalizes program
+generation techniques used in another tool **JEST** which is a _N+1-version
+Differential Testing_ of both JavaScript engines and specifications.
 
 ## Installation Guide
 
-We explain how to install JISET with necessary environment settings from the
+We explain how to install JSGen with necessary environment settings from the
 scratch.  Before installation, please download JDK 8 and
 [`sbt`](https://www.scala-sbt.org/1.x/docs/Installing-sbt-on-Linux.html).
 
-### Download JISET
+### Download JSGen
 ```bash
-$ git clone https://github.com/kaist-plrg/jiset.git
+$ git clone https://github.com/f52985/jsgen.git
 ```
 
 ### Environment Setting
 Insert the following commands to `~/.bashrc` (or `~/.zshrc`):
 ```bash
-# for JISET
-export JISET_HOME="<path to JISET>" # IMPORTANT!!!
-export PATH="$JISET_HOME/bin:$PATH" # for executables `jiset` and etc.
-source $JISET_HOME/jiset-auto-completion # for auto completion
+# for JSGen
+export JSGEN_HOME="<path to JSGen>" # IMPORTANT!!!
+export PATH="$JSGEN_HOME/bin:$PATH" # for executables `jsgen` and etc.
+source $JSGEN_HOME/jsgen-auto-completion # for auto completion
 ```
-The `<path to JISET>` should be the absolute path of JISET repository.
+The `<path to JSGen>` should be the absolute path of JSGen repository.
 
-### Installation of JISET using `sbt`
+### Installation of JSGen using `sbt`
 ```bash
-$ cd jiset && git submodule init && git submodule update && sbt assembly
+$ cd jsgen && git submodule init && git submodule update && sbt assembly
 ```
 
 ## Simple Examples
 Extract and generate a model from ECMAScript 2021 (ES12 / es2021):
 ```bash
-$ jiset gen-model -extract:version=es2021
+$ jsgen gen-model -extract:version=es2021
 # ========================================
 #  extract phase
 # ----------------------------------------
@@ -65,7 +52,7 @@ print(x);
 ```
 Parse `sample.js`:
 ```bash
-$ jiset parse sample.js
+$ jsgen parse sample.js
 # ========================================
 #  parse phase
 # ----------------------------------------
@@ -73,19 +60,19 @@ $ jiset parse sample.js
 ```
 Evaluate `sample.js`:
 ```bash
-$ jiset eval sample.js -silent
+$ jsgen eval sample.js -silent
 # 3.0
 ```
 Show detail path and final results during evaluation of `sample.js`:
 ```bash
-$ jiset eval sample.js -debug
+$ jsgen eval sample.js -debug
 ```
 
 ## Basic Commands
 
 You can run the artifact with the following command:
 ```bash
-$ jiset <sub-command> <option>*
+$ jsgen <sub-command> <option>*
 ```
 with the following sub-commands:
 - `help` shows the help message.
