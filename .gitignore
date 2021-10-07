@@ -204,3 +204,10 @@ lib/esparse/build
 sample.js
 tests/esparse
 test_desc.json
+
+# ignorable files in lib/desugar
+lib/desugar/compiled-test/
+lib/desugar/script/
+lib/desugar/module/
+lib/desugar/compiled-script/
+lib/desugar/compiled-module/
