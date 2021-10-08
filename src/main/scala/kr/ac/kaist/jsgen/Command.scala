@@ -146,3 +146,22 @@ case object CmdTypeCheck extends Command("type-check", CmdBuildCFG >> TypeCheck)
     println(sem.getInfo)
   }
 }
+
+////////////////////////////////////////////////////////////////////////////////
+// Feature Extraction
+////////////////////////////////////////////////////////////////////////////////
+// extract-vec
+case object CmdExtractVec extends Command("extract-vec", CmdParse >> ExtractVec) {
+  def help = "extracts feature vector."
+  override def display(vec: feature.FeatureVector): Unit = {
+    println(vec.featureVector)
+  }
+}
+
+// extract-feat
+case object CmdExtractFeat extends Command("extract-feat", CmdExtractVec >> ExtractFeat) {
+  def help = "extracts feature."
+  override def display(feat: feature.Feature): Unit = {
+    println(feat.feat)
+  }
+}

@@ -86,6 +86,10 @@ object JSGen {
     // JSTAR
     CmdBuildCFG,
     CmdTypeCheck,
+
+    // Feature
+    CmdExtractVec,
+    CmdExtractFeat,
   )
   val cmdMap = commands.foldLeft[Map[String, Command[_]]](Map()) {
     case (map, cmd) => map + (cmd.name -> cmd)
@@ -117,6 +121,10 @@ object JSGen {
     // JSTAR
     BuildCFG,
     TypeCheck,
+
+    // Feature
+    ExtractVec,
+    ExtractFeat,
   )
 
   // global options
