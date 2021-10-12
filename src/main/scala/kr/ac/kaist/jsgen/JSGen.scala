@@ -88,6 +88,7 @@ object JSGen {
     CmdTypeCheck,
 
     // Feature
+    CmdDirParse,
     CmdExtractVec,
     CmdExtractFeat,
   )
@@ -123,6 +124,7 @@ object JSGen {
     TypeCheck,
 
     // Feature
+    DirParse,
     ExtractVec,
     ExtractFeat,
   )

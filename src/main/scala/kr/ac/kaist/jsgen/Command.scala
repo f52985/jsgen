@@ -150,18 +150,17 @@ case object CmdTypeCheck extends Command("type-check", CmdBuildCFG >> TypeCheck)
 ////////////////////////////////////////////////////////////////////////////////
 // Feature Extraction
 ////////////////////////////////////////////////////////////////////////////////
+// parrse-dir
+case object CmdDirParse extends Command("parse-dir", CmdBase >> DirParse) {
+  def help = "parses all javascript files in the given directory"
+}
+
 // extract-vec
-case object CmdExtractVec extends Command("extract-vec", CmdParse >> ExtractVec) {
-  def help = "extracts feature vector."
-  override def display(vec: feature.FeatureVector): Unit = {
-    println(vec.featureVector)
-  }
+case object CmdExtractVec extends Command("extract-vec", CmdDirParse >> ExtractVec) {
+  def help = "extracts feature vector for all files in the given directory."
 }
 
 // extract-feat
 case object CmdExtractFeat extends Command("extract-feat", CmdExtractVec >> ExtractFeat) {
   def help = "extracts feature."
-  override def display(feat: feature.Feature): Unit = {
-    println(feat.feat)
-  }
 }
