@@ -4,24 +4,22 @@ import kr.ac.kaist.jsgen.js.ASTWalker
 import kr.ac.kaist.jsgen.js.ast.{ AST, Script }
 
 // FeatureVector
-case class FeatureVector(script: Script) {
-  var featureVector: Map[Feature, Boolean] = Map()
-
+case class FeatureVector(var featureVector: List[Feature]) {
   class NonTerminalExtractor extends ASTWalker {
     override def job(ast: AST): Unit = {
-      featureVector = featureVector + (Feature(ast.kind) -> true)
+      featureVector = Feature(ast.kind) :: featureVector
     }
   }
 
-  def traverse() = {
+  def traverse(script: Script) = {
     new NonTerminalExtractor().walk(script)
   }
 }
 
 object FeatureVector {
   def apply(script: Script): FeatureVector = {
-    val vec = new FeatureVector(script)
-    vec.traverse()
+    val vec = new FeatureVector(List())
+    vec.traverse(script)
     vec
   }
 }

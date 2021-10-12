@@ -38,7 +38,7 @@ case object DirParse extends Phase[Unit, DirParseConfig, Map[File, Script]] {
   def parseJS(filename: String): Script = {
     if (cnt % 100 == 0) {
       val cur = System.currentTimeMillis
-      println(s"Parsed $cnt files in ${(cur - st) / 1000} sec.")
+      //println(s"Parsed $cnt files in ${(cur - st) / 1000} sec.")
     }
     cnt += 1
 
