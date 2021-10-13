@@ -1,11 +1,13 @@
 package kr.ac.kaist.jsgen.phase
 
 import io.circe._, io.circe.syntax._, io.circe.parser._
-import kr.ac.kaist.jsgen.BASE_DIR
+import kr.ac.kaist.jsgen.{ BASE_DIR, FEATURE }
 import kr.ac.kaist.jsgen.error.NotSupported
 import kr.ac.kaist.jsgen.js._
 import kr.ac.kaist.jsgen.js.ast.Script
 import kr.ac.kaist.jsgen.parser.{ MetaParser, MetaData }
+import kr.ac.kaist.jsgen.feature.FeatureVector
+import kr.ac.kaist.jsgen.feature.JsonProtocol._
 import kr.ac.kaist.jsgen.util.JvmUseful._
 import kr.ac.kaist.jsgen.util.Useful._
 import kr.ac.kaist.jsgen.util._
@@ -26,14 +28,13 @@ case object Parse extends Phase[Unit, ParseConfig, Script] {
       case ast if config.test262 => prependedTest262Harness(filename, ast)
       case ast => ast
     }
-    config.jsonFile match {
-      case Some(name) =>
-        val nf = getPrintWriter(name)
-        nf.println(ast.toJson.noSpaces)
-        nf.close()
-      case None =>
-    }
+    config.jsonFile.foreach(name => {
+      val nf = getPrintWriter(name)
+      nf.println(ast.toJson.noSpaces)
+      nf.close()
+    })
     if (config.pprint) println(ast.prettify.noSpaces)
+    if (FEATURE) dumpJson(FeatureVector(ast), filename + ".vec")
 
     ast
   }
@@ -85,6 +86,8 @@ case object Parse extends Phase[Unit, ParseConfig, Script] {
       "use `esparse` instead of the generated parser."),
     ("test262", BoolOption(c => c.test262 = true),
       "prepend test262 harness files based on metadata."),
+    ("feature", BoolOption(c => FEATURE = true),
+      "dump feature vector."),
   )
 }
 

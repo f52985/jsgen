@@ -76,6 +76,9 @@ package object jsgen {
   // Logging mode
   var LOG: Boolean = false
 
+  // Feature Extracting mode
+  var FEATURE: Boolean = false
+
   // triple double quations marks
   val TRIPLE = "\"\"\""
 

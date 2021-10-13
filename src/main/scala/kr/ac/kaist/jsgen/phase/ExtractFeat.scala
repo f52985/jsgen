@@ -2,28 +2,38 @@ package kr.ac.kaist.jsgen.phase
 
 import kr.ac.kaist.jsgen._
 import kr.ac.kaist.jsgen.feature._
+import kr.ac.kaist.jsgen.feature.JsonProtocol._
+import kr.ac.kaist.jsgen.util.JvmUseful._
+import scala.collection.mutable.{ Map => MMap }
 
 // ExtractFeat phase
-case object ExtractFeat extends Phase[Map[String, FeatureVector], ExtractFeatConfig, Map[String, Feature]] {
+case object ExtractFeat extends Phase[Unit, ExtractFeatConfig, Unit] {
   val name = "extract-feat"
   val help = "extract feature from AST."
 
-  private type FeatCnt = Map[Feature, Int]
+  private type FeatCnt = MMap[Feature, Int]
   implicit val order = Ordering.Float.TotalOrdering
 
   def apply(
-    vecs: Map[String, FeatureVector],
+    unit: Unit,
     jsgenConfig: JSGenConfig,
     config: ExtractFeatConfig
-  ): Map[String, Feature] = {
+  ): Unit = {
+    val dirname = getFirstFilename(jsgenConfig, "extract feature")
+    val vecs = walkTree(dirname)
+      .map(_.toString)
+      .filter(extFilter("vec"))
+      .map(name => (name, readJson[FeatureVector](name)))
+      .toMap
+
     // Count number of occurence of each feature
-    var totalFeatCnt: FeatCnt = Map()
+    var totalFeatCnt: FeatCnt = MMap().withDefaultValue(0)
     val fileFeatCnt: Map[String, FeatCnt] = vecs.map({
       case (filename, vec) => {
-        var featCnt: FeatCnt = Map()
+        var featCnt: FeatCnt = MMap().withDefaultValue(0)
         vec.featureVector.foreach(feat => {
-          featCnt = featCnt + (feat -> (featCnt.getOrElse(feat, 0) + 1))
-          totalFeatCnt = totalFeatCnt + (feat -> (totalFeatCnt.getOrElse(feat, 0) + 1))
+          featCnt(feat) += 1
+          totalFeatCnt(feat) += 1
         })
         (filename, featCnt)
       }
@@ -37,7 +47,6 @@ case object ExtractFeat extends Phase[Map[String, FeatureVector], ExtractFeatCon
       }))
     })
     println(ret)
-    ret
   }
 
   def defaultConfig: ExtractFeatConfig = ExtractFeatConfig()

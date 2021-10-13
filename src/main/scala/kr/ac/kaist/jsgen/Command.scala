@@ -155,12 +155,7 @@ case object CmdDirParse extends Command("parse-dir", CmdBase >> DirParse) {
   def help = "parses all javascript files in the given directory"
 }
 
-// extract-vec
-case object CmdExtractVec extends Command("extract-vec", CmdDirParse >> ExtractVec) {
-  def help = "extracts feature vector for all files in the given directory."
-}
-
 // extract-feat
-case object CmdExtractFeat extends Command("extract-feat", CmdExtractVec >> ExtractFeat) {
+case object CmdExtractFeat extends Command("extract-feat", CmdBase >> ExtractFeat) {
   def help = "extracts feature."
 }

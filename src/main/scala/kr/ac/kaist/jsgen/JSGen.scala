@@ -89,7 +89,6 @@ object JSGen {
 
     // Feature
     CmdDirParse,
-    CmdExtractVec,
     CmdExtractFeat,
   )
   val cmdMap = commands.foldLeft[Map[String, Command[_]]](Map()) {
@@ -125,7 +124,6 @@ object JSGen {
 
     // Feature
     DirParse,
-    ExtractVec,
     ExtractFeat,
   )
 
