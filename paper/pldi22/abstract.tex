@@ -1,3 +1,22 @@
 \begin{abstract}\label{sec:abstract}
-  \todo
+  In 2015, ECMAScript 6 (ES6, 2015) introduced a new wave in JavaScript with
+  various new language features. It is the start of the fast-evolving nature of
+  JavaScript with an annual release cadence and open development process.
+  However, most JavaScript engines did not support or partially supported newly
+  introduced features in the beginning. Therefore, transpilers showed up to
+  fulfill developers' desires to use new language features before JavaScript
+  engines would support them. They \textit{desugar} such features to transpile
+  JavaScript programs from ES6 or later versions to ECMAScript 5.1 (ES5.1,
+  2011). Even though most engines now support language features even in the
+  latest ECMAScript, developers still heavily utilize them to execute their
+  JavaScript programs in legacy engines. However, there is no empirical study to
+  answer the correctness or quality of their desugaring process even though six
+  years have passed since 2015.
+
+  This paper takes the first step to systematically studying the desugaring
+  process of the most dominating JavaScript transpiler, Babel. We measure the
+  quality of desugaring process based on its \textit{semantics preservation},
+  \textit{speed degradation}, and \textit{code bloat}. Moreover, we develop
+  $\tool$, a JavaScript program generator using genetic algorithms, to
+  automatically find the worst quality cases in each metric.
 \end{abstract}
