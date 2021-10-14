@@ -7,7 +7,7 @@ import kr.ac.kaist.jsgen.js.ast.{ AST, Script }
 case class FeatureVector(var featureVector: List[Feature]) {
   class NonTerminalExtractor extends ASTWalker {
     override def job(ast: AST): Unit = {
-      featureVector = Feature(ast.kind) :: featureVector
+      featureVector = Feature(ast.name) :: featureVector
     }
   }
 
