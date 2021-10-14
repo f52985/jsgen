@@ -87,8 +87,11 @@ object JSGen {
     CmdBuildCFG,
     CmdTypeCheck,
 
-    // Feature
+    // Directory Mode
     CmdDirParse,
+    CmdDirEval,
+
+    // Feature
     CmdExtractFeat,
   )
   val cmdMap = commands.foldLeft[Map[String, Command[_]]](Map()) {
@@ -123,7 +126,6 @@ object JSGen {
     TypeCheck,
 
     // Feature
-    DirParse,
     ExtractFeat,
   )
 
@@ -143,6 +145,8 @@ object JSGen {
       "use semantics including specification bugs."),
     ("log", BoolOption(c => LOG = true),
       "turn on the logging mode."),
+    ("feature", BoolOption(c => FEATURE = true),
+      "turn on the feature extracting mode."),
     ("time", BoolOption(c => c.time = true),
       "display the duration time.")
   )

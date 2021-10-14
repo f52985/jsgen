@@ -3,6 +3,7 @@ package kr.ac.kaist.jsgen
 import kr.ac.kaist.jsgen.phase._
 import kr.ac.kaist.jsgen.spec._
 import kr.ac.kaist.jsgen.util.ArgParser
+import kr.ac.kaist.jsgen.util.JvmUseful._
 import scala.Console.CYAN
 
 sealed abstract class Command[Result](
@@ -148,13 +149,44 @@ case object CmdTypeCheck extends Command("type-check", CmdBuildCFG >> TypeCheck)
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-// Feature Extraction
+// Directory Mode
 ////////////////////////////////////////////////////////////////////////////////
-// parrse-dir
-case object CmdDirParse extends Command("parse-dir", CmdBase >> DirParse) {
-  def help = "parses all javascript files in the given directory"
+sealed abstract class DirCommand[T](name: String, subcmd: Command[T]) extends Command(name, PhaseNil) {
+  import kr.ac.kaist.jsgen.error._
+
+  override def apply(args: List[String]): Unit = {
+    args match {
+      case dirname :: rest =>
+        walkTree(dirname)
+          .map(_.toString)
+          .filter(jsFilter)
+          .foreach(name => {
+            println(name)
+            try {
+              subcmd(name :: rest)
+            } catch {
+              case ex: Exception => println(ex)
+            }
+            println()
+          })
+      case Nil =>
+        throw NoFileError("Need directory")
+    }
+  }
 }
 
+// parse-dir
+case object CmdDirParse extends DirCommand("parse-dir", CmdParse) {
+  def help = "parses all javascript files in the given directory"
+}
+// eval-dir
+case object CmdDirEval extends DirCommand("eval-dir", CmdEval) {
+  def help = "evaluates all javascript files in the given directory"
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Feature Extraction
+////////////////////////////////////////////////////////////////////////////////
 // extract-feat
 case object CmdExtractFeat extends Command("extract-feat", CmdBase >> ExtractFeat) {
   def help = "extracts feature."

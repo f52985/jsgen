@@ -86,8 +86,6 @@ case object Parse extends Phase[Unit, ParseConfig, Script] {
       "use `esparse` instead of the generated parser."),
     ("test262", BoolOption(c => c.test262 = true),
       "prepend test262 harness files based on metadata."),
-    ("feature", BoolOption(c => FEATURE = true),
-      "dump feature vector."),
   )
 }
 
