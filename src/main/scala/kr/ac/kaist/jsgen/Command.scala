@@ -161,13 +161,15 @@ sealed abstract class DirCommand[T](name: String, subcmd: Command[T]) extends Co
           .map(_.toString)
           .filter(jsFilter)
           .foreach(name => {
-            println(name)
+            if (!args.contains("-silent")) println(name)
             try {
               subcmd(name :: rest)
             } catch {
-              case ex: Exception => println(ex)
+              case ex: Exception => {
+                println(s"FAIL: $name")
+                println(ex)
+              }
             }
-            println()
           })
       case Nil =>
         throw NoFileError("Need directory")
