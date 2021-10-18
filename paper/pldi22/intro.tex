@@ -22,25 +22,70 @@ client-side developers cannot use most ES6 features initially for the web
 application development, although they wanted to utilize them for more concise
 and readable JavaScript code.
 
-Therefore, \textit{transpilers} showed up to fulfill developers' desires to use
-new language features earlier. A transpiler is a source-to-source compiler that
-takes a program written in a programming language and produces an equivalent
-program in the same or a different programming language. For JavaScript, several
-transpilers focused on how to \textit{desugar} newly introduced language
-features in ES6+ to ES5. In 2011, Google started to develop a transpiler called
+Several \textit{transpilers} showed up to fulfill developers' desires to use new
+language features earlier. They focused on how to \textit{desugar} newly
+introduced language features in ES6+ to ECMAScript 5 (ES5, 2009). In 2011,
+Google started to develop a transpiler called
 Traceur\footnote{https://github.com/google/traceur-compiler} for experimenting
 with early ES6 features, and it provided a high-fidelity implementation of ES6
 semantics. However, its severe speed degradation was unattractive to developers.
 On the other hand, a 17-year-old developer introduced another transpiler
-Babel\footnote{https://babeljs.io/} (originally named 6to5) to minimize runtime
-overhead of desugared JavaScropt codes by sacrificing semantics preservation.
-Nowadays, Babel has become an essential library to build JavaScript projects,
-and it is downloaded about 32.4M times every
-week\footnote{https://www.npmtrends.com/@babel/core}. Even though most engines
-now support language features even in the latest ECMAScript, developers still
-heavily utilize Babel to execute their JavaScript programs in legacy engines:
-older versions of engines, legacy engines (e.g., Internet Explorer developed by
-Microsoft), or regional web browsers (e.g., UC and QQ browsers in China) not
-conforming to the latest ECMAScript.
+Babel\footnote{https://babeljs.io/} (originally named 6to5) in 2015 to minimize
+runtime overhead of desugared JavaScropt programs by sacrificing semantics
+preservation. Nowadays, Babel has become an essential library to build
+JavaScript projects with 32.5M weekly downloads and 16.7K npm packages dependent
+on it\footnote{https://www.npmjs.com/package/@babel/core}. Even though most
+engines now support language features even in the latest ECMAScript, developers
+still heavily utilize Babel to execute their JavaScript programs in legacy
+engines: older versions of engines, deprecated engines (e.g., Internet
+Explorer), or regional web browsers (e.g., UC and QQ browsers in China) not
+fully supporting language features in ES6+. However, unfortunately, there is no
+empirical study on such desugaring process of transpilers, especially for Babel.
 
-\todo
+This paper takes the first systematically studying the desugaring process of
+Babel, the most dominating JavaScript transpiler. We measure the quality of
+desugaring process from ES6 or later versions to ES5 based on its
+\textit{semantics preservation}, \textit{speed degradation}, and \textit{code
+bloat}. First, the essential property of desugaring process is to preserve
+semantics. However, no one confidently claims which features are not correctly
+desugared by Babel. Second, even though Babel sacrifices semantics preservation
+to overcome the runtime overhead of desugared JavaScript programs, speed
+degradation still exists in the desugaring process. Besides, it is unclear when
+the speed degradation becomes serious. Third, sizes of JavaScript programs are
+also important because small-sized JavaScript programs speed up file transfer
+and decrease costs for network bandwidth. If the desugaring process explodes the
+size of JavaScript code, it reduces the usability of JavaScript applications
+because of slow code transmission.
+
+We develop $\tool$, a \textbf{J}ava\textbf{S}cript Program \textbf{Gen}erator
+using genetic algorithms, to automatically measure the quality and find the
+worst cases in each metric. To evenly treat each language feature under the same
+granularity, we first introduce a solid definition of JavaScript language
+features and an automated approach to extract them from JavaScript programs
+using their statistical information. We utilize a variant of Term
+Frequency-Inverse Document Frequency (TF-IDF)~\cite{tf, idf} widely used in
+natural language processing. Then, we automatically generate JavaScript
+programs using our tool and measure the semantics preservation, speed
+degradation, and code bloats of Babel's desugaring process with them. Moreover,
+$\tool$ can find the worst cases in each metric by generating JavaScript
+programs using genetic algorithms~\cite{ga1, ga2, ga3, ga4} with different
+fitness functions for distinct metrics.
+
+Contributions of this work are as follows:
+\begin{itemize}
+
+  \item We conduct the first empirical study on the desugaring process of Babel,
+    the most dominating JavaScript transpiler, with three metrics:
+    \textit{semantics preservation}, \textit{speed degradation}, and
+    \textit{code bloat}.
+
+  \item We develop $\tool$, a \textbf{J}ava\textbf{S}cript Program
+    \textbf{Gen}erator using genetic algorithms, to automatically measure the
+    quality and find the worst cases in each metric.
+
+  \item We experimentally show that Babel incorrectly desugars \inred{XX}
+    language features, degrades the execution speed by \inred{XX.X}\% on
+    average, and bloats code sizes by \inred{XX.X}\% on average. In the worst
+    case, the speed was \inred{XX.X} times slower, and the size was \inred{XX.X}
+    times increased.
+\end{itemize}
