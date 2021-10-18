@@ -6,18 +6,26 @@
   introduced features in the beginning. Therefore, transpilers showed up to
   fulfill developers' desires to use new language features before JavaScript
   engines would support them. They \textit{desugar} such features to transpile
-  JavaScript programs from ES6 or later versions to ECMAScript 5.1 (ES5.1,
-  2011). Even though most engines now support language features even in the
-  latest ECMAScript, developers still heavily utilize them to execute their
-  JavaScript programs in legacy engines. However, there is no empirical study to
-  answer the correctness or quality of their desugaring process even though six
-  years have passed since 2015.
+  JavaScript programs from ES6 or later versions to ECMAScript 5 (ES5, 2009).
+  Even though most engines now support language features even in the latest
+  ECMAScript, developers still heavily utilize them to execute their JavaScript
+  programs in legacy engines. However, there is no empirical study to answer the
+  correctness or quality of their desugaring process even though six years have
+  passed since 2015.
 
   This paper takes the first step to systematically studying the desugaring
   process of the most dominating JavaScript transpiler, Babel. We measure the
-  quality of desugaring process based on its \textit{semantics preservation},
-  \textit{speed degradation}, and \textit{code bloat}. Moreover, we develop
-  $\tool$, a JavaScript program generator using genetic algorithms, to
-  automatically find the worst quality cases in each metric.
-  \todo ...
+  quality of desugaring process from ES6 or later versions to ES5 based on its
+  \textit{semantics preservation}, \textit{speed degradation}, and \textit{code
+  bloat}. To fairly measure the coverage of JavaScript language features, we
+  introduce their solid definition and an automated approach to extract them
+  from JavaScript programs using their statistical information. Moreover, we
+  develop $\tool$, a JavaScript program generator using genetic algorithms, to
+  automatically find the worst quality cases in each metric. Our experiments
+  show that Babel incorrectly desugars \inred{XX} language features, degrades
+  the execution speed by \inred{XX.X}\% on average, and bloats code sizes by
+  \inred{XX.X}\% on average. In the worst case, the speed was \inred{XX.X} times
+  slower, and the size was \inred{XX.X} times increased. We believe that this
+  study provides a foundation for building sound and practical JavaScript
+  transpilers.
 \end{abstract}

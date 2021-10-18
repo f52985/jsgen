@@ -1,3 +1,46 @@
 \section{Introduction}\label{sec:intro}
 
+JavaScript~\cite{js-hopl} has quickly evolved with an annual release cadence and
+open development process since 2015. ECMAScript is the standard specification of
+JavaScript maintained by the Ecma Technical Committee 39 (TC39). In June 2015,
+the committee introduced its new version called ECMAScript 6 (ES6,
+2015)~\cite{es6}. It was the most extensive single update with new language
+features, such as classes, arrow functions, promises, iterators, generators, and
+proxies. Moreover,  to quickly adapt users' demands to the specification, TC39
+members decided to release ECMAScript yearly and maintain it as an open-source
+project in a GitHub repository\footnote{https://github.com/tc39/ecma262}.
+Therefore, already six more versions of ECMAScript from ES7 to ES12 have been
+released after ES6, and contributors have pushed \inred{2,150} commits to its
+official GitHub repository.
+
+However, most JavaScript engines did not support or partially supported newly
+introduced features in the beginning. For example, even though ES6 was released
+in June 2015, Google introduced Chrome 51, the first web browser that fully
+supported ES6 features, in May 2016. Subsequently, Safari 10 (Apple, Sep. 2016)
+and Firefox 54 (Mozilla, Sep. 2017) fully supported ES6 features. Thus,
+client-side developers cannot use most ES6 features initially for the web
+application development, although they wanted to utilize them for more concise
+and readable JavaScript code.
+
+Therefore, \textit{transpilers} showed up to fulfill developers' desires to use
+new language features earlier. A transpiler is a source-to-source compiler that
+takes a program written in a programming language and produces an equivalent
+program in the same or a different programming language. For JavaScript, several
+transpilers focused on how to \textit{desugar} newly introduced language
+features in ES6+ to ES5. In 2011, Google started to develop a transpiler called
+Traceur\footnote{https://github.com/google/traceur-compiler} for experimenting
+with early ES6 features, and it provided a high-fidelity implementation of ES6
+semantics. However, its severe speed degradation was unattractive to developers.
+On the other hand, a 17-year-old developer introduced another transpiler
+Babel\footnote{https://babeljs.io/} (originally named 6to5) to minimize runtime
+overhead of desugared JavaScropt codes by sacrificing semantics preservation.
+Nowadays, Babel has become an essential library to build JavaScript projects,
+and it is downloaded about 32.4M times every
+week\footnote{https://www.npmtrends.com/@babel/core}. Even though most engines
+now support language features even in the latest ECMAScript, developers still
+heavily utilize Babel to execute their JavaScript programs in legacy engines:
+older versions of engines, legacy engines (e.g., Internet Explorer developed by
+Microsoft), or regional web browsers (e.g., UC and QQ browsers in China) not
+conforming to the latest ECMAScript.
+
 \todo
