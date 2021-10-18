@@ -25,4 +25,7 @@ case class ModelGenerator(spec: ECMAScript, parser: Boolean) {
 
   // generate js/ASTDiff.scala in source code directory
   DiffGenerator(grammar)
+
+  // generate js/ASTTransformer.scala in source code directory
+  TransformerGenerator(grammar)
 }
