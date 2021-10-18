@@ -90,20 +90,22 @@ package object js {
   }
 
   // merge statements to script
+  def mergeStmtList(l: List[StatementListItem]): Option[StatementList] = l match {
+    case a :: rest => {
+      val params = List(false, false, false)
+      val init: StatementList = StatementList0(a, params, a.span)
+      val list = rest.foldLeft(init) {
+        case (x, y) =>
+          val span = Span(x.span.start, y.span.end)
+          StatementList1(x, y, params, span)
+      }
+      Some(list)
+    }
+    case Nil => None
+  }
   def mergeStmt(l: List[StatementListItem]): Script = {
     val params = List(false, false, false)
-    val bodyOpt = l match {
-      case a :: rest => {
-        val init: StatementList = StatementList0(a, params, a.span)
-        val list = rest.foldLeft(init) {
-          case (x, y) =>
-            val span = Span(x.span.start, y.span.end)
-            StatementList1(x, y, params, span)
-        }
-        Some(ScriptBody0(list, params, list.span))
-      }
-      case Nil => None
-    }
+    val bodyOpt = mergeStmtList(l).map(l => ScriptBody0(l, params, l.span))
     val span = bodyOpt.fold(Span())(_.span)
     Script0(bodyOpt, params, span)
   }
