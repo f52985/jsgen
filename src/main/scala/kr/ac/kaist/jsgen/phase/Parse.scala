@@ -4,7 +4,7 @@ import io.circe._, io.circe.syntax._, io.circe.parser._
 import kr.ac.kaist.jsgen.{ BASE_DIR, FEATURE }
 import kr.ac.kaist.jsgen.error.NotSupported
 import kr.ac.kaist.jsgen.js._
-import kr.ac.kaist.jsgen.js.ast.Script
+import kr.ac.kaist.jsgen.js.ast._
 import kr.ac.kaist.jsgen.parser.{ MetaParser, MetaData }
 import kr.ac.kaist.jsgen.feature.FeatureVector
 import kr.ac.kaist.jsgen.feature.JsonProtocol._
@@ -24,17 +24,22 @@ case object Parse extends Phase[Unit, ParseConfig, Script] {
     config: ParseConfig
   ): Script = {
     val filename = getFirstFilename(jsgenConfig, "parse")
-    val ast = parseJS(jsgenConfig.args, config.esparse) match {
-      case ast if config.test262 => prependedTest262Harness(filename, ast)
-      case ast => ast
-    }
-    config.jsonFile.foreach(name => {
-      val nf = getPrintWriter(name)
-      nf.println(ast.toJson.noSpaces)
-      nf.close()
-    })
-    if (config.pprint) println(ast.prettify.noSpaces)
-    if (FEATURE) dumpJson(FeatureVector(ast), filename + ".vec")
+    var ast = parseJS(jsgenConfig.args, config.esparse)
+
+    if (config.removeAssert)
+      ast = removeAssert(ast)
+
+    if (config.test262)
+      ast = prependedTest262Harness(filename, ast)
+
+    config.jsonFile.foreach(name =>
+      dumpFile(ast.toJson.noSpaces, name))
+
+    if (config.pprint)
+      println(ast.prettify.noSpaces)
+
+    if (FEATURE)
+      dumpJson(FeatureVector(ast), filename + ".vec")
 
     ast
   }
@@ -76,6 +81,59 @@ case object Parse extends Phase[Unit, ParseConfig, Script] {
     mergeStmt(stmts)
   }
 
+  // remove asserts for Test262
+  def removeAssert(ast: Script): Script = {
+    class AssertRemover extends ASTTransformer {
+      implicit def downcast[T <: AST](ast: AST): T = ast.asInstanceOf[T]
+      implicit def downcast[T <: AST](ast: Option[AST]): Option[T] = ast.map(downcast[T])
+
+      def getCall(ast: AST): Option[CoverCallExpressionAndAsyncArrowHead] = {
+        val callType = "CoverCallExpressionAndAsyncArrowHead"
+        if (ast.getKinds.contains(callType))
+          ast.getElems(callType).lift(0)
+        else
+          None
+      }
+
+      def getArgument(ast: Arguments, n: Int): AssignmentExpression =
+        ast.getElems("ArgumentList")(0).getElems("AssignmentExpression")(n)
+
+      override def transform(ast: AssignmentExpression): AssignmentExpression = {
+        getCall(ast).flatMap(call => call match {
+          case CoverCallExpressionAndAsyncArrowHead0(x0, x1, _, _) =>
+            val asserts = List(
+              "assert",
+              "assert . sameValue",
+              "assert . notSameValue",
+              "assert . deepEqual",
+              "assert . compareArray",
+              "assertRelativeDateMs"
+            )
+            if (asserts.contains(x0.toString))
+              Some(getArgument(x1, 0))
+            else
+              None
+          case _ => None
+        }).getOrElse(super.transform(ast))
+      }
+
+      override def transform(ast: Statement): Statement = {
+        getCall(ast).flatMap(call => call match {
+          case CoverCallExpressionAndAsyncArrowHead0(x0, x1, _, _) =>
+            if (x0.toString == "assert . throws") {
+              val f = getArgument(x1, 1).toString
+              println(s"try { ($f)(); } catch {}")
+              Some(Parser.parse(Parser.Statement(ast.parserParams), s"try { ($f)(); } catch {}").get)
+            } else
+              None
+          case _ => None
+        }).getOrElse(super.transform(ast))
+      }
+    }
+
+    new AssertRemover().transform(ast)
+  }
+
   def defaultConfig: ParseConfig = ParseConfig()
   val options: List[PhaseOption[ParseConfig]] = List(
     ("json", StrOption((c, s) => c.jsonFile = Some(s)),
@@ -86,6 +144,8 @@ case object Parse extends Phase[Unit, ParseConfig, Script] {
       "use `esparse` instead of the generated parser."),
     ("test262", BoolOption(c => c.test262 = true),
       "prepend test262 harness files based on metadata."),
+    ("remove-assert", BoolOption(c => c.removeAssert = true),
+      "Remove test262 asserts"),
   )
 }
 
@@ -94,5 +154,6 @@ case class ParseConfig(
   var jsonFile: Option[String] = None,
   var esparse: Boolean = false,
   var test262: Boolean = false,
-  var pprint: Boolean = false
+  var pprint: Boolean = false,
+  var removeAssert: Boolean = false
 ) extends Config
