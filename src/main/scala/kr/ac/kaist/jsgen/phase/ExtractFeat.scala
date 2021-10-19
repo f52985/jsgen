@@ -12,7 +12,7 @@ case object ExtractFeat extends Phase[Unit, ExtractFeatConfig, Unit] {
   val help = "extract feature from AST."
 
   private type FeatCnt = MMap[Feature, Int]
-  implicit val order = Ordering.Float.TotalOrdering
+  implicit val order = Ordering.Double.TotalOrdering
 
   def apply(
     unit: Unit,
@@ -28,6 +28,7 @@ case object ExtractFeat extends Phase[Unit, ExtractFeatConfig, Unit] {
 
     // Count number of occurence of each feature
     var totalFeatCnt: FeatCnt = MMap().withDefaultValue(0)
+    var df: FeatCnt = MMap().withDefaultValue(0)
     val fileFeatCnt: Map[String, FeatCnt] = vecs.map({
       case (filename, vec) => {
         var featCnt: FeatCnt = MMap().withDefaultValue(0)
@@ -35,6 +36,7 @@ case object ExtractFeat extends Phase[Unit, ExtractFeatConfig, Unit] {
           featCnt(feat) += 1
           totalFeatCnt(feat) += 1
         })
+        featCnt.foreach(p => df(p._1) += 1)
         (filename, featCnt)
       }
     })
@@ -43,7 +45,8 @@ case object ExtractFeat extends Phase[Unit, ExtractFeatConfig, Unit] {
 
     val ret = vecs.map({
       case (filename, vec) => (filename, vec.featureVector.maxBy(feat => {
-        fileFeatCnt(filename)(feat).toFloat / totalFeatCnt(feat)
+        //fileFeatCnt(filename)(feat).toDouble / totalFeatCnt(feat)
+        fileFeatCnt(filename)(feat) * math.log(df.size / df(feat))
       }))
     })
     println(ret)
