@@ -3,7 +3,7 @@ cnt=0
 
 echo dir original compiled diff
 
-for f in `find compiled-script compiled-module -name "*.js"`; do
+for f in `find compiled-script -name "*.js"`; do
   orig=${f:9}
   orig_cnt=`cat $orig | sed '/^\s*$/d' | wc -l`
   comp_cnt=`cat $f | sed '/^\s*$/d' | wc -l`

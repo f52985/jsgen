@@ -13,10 +13,10 @@ for d in `find test262/test -type d -mindepth 1`; do
   total=`grep $dd result/test262.txt | wc -l`
 
   # number of fails in original test
-  origFail=`grep $dd result/test262.txt | grep FAIL | wc -l`
+  origFail=`grep "$dd/" result/test262.txt | grep FAIL | wc -l`
 
   # number of fails in compiled test
-  compileFail=`grep $dd result/compiled-test262.txt | grep FAIL | wc -l`
+  compileFail=`grep "$dd/" result/compiled-test262.txt | grep FAIL | wc -l`
 
   (( diff = compileFail - origFail ))
   (( ratio = diff * 100 / total ))

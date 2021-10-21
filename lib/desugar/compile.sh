@@ -14,4 +14,4 @@ function compile() {
 }
 
 compile "script" "compiled-script"
-compile "module" "compiled-module" "--source-type module"
+#compile "module" "compiled-module" "--source-type module"

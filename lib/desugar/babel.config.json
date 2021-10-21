@@ -7,6 +7,8 @@
       {
         "absoluteRuntime": true
       }
-    ]
+    ],
+    "@babel/plugin-syntax-import-assertions",
+    "@babel/plugin-proposal-class-static-block"
   ]
 }
