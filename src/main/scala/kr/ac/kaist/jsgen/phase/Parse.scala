@@ -199,7 +199,7 @@ case object Parse extends Phase[Unit, ParseConfig, Script] {
     ("test262", BoolOption(c => c.test262 = true),
       "prepend test262 harness files based on metadata."),
     ("remove-assert", BoolOption(c => c.removeAssert = true),
-      "Remove test262 asserts"),
+      "remove test262 asserts."),
   )
 }
 

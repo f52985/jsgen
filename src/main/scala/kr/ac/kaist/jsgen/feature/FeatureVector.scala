@@ -11,8 +11,12 @@ case class FeatureVector(var featureVector: List[Feature]) {
     }
   }
 
-  def traverse(script: Script) = {
+  def traverse(script: Script): Unit = {
     new NonTerminalExtractor().walk(script)
+  }
+
+  def update(visitFunctions: List[String]): Unit = {
+    featureVector = visitFunctions.map(Feature) ++ featureVector
   }
 }
 

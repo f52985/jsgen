@@ -8,8 +8,11 @@ import kr.ac.kaist.jsgen.js.{ Parser => ESParser, _ }
 import kr.ac.kaist.jsgen.parser.ESValueParser
 import kr.ac.kaist.jsgen.spec.algorithm._
 import kr.ac.kaist.jsgen.util.Useful._
+import kr.ac.kaist.jsgen.util.JvmUseful._
 import kr.ac.kaist.jsgen.util._
-import kr.ac.kaist.jsgen.{ TEST_MODE, LOG, DEBUG, TIMEOUT, VIEW, PARTIAL }
+import kr.ac.kaist.jsgen.feature._
+import kr.ac.kaist.jsgen.feature.JsonProtocol._
+import kr.ac.kaist.jsgen.{ TEST_MODE, LOG, DEBUG, TIMEOUT, VIEW, PARTIAL, FEATURE }
 import scala.annotation.tailrec
 import scala.collection.mutable.{ Map => MMap }
 
@@ -41,6 +44,9 @@ class Interp(
   // iteration period for check
   val CHECK_PERIOD = 10000
 
+  // list of visited functions
+  private var visitFunctions: List[String] = Nil
+
   // step target
   trait StepTarget {
     override def toString: String = this match {
@@ -65,11 +71,17 @@ class Interp(
   // step
   final def step: Boolean = nextTarget match {
     case Terminate =>
-      // stop evaluation
       if (LOG) {
         IRLogger.recordIter(st.fnameOpt, iter)
         IRLogger.recordCallDepth(st.fnameOpt, maxDepth)
       }
+      if (FEATURE) {
+        val vecName = st.fnameOpt.get + ".vec"
+        val featureVector = readJson[FeatureVector](vecName)
+        featureVector.update(visitFunctions)
+        dumpJson(featureVector, vecName)
+      }
+      // stop evaluation
       false
     case ReturnUndef =>
       // do return
@@ -124,6 +136,12 @@ class Interp(
         val fnameOpt = st.fnameOpt
         IRLogger.visitRecorder.record(func, view, node, fnameOpt)
       case _ =>
+    }
+    if (FEATURE && node.isInstanceOf[Entry]) {
+      val func = cfg.funcOf(node).name
+      if (func.contains("prototype.")) {
+        visitFunctions = func :: visitFunctions
+      }
     }
     node match {
       case Entry(_) => st.moveNext
@@ -647,6 +665,8 @@ object Interp {
     timeLimit: Option[Long] = Some(TIMEOUT)
   ): State = {
     val interp = new Interp(st, timeLimit)
+    if (FEATURE)
+      interp.visitFunctions = Nil
     interp.fixpoint
     st
   }

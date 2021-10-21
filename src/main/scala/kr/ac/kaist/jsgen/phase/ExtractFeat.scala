@@ -4,6 +4,7 @@ import kr.ac.kaist.jsgen._
 import kr.ac.kaist.jsgen.feature._
 import kr.ac.kaist.jsgen.feature.JsonProtocol._
 import kr.ac.kaist.jsgen.util.JvmUseful._
+import kr.ac.kaist.jsgen.util._
 import scala.collection.mutable.{ Map => MMap }
 
 // ExtractFeat phase
@@ -41,7 +42,8 @@ case object ExtractFeat extends Phase[Unit, ExtractFeatConfig, Unit] {
       }
     })
 
-    println(totalFeatCnt)
+    if (!jsgenConfig.silent)
+      println(totalFeatCnt)
 
     val ret = vecs.map({
       case (filename, vec) => (filename, vec.featureVector.maxBy(feat => {
@@ -49,12 +51,28 @@ case object ExtractFeat extends Phase[Unit, ExtractFeatConfig, Unit] {
         fileFeatCnt(filename)(feat) * math.log(df.size / df(feat))
       }))
     })
-    println(ret)
+
+    if (!jsgenConfig.silent)
+      println(ret)
+
+    if (config.dump) {
+      ret.foreach({
+        case (vecname, feat) => {
+          val featname = vecname.dropRight(4) + ".feat"
+          dumpFile(feat.toString + LINE_SEP, featname)
+        }
+      })
+    }
   }
 
   def defaultConfig: ExtractFeatConfig = ExtractFeatConfig()
-  val options: List[PhaseOption[ExtractFeatConfig]] = List()
+  val options: List[PhaseOption[ExtractFeatConfig]] = List(
+    ("dump", BoolOption(c => c.dump = true),
+      "dump feature to file."),
+  )
 }
 
 // ExtractFeat phase config
-case class ExtractFeatConfig() extends Config
+case class ExtractFeatConfig(
+  var dump: Boolean = false
+) extends Config

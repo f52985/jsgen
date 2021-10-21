@@ -165,7 +165,7 @@ sealed abstract class DirCommand[T](name: String, subcmd: Command[T]) extends Co
             try {
               subcmd(name :: rest)
             } catch {
-              case ex: Exception => {
+              case ex @ (_: Exception | _: Error) => {
                 println(s"FAIL: $name")
                 println(ex)
               }
