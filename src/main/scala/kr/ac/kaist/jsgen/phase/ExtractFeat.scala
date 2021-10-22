@@ -8,7 +8,7 @@ import kr.ac.kaist.jsgen.util._
 import scala.collection.mutable.{ Map => MMap }
 
 // ExtractFeat phase
-case object ExtractFeat extends Phase[Unit, ExtractFeatConfig, Unit] {
+case object ExtractFeat extends Phase[Unit, ExtractFeatConfig, Map[String, Feature]] {
   val name = "extract-feat"
   val help = "extract feature from AST."
 
@@ -19,7 +19,7 @@ case object ExtractFeat extends Phase[Unit, ExtractFeatConfig, Unit] {
     unit: Unit,
     jsgenConfig: JSGenConfig,
     config: ExtractFeatConfig
-  ): Unit = {
+  ): Map[String, Feature] = {
     val dirname = getFirstFilename(jsgenConfig, "extract feature")
     val vecs = walkTree(dirname)
       .map(_.toString)
@@ -42,27 +42,23 @@ case object ExtractFeat extends Phase[Unit, ExtractFeatConfig, Unit] {
       }
     })
 
-    if (!jsgenConfig.silent)
-      println(totalFeatCnt)
-
     val ret = vecs.map({
-      case (filename, vec) => (filename, vec.featureVector.maxBy(feat => {
+      case (filename, vec) => (filename.dropRight(4), vec.featureVector.maxBy(feat => {
         //fileFeatCnt(filename)(feat).toDouble / totalFeatCnt(feat)
-        fileFeatCnt(filename)(feat) * math.log(df.size / df(feat))
+        math.log1p(fileFeatCnt(filename)(feat)) * math.log(vecs.size / df(feat))
       }))
     })
-
-    if (!jsgenConfig.silent)
-      println(ret)
 
     if (config.dump) {
       ret.foreach({
         case (vecname, feat) => {
-          val featname = vecname.dropRight(4) + ".feat"
+          val featname = vecname + ".feat"
           dumpFile(feat.toString + LINE_SEP, featname)
         }
       })
     }
+
+    ret
   }
 
   def defaultConfig: ExtractFeatConfig = ExtractFeatConfig()

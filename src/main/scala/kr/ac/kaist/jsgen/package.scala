@@ -51,6 +51,11 @@ package object jsgen {
   val ID_START_JSON = s"$RESOURCE_DIR/ID_Start.json"
   val ID_CONTINUE_JSON = s"$RESOURCE_DIR/ID_Continue.json"
 
+  // Library directory
+  val LIB_DIR = s"$BASE_DIR/lib"
+  val DESUGAR_DIR = s"$LIB_DIR/desugar"
+  val DESUGAR_RESULT_DIR = s"$DESUGAR_DIR/result"
+
   // Package name
   val PACKAGE_NAME = "kr.ac.kaist.jsgen"
 

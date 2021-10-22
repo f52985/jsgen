@@ -179,11 +179,11 @@ sealed abstract class DirCommand[T](name: String, subcmd: Command[T]) extends Co
 
 // parse-dir
 case object CmdDirParse extends DirCommand("parse-dir", CmdParse) {
-  def help = "parses all javascript files in the given directory"
+  def help = "parses all javascript files in the given directory."
 }
 // eval-dir
 case object CmdDirEval extends DirCommand("eval-dir", CmdEval) {
-  def help = "evaluates all javascript files in the given directory"
+  def help = "evaluates all javascript files in the given directory."
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -192,4 +192,12 @@ case object CmdDirEval extends DirCommand("eval-dir", CmdEval) {
 // extract-feat
 case object CmdExtractFeat extends Command("extract-feat", CmdBase >> ExtractFeat) {
   def help = "extracts feature."
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Summary per feature
+////////////////////////////////////////////////////////////////////////////////
+//
+case object CmdSummaryFeat extends Command("summary-feat", CmdExtractFeat >> SummaryFeat) {
+  def help = "create sumamry per feature."
 }
