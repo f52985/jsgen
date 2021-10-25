@@ -10,9 +10,13 @@ case object SummaryFeat extends Phase[Map[String, Feature], SummaryFeatConfig, U
   val name = "sumamry-feat"
   val help = "summarize information per feature."
 
-  //TODO: faster
-  private def count(msgs: Iterable[String], files: Iterable[String]) = msgs.count(line =>
-    files.exists(file => line contains file))
+  private def toCntMap(elems: Iterable[String]): Map[String, Int] = {
+    val mtMap = Map[String, Int]().withDefaultValue(0)
+    elems.foldLeft(mtMap)({
+      case (cur, elem) => cur + (elem -> (cur(elem) + 1))
+    })
+  }
+  private def count(cnt: Map[String, Int], files: Iterable[String]): Int = files.foldLeft(0)(_ + cnt(_))
 
   def apply(
     featMap: Map[String, Feature],
@@ -25,13 +29,19 @@ case object SummaryFeat extends Phase[Map[String, Feature], SummaryFeatConfig, U
     val compResult = readFile(s"$DESUGAR_RESULT_DIR/compiled-test262.txt").split(LINE_SEP)
     val PREFIX_LEN = 12 // lib/desugar/
 
+    val jsPattern = """script/.*\.js""".r
+
+    val origCnt = toCntMap(origResult.flatMap(jsPattern.findFirstIn))
+    val origFailCnt = toCntMap(origResult.filter(_ contains "FAIL").flatMap(jsPattern.findFirstIn))
+    val compFailCnt = toCntMap(compResult.filter(_ contains "FAIL").flatMap(jsPattern.findFirstIn))
+
     println("feat total origFail compFail diff ratio")
 
     features.foreach(feat => {
       val files = featMap.filter(_._2 == feat).keys.map(_.drop(PREFIX_LEN))
-      val total = count(origResult, files)
-      val origFail = count(origResult.filter(_ contains "FAIL"), files)
-      val compFail = count(compResult.filter(_ contains "FAIL"), files)
+      val total = count(origCnt, files)
+      val origFail = count(origFailCnt, files)
+      val compFail = count(compFailCnt, files)
       val diff = compFail - origFail
       val ratio = diff * 100.0 / total
 
