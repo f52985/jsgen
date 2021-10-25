@@ -160,7 +160,11 @@ case object Parse extends Phase[Unit, ParseConfig, Script] {
         case _ =>
           None
       })
-        .map(stmts => stmts.map(stmt => Parser.parse(Parser.StatementListItem(ast.parserParams), stmt).get))
+        .map(stmts => stmts.map(stmt => {
+          val parser = Parser.StatementListItem(ast.parserParams)
+          val str = if (stmt.startsWith("{")) s"($stmt)" else stmt
+          Parser.parse(parser, str).get
+        }))
         .getOrElse(List(ast))
     }
 
