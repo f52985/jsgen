@@ -9,10 +9,20 @@ case class FeatureVector(var featureVector: List[Feature]) {
     override def job(ast: AST): Unit = {
       featureVector = Feature(ast.name) :: featureVector
     }
+
+    // Prevent cover-syntaxes from being added to feature
+    override def walk(ast: CoverCallExpressionAndAsyncArrowHead): Unit = ()
+    override def walk(ast: CoverParenthesizedExpressionAndArrowParameterList): Unit = ()
+    override def walk(ast: AssignmentExpression): Unit = ast match {
+      case AssignmentExpression4(x0, x2, _, _) if (x0.toString.startsWith("[") || x0.toString.startsWith("{")) =>
+        job(ast); walk(x2);
+      case _ => super.walk(ast)
+    }
   }
 
-  def traverse(script: Script): Unit = {
-    new NonTerminalExtractor().walk(script)
+  def traverse(ast: AST): Unit = {
+    println(ast)
+    new NonTerminalExtractor().walk(ast)
   }
 
   def update(visitFunctions: List[String]): Unit = {

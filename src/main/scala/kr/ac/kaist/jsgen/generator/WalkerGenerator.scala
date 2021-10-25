@@ -24,6 +24,7 @@ case class WalkerGenerator(grammar: Grammar) {
     nf.println(s"""  def walk(lex: Lexical): Unit = {}""")
     nf.println
     prods.foreach(genWalker)
+    genGeneralWalker(prods)
     nf.println(s"""}""")
   }
 
@@ -48,6 +49,18 @@ case class WalkerGenerator(grammar: Grammar) {
         nf.println(s"""      job(ast); $walkStr""")
       }
     }
+    nf.println(s"""  }""")
+  }
+
+  private def genGeneralWalker(prods: List[Production]): Unit = {
+    nf.println(s"""  def walk(ast: AST): Unit = ast match {""")
+    nf.println(s"""    case ast: Lexical => walk(ast)""")
+    prods.foreach(prod => {
+      val Production(lhs, _) = prod
+      val Lhs(name, _) = lhs
+
+      nf.println(s"""    case ast: $name => walk(ast)""")
+    })
     nf.println(s"""  }""")
   }
 

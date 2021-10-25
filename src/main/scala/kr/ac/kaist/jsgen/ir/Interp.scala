@@ -44,8 +44,9 @@ class Interp(
   // iteration period for check
   val CHECK_PERIOD = 10000
 
-  // list of visited functions
+  // list of visited functions and newly parsed asts
   private var visitFunctions: List[String] = Nil
+  private var newASTs: List[AST] = Nil
 
   // step target
   trait StepTarget {
@@ -79,6 +80,7 @@ class Interp(
         val vecName = st.fnameOpt.get + ".vec"
         val featureVector = readJson[FeatureVector](vecName)
         featureVector.update(visitFunctions)
+        Interp.newASTs.foreach(featureVector.traverse(_))
         dumpJson(featureVector, vecName)
       }
       // stop evaluation
@@ -665,8 +667,10 @@ object Interp {
     timeLimit: Option[Long] = Some(TIMEOUT)
   ): State = {
     val interp = new Interp(st, timeLimit)
-    if (FEATURE)
+    if (FEATURE) {
       interp.visitFunctions = Nil
+      newASTs = Nil
+    }
     interp.fixpoint
     st
   }
@@ -901,9 +905,13 @@ object Interp {
   val doParseStr: ESParser.LAParser[AST] => String => Value = cached(parser => {
     cached(str => doParseSyntax(parser, str))
   })
+
+  var newASTs: List[AST] = Nil
   private def doParseSyntax(parser: ESParser.LAParser[AST], str: String): Value = {
     val result = ESParser.parse(parser, str)
-    if (result.successful) ASTVal(result.get.checkSupported)
-    else Absent
+    if (result.successful) {
+      if (FEATURE) newASTs = result.get :: newASTs
+      ASTVal(result.get.checkSupported)
+    } else Absent
   }
 }
