@@ -16,7 +16,19 @@ case object SummaryFeat extends Phase[Map[String, Feature], SummaryFeatConfig, U
       case (cur, elem) => cur + (elem -> (cur(elem) + 1))
     })
   }
+
   private def count(cnt: Map[String, Int], files: Iterable[String]): Int = files.foldLeft(0)(_ + cnt(_))
+
+  private def getAvgLen(files: Iterable[String], prefix: String): Double = {
+    val existingFiles =
+      files
+        .map(prefix + _)
+        .filter(exists)
+
+    val sum: Double = existingFiles.foldLeft(0)(_ + readFile(_).length)
+    val cnt: Double = existingFiles.toList.length
+    sum / cnt
+  }
 
   def apply(
     featMap: Map[String, Feature],
@@ -35,7 +47,7 @@ case object SummaryFeat extends Phase[Map[String, Feature], SummaryFeatConfig, U
     val origFailCnt = toCntMap(origResult.filter(_ contains "FAIL").flatMap(jsPattern.findFirstIn))
     val compFailCnt = toCntMap(compResult.filter(_ contains "FAIL").flatMap(jsPattern.findFirstIn))
 
-    println("feat total origFail compFail diff ratio")
+    println("feat total origFail compFail diff ratio origLen commpLen")
 
     features.foreach(feat => {
       val files = featMap.filter(_._2 == feat).keys.map(_.drop(PREFIX_LEN))
@@ -44,8 +56,10 @@ case object SummaryFeat extends Phase[Map[String, Feature], SummaryFeatConfig, U
       val compFail = count(compFailCnt, files)
       val diff = compFail - origFail
       val ratio = diff * 100.0 / total
+      val origLen = getAvgLen(files, s"$DESUGAR_DIR/")
+      val compLen = getAvgLen(files, s"$DESUGAR_DIR/compiled-")
 
-      println(s"$feat $total $origFail $compFail $diff $ratio%")
+      println(s"$feat $total $origFail $compFail $diff $ratio% $origLen $compLen")
     })
   }
 
