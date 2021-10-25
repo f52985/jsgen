@@ -21,7 +21,6 @@ case class FeatureVector(var featureVector: List[Feature]) {
   }
 
   def traverse(ast: AST): Unit = {
-    println(ast)
     new NonTerminalExtractor().walk(ast)
   }
 
