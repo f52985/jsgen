@@ -21,6 +21,14 @@ case object ExtractFeat extends Phase[Unit, ExtractFeatConfig, Map[String, Featu
     config: ExtractFeatConfig
   ): Map[String, Feature] = {
     val dirname = getFirstFilename(jsgenConfig, "extract feature")
+
+    if (config.cached)
+      return walkTree(dirname)
+        .map(_.toString)
+        .filter(extFilter("feat"))
+        .map(name => (name.dropRight(5), Feature(readFile(name).trim)))
+        .toMap
+
     val vecs = walkTree(dirname)
       .map(_.toString)
       .filter(extFilter("vec"))
@@ -56,6 +64,7 @@ case object ExtractFeat extends Phase[Unit, ExtractFeatConfig, Map[String, Featu
           dumpFile(feat.toString + LINE_SEP, featname)
         }
       })
+
     }
 
     ret
@@ -65,10 +74,13 @@ case object ExtractFeat extends Phase[Unit, ExtractFeatConfig, Map[String, Featu
   val options: List[PhaseOption[ExtractFeatConfig]] = List(
     ("dump", BoolOption(c => c.dump = true),
       "dump feature to file."),
+    ("cached", BoolOption(c => c.cached = true),
+      "use cached, dumped feature."),
   )
 }
 
 // ExtractFeat phase config
 case class ExtractFeatConfig(
-  var dump: Boolean = false
+  var dump: Boolean = false,
+  var cached: Boolean = false
 ) extends Config
