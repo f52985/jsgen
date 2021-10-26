@@ -2,8 +2,8 @@ PREFIX="PREFIX"
 
 echo dir total orig_fail com_fail diff ratio
 
-for d in `find test262/test -type d -mindepth 1`; do
-  dd=${d:13}
+for d in `find script -type d -mindepth 1`; do
+  dd=${d:7}
 
   if [[ $dd == $PREFIX* ]]; then 
     continue

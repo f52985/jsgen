@@ -4,7 +4,7 @@ function run_compiled () {
   tests=$1
 
   date +%"T"
-  $runner "$tests" --test262Dir ../../tests/test262 -t 8
+  $runner "$tests" --test262Dir ../../tests/test262 --includesDir my-harness -t 16
   date +%"T"
 }
 
