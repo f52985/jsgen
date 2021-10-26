@@ -45,8 +45,6 @@ case class Injector(
 
   // handle variables
   private def handleVariable: Unit = for (x <- createdVars) {
-    println(interp.interp(s"$globalMap.$x.Value"))
-    println(interp.interp(s"$globalMap.$x.Value").getClass)
     interp.interp(s"$globalMap.$x.Value") match {
       case s: SimpleValue => append(s"$$assert.sameValue($x, ${simple2code(s)});")
       case (addr: Addr) => handleObject(addr, x)
@@ -130,12 +128,12 @@ case class Injector(
 
   // handle property names
   private def handlePropKeys(addr: Addr, path: String): Unit = {
-    val initSt = st.copy(globals = st.globals + (Id("input") -> addr))
-    val newSt = runInst(initSt, s"app result = (input.OwnPropertyKeys input)")
+    val newSt = st.copy(globals = st.globals + (Id("input") -> addr))
+    val newInterp = runInst(newSt, s"app result = (input.OwnPropertyKeys input)")
     val result = "result.Value"
-    val len = new Interp(newSt).interp(s"$result.length").asInstanceOf[INum].long.toInt
+    val len = newInterp.interp(s"$result.length").asInstanceOf[INum].long.toInt
     val array = (0 until len)
-      .map(k => new Interp(newSt).interp(s"""$result[${k}i]"""))
+      .map(k => newInterp.interp(s"""$result[${k}i]"""))
       .flatMap(_ match {
         case Str(str) => Some(s"'$str'")
         case addr: Addr => addrToName(addr)
@@ -189,19 +187,20 @@ case class Injector(
   }
 
   // run instructions
-  private def runInst(st: State, str: String): State = {
-    val inst = Inst(str)
-    //interp(st.copy(context = st.context.copy(insts = List(inst))))
-    ???
+  private def runInst(st: State, inst: String): Interp = {
+    val interp = new Interp(st)
+    interp.interp(Inst(inst), Nil)
+    interp.fixpoint
+    interp
   }
 
   // access properties
   private def access(st: State, base: Value, props: Value*): Value = {
-    println(base, props)
     props.foldLeft(base) {
       case (base, p: PureValue) => st(base, p) match {
         case x: Id => st(x)
         case ref: RefValue => st(ref)
+        case _ => warning; base
       }
       case _ => warning; base
     }
@@ -248,5 +247,5 @@ case class Injector(
     case x => warning; None
   }
 
-  def warning: Unit = ???
+  def warning: Unit = println("warning")
 }
