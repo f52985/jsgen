@@ -1,0 +1,6 @@
+{
+  "sourceType": "script",
+  "plugins": [
+    "@babel/plugin-syntax-import-assertions"
+  ]
+}

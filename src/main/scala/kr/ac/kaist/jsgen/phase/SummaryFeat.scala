@@ -43,7 +43,7 @@ case object SummaryFeat extends Phase[Map[String, Feature], SummaryFeatConfig, U
 
     val jsPattern = """script/.*\.js""".r
 
-    val origCnt = toCntMap(origResult.flatMap(jsPattern.findFirstIn))
+    val totalCnt = toCntMap(compResult.flatMap(jsPattern.findFirstIn))
     val origFailCnt = toCntMap(origResult.filter(_ contains "FAIL").flatMap(jsPattern.findFirstIn))
     val compFailCnt = toCntMap(compResult.filter(_ contains "FAIL").flatMap(jsPattern.findFirstIn))
 
@@ -51,13 +51,13 @@ case object SummaryFeat extends Phase[Map[String, Feature], SummaryFeatConfig, U
 
     features.foreach(feat => {
       val files = featMap.filter(_._2 == feat).keys.map(_.drop(PREFIX_LEN))
-      val total = count(origCnt, files)
+      val total = count(totalCnt, files)
       val origFail = count(origFailCnt, files)
       val compFail = count(compFailCnt, files)
       val diff = compFail - origFail
       val ratio = diff * 100.0 / total
-      val origLen = getAvgLen(files, s"$DESUGAR_DIR/")
-      val compLen = getAvgLen(files, s"$DESUGAR_DIR/compiled-")
+      val origLen = getAvgLen(files, s"$DESUGAR_DIR/min-")
+      val compLen = getAvgLen(files, s"$DESUGAR_DIR/min-compiled-")
 
       println(s"$feat $total $origFail $compFail $diff $ratio% $origLen $compLen")
     })

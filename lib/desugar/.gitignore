@@ -2,3 +2,5 @@ script/
 module/
 compiled-script/
 compiled-module/
+min-script/
+min-compiled-script/

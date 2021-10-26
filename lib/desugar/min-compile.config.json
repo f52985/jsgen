@@ -1,0 +1,9 @@
+{
+  "presets": ["@babel/env"],
+  "sourceType": "script",
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-syntax-import-assertions",
+    "@babel/plugin-proposal-class-static-block"
+  ]
+}
