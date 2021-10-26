@@ -162,7 +162,8 @@ case object Parse extends Phase[Unit, ParseConfig, Script] {
       })
         .map(stmts => stmts.map(stmt => {
           val parser = Parser.StatementListItem(ast.parserParams)
-          val str = if (stmt.startsWith("{")) s"($stmt)" else stmt
+          val illegal = List("{", "function", "async function", "class", "let [")
+          val str = if (illegal.exists(stmt.startsWith(_))) s"($stmt)" else stmt
           Parser.parse(parser, str).get
         }))
         .getOrElse(List(ast))
