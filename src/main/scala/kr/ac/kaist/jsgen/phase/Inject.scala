@@ -15,7 +15,7 @@ case object Inject extends Phase[State, InjectConfig, String] {
     st: State,
     jsgenConfig: JSGenConfig,
     config: InjectConfig
-  ): String = ???
+  ): String = Injector(st).result
 
   /*
   jsgenConfig.fileNames.headOption match {
