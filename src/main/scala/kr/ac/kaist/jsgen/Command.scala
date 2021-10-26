@@ -81,6 +81,12 @@ case object CmdEval extends Command("eval", CmdLoad >> IREval) {
   override def display(st: ir.State): Unit = println(st)
 }
 
+// eval
+case object CmdInject extends Command("inject", CmdEval >> Inject) {
+  def help = "constructs tests by injecting semantics assertions to given JavaScript program."
+  override def display(injected: String): Unit = println(injected)
+}
+
 // repl
 case object CmdREPL extends Command("repl", CmdLoad >> IRREPL) {
   def help = "performs REPL for a JavaScript file"

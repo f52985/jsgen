@@ -69,6 +69,7 @@ object JSGen {
     CmdParse,
     CmdLoad,
     CmdEval,
+    CmdInject,
     CmdREPL,
 
     // JSAVER
@@ -121,6 +122,9 @@ object JSGen {
     IRLoad,
     IREval,
     IRREPL,
+
+    // JEST
+    Inject,
 
     // JSTAR
     BuildCFG,
