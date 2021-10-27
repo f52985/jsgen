@@ -155,12 +155,12 @@ object Test262 {
   class HarnessRemover extends AssertRemover {
     import HarnessRemover._
 
-    // $DONE => function () {}, Test262Error => Error
+    // Test262Error, $DONE => function () {},
     override def transform(ast: PrimaryExpression): PrimaryExpression = ast match {
       case PrimaryExpression1(x0, ps, _) if x0.toString == $DONE =>
         Parser.parse(Parser.PrimaryExpression(ps), "(function(){})").get
       case PrimaryExpression1(x0, ps, _) if x0.toString == TEST262_ERROR =>
-        Parser.parse(Parser.PrimaryExpression(ps), "URIError").get
+        Parser.parse(Parser.PrimaryExpression(ps), "function(){}").get
       case _ => super.transform(ast)
     }
   }
