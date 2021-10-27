@@ -90,9 +90,11 @@ package object js {
   }
 
   // merge statements to script
-  def mergeStmtList(l: List[StatementListItem]): Option[StatementList] = l match {
+  def mergeStmtList(
+    l: List[StatementListItem],
+    params: List[Boolean] = List(false, false, false)
+  ): Option[StatementList] = l match {
     case a :: rest => {
-      val params = List(false, false, false)
       val init: StatementList = StatementList0(a, params, a.span)
       val list = rest.foldLeft(init) {
         case (x, y) =>
