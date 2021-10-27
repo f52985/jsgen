@@ -45,19 +45,19 @@ case class Injector(
 
   // handle variables
   private def handleVariable: Unit = for (x <- createdVars) {
-    interp.interp(s"$globalMap.$x.Value") match {
+    interp.interp(s"$globalMap.$x.Value").escaped match {
       case s: SimpleValue => append(s"$$assert.sameValue($x, ${simple2code(s)});")
-      case (addr: Addr) => handleObject(addr, x)
-      case _ =>
+      case addr: Addr => handleObject(addr, x)
+      case _ => warning;
     }
   }
 
   // handle lexical variables
   private def handleLet: Unit = for (x <- createdLets) {
-    interp.interp(s"$lexRecord.$x.BoundValue") match {
+    interp.interp(s"$lexRecord.$x.BoundValue").escaped match {
       case s: SimpleValue => append(s"$$assert.sameValue($x, ${simple2code(s)});")
-      case (addr: Addr) => handleObject(addr, x)
-      case _ =>
+      case addr: Addr => handleObject(addr, x)
+      case _ => warning;
     }
   }
 
@@ -128,7 +128,7 @@ case class Injector(
 
   // handle property names
   private def handlePropKeys(addr: Addr, path: String): Unit = {
-    val newSt = st.copy(globals = st.globals + (Id("input") -> addr))
+    val newSt = st.copy(globals = st.globals ++ Map(Id("input") -> addr))
     val newInterp = runInst(newSt, s"app result = (input.OwnPropertyKeys input)")
     val result = "result.Value"
     val len = newInterp.interp(s"$result.length").asInstanceOf[INum].long.toInt
@@ -155,16 +155,15 @@ case class Injector(
             for {
               field <- fields
               (value, _) <- props.get(Str(field))
-              //            } interp.escapeCompletion((value, st)) match {
-            } (value, st) match {
-              case (s: SimpleValue, _) => set += s"${field.toLowerCase}: ${simple2code(s)}"
-              case (addr: Addr, _) => field match {
+            } value.escaped match {
+              case s: SimpleValue => set += s"${field.toLowerCase}: ${simple2code(s)}"
+              case addr: Addr => field match {
                 case "Value" => handleObject(addr, s"$path[$propStr]")
                 case "Get" => handleObject(addr, s"Object.getOwnPropertyDescriptor($path, $propStr).get")
                 case "Set" => handleObject(addr, s"Object.getOwnPropertyDescriptor($path, $propStr).set")
                 case _ =>
               }
-              case _ => warning
+              case a => warning
             }
             val desc = set.mkString("{ ", ", ", "}")
             append(s"$$verifyProperty($path, $propStr, $desc);")
@@ -196,12 +195,10 @@ case class Injector(
 
   // access properties
   private def access(st: State, base: Value, props: Value*): Value = {
+    //case (base, p) => interp.getValue(st, interp.interp(base, p)(st)._1)._1
+
     props.foldLeft(base) {
-      case (base, p: PureValue) => st(base, p) match {
-        case x: Id => st(x)
-        case ref: RefValue => st(ref)
-        case _ => warning; base
-      }
+      case (base, p: PureValue) => st(base, p)
       case _ => warning; base
     }
   }
@@ -232,12 +229,10 @@ case class Injector(
   }
 
   // conversion to JS codes
-  private def simple2code(s: SimpleValue): String = s.toString
-  /*c match {
+  private def simple2code(s: SimpleValue): String = s match {
     case INum(n) => n.toString
-    case c => beautify(c)
+    case s => s.toString
   }
-  */
   private def val2code(value: Value): Option[String] = value match {
     case s: SimpleValue => Some(simple2code(s))
     case addr: Addr => addrToName(addr) match {
@@ -247,5 +242,5 @@ case class Injector(
     case x => warning; None
   }
 
-  def warning: Unit = println("warning")
+  def warning: Unit = { println("warning"); ??? }
 }
