@@ -91,6 +91,7 @@ object JSGen {
     // Directory Mode
     CmdDirParse,
     CmdDirEval,
+    CmdDirInject,
 
     // Feature
     CmdExtractFeat,
@@ -154,7 +155,9 @@ object JSGen {
     ("feature", BoolOption(c => FEATURE = true),
       "turn on the feature extracting mode."),
     ("time", BoolOption(c => c.time = true),
-      "display the duration time.")
+      "display the duration time."),
+    ("no-harness", BoolOption(c => c.noHarness = true),
+      "remove harness from test262 files")
   )
 
   // indentation
@@ -199,5 +202,6 @@ case class JSGenConfig(
   var args: List[String] = Nil,
   var silent: Boolean = false,
   var debug: Boolean = false,
-  var time: Boolean = false
+  var time: Boolean = false,
+  var noHarness: Boolean = false
 ) extends Config

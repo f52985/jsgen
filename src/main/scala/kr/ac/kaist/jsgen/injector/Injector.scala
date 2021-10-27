@@ -8,9 +8,7 @@ import kr.ac.kaist.jsgen.ir._
 import kr.ac.kaist.jsgen.ir.Parser._
 import kr.ac.kaist.jsgen.js.ast.Script
 
-case class Injector(
-  st: State
-) {
+case class Injector(fname: String, st: State) {
   // injected script
   lazy val result: String = {
     append(scriptStr)
@@ -24,10 +22,7 @@ case class Injector(
   implicit def str2expr(str: String): Expr = Expr(str)
 
   // script
-  private lazy val scriptStr = readFile(st.fnameOpt.get)
-
-  // initial state
-  // private lazy val initState = ModelHelper.initState(script)
+  private lazy val scriptStr = readFile(fname)
 
   // interpreter
   private lazy val interp = new Interp(st)

@@ -30,7 +30,7 @@ case object Parse extends Phase[Unit, ParseConfig, Script] {
     if (config.test262)
       ast = prependedTest262Harness(filename, ast)
 
-    if (config.removeHarness) {
+    if (jsgenConfig.noHarness) {
       ast = HarnessRemover(ast)
       dumpFile(ast, filename + ".no-harness")
     }
@@ -95,8 +95,6 @@ case object Parse extends Phase[Unit, ParseConfig, Script] {
       "use `esparse` instead of the generated parser."),
     ("test262", BoolOption(c => c.test262 = true),
       "prepend test262 harness files based on metadata."),
-    ("remove-harness", BoolOption(c => c.removeHarness = true),
-      "remove test262 harness."),
   )
 }
 
@@ -105,6 +103,5 @@ case class ParseConfig(
   var jsonFile: Option[String] = None,
   var esparse: Boolean = false,
   var test262: Boolean = false,
-  var pprint: Boolean = false,
-  var removeHarness: Boolean = false
+  var pprint: Boolean = false
 ) extends Config

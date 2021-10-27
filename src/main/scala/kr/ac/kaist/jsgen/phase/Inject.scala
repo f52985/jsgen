@@ -17,19 +17,25 @@ case object Inject extends Phase[State, InjectConfig, String] {
     jsgenConfig: JSGenConfig,
     config: InjectConfig
   ): String = {
-    val injected: String = Injector(st).result
-    config.dump.foreach(dumpFile(injected, _))
+    val jsname = st.fnameOpt.get
+    val fname = if (jsgenConfig.noHarness) jsname + ".no-harness" else jsname
+
+    val injected: String = Injector(fname, st).result
+
+    if (config.dump)
+      dumpFile(injected, jsname + ".injected")
+
     injected
   }
 
   def defaultConfig: InjectConfig = InjectConfig()
   val options: List[PhaseOption[InjectConfig]] = List(
-    ("dump", StrOption((c, s) => c.dump = Some(s)),
-      "dump injected script into the given file."),
+    ("dump", BoolOption(c => c.dump = true),
+      "dump injected script"),
   )
 }
 
 // Inject phase config
 case class InjectConfig(
-  var dump: Option[String] = None
+  var dump: Boolean = false
 ) extends Config

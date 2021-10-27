@@ -191,6 +191,10 @@ case object CmdDirParse extends DirCommand("parse-dir", CmdParse) {
 case object CmdDirEval extends DirCommand("eval-dir", CmdEval) {
   def help = "evaluates all javascript files in the given directory."
 }
+// inject-dir
+case object CmdDirInject extends DirCommand("inject-dir", CmdInject) {
+  def help = "inject tests to all javascript files in the given directory."
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 // Feature Extraction
