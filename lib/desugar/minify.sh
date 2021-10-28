@@ -13,5 +13,10 @@ function compile() {
   date +%"T"
 }
 
-compile "script" "min-script" "--config-file ./min.config.json --no-comments --minified"
-compile "script" "min-compiled-script" "--config-file ./min-compile.config.json --no-comments --minified"
+if [[ "$1" == "--no-harness" ]]; then
+  compile "no-harness-script" "no-harness-min-script" "--config-file ./min.config.json --no-comments --minified"
+  compile "no-harness-script" "no-harness-min-compiled-script" "--config-file ./min-compile.config.json --no-comments --minified"
+else
+  compile "script" "min-script" "--config-file ./min.config.json --no-comments --minified"
+  compile "script" "min-compiled-script" "--config-file ./min-compile.config.json --no-comments --minified"
+fi

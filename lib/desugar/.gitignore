@@ -1,6 +1,14 @@
 script/
 module/
+
 compiled-script/
 compiled-module/
+
 min-script/
 min-compiled-script/
+
+no-harness-script/
+no-harness-compiled-script/
+no-harness-min-script/
+no-harness-min-compiled-script/
+

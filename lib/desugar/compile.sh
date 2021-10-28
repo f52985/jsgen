@@ -13,5 +13,8 @@ function compile() {
   date +%"T"
 }
 
-compile "script" "compiled-script"
+in="${1:-script}"
+out="${2:-compiled-script}"
+
+compile $in $out
 #compile "module" "compiled-module" "--source-type module"
