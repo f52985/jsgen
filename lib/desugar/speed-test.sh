@@ -1,22 +1,30 @@
-test_dir="../../tests/js"
-filenames=`ls $test_dir/*.js`
+orig_dir="no-harness-script"
+comp_dir="no-harness-compiled-script"
 
-touch "temp-test.js"
-touch "speed-test.txt"
+date +%"T"
 
-date +%"T" > speed-test.txt
-
+#orig test
+filenames=`find $orig_dir -name "*.js"`
 for filename in $filenames; do
   code=$(< $filename)
-  echo "function test() {
-$code
-}
+  script="
 var start = performance.now();
-test();
+$code
 var end = performance.now();
-console.log('$filename, '+(end-start)+'ms');\n" > temp-test.js
-  node "temp-test.js" >> speed-test.txt
+console.log('$filename ' + (end-start) + ' ms');"
+  echo $script | node 2> /dev/null
 done
 
-date +%"T" >> speed-test.txt
-rm "temp-test.js"
+#comp test
+filenames=`find $comp_dir -name "*.js"`
+for filename in $filenames; do
+  code=$(< $filename)
+  script="
+var start = performance.now();
+$code
+var end = performance.now();
+console.log('$filename ' + (end-start) + ' ms');"
+  echo $script | node 2> /dev/null
+done
+
+date +%"T"

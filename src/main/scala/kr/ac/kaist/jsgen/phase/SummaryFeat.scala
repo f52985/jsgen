@@ -30,6 +30,14 @@ case object SummaryFeat extends Phase[Map[String, Feature], SummaryFeatConfig, U
     sum / cnt
   }
 
+  private def getAvgTime(timeMap: Map[String, Double], files: Iterable[String], prefix: String): Double = {
+    val (sum, cnt) = files.map(prefix + _).foldLeft((0.0, 0))({
+      case ((sum: Double, cnt: Int), f: String) => if (timeMap contains f) (sum + timeMap(f), cnt + 1) else (sum, cnt)
+    })
+
+    if (cnt > 0) sum / cnt else 0
+  }
+
   def apply(
     featMap: Map[String, Feature],
     jsgenConfig: JSGenConfig,
@@ -43,6 +51,8 @@ case object SummaryFeat extends Phase[Map[String, Feature], SummaryFeatConfig, U
     val origResult = readFile(s"$DESUGAR_RESULT_DIR/$origResultFile").split(LINE_SEP)
     val compResult = readFile(s"$DESUGAR_RESULT_DIR/$compResultFile").split(LINE_SEP)
 
+    val speedResult = readFile(s"$DESUGAR_RESULT_DIR/speed.txt").split(LINE_SEP)
+
     val PREFIX_LEN = 12 // lib/desugar/
     val jsPattern = """script/.*\.js""".r
 
@@ -50,7 +60,13 @@ case object SummaryFeat extends Phase[Map[String, Feature], SummaryFeatConfig, U
     val origFailCnt = toCntMap(origResult.filter(_ contains "FAIL").flatMap(jsPattern.findFirstIn))
     val compFailCnt = toCntMap(compResult.filter(_ contains "FAIL").flatMap(jsPattern.findFirstIn))
 
-    println("feat total origFail compFail diff ratio origLen commpLen")
+    val timeMap = speedResult.filter(_ contains "script").map(line => {
+      val f = line.split(" ")(0)
+      val time = line.split(" ")(1).toDouble
+      (f, time)
+    }).toMap
+
+    println("feat total origFail compFail diff ratio origLen commpLen origTime compTime")
 
     features.foreach(feat => {
       val files = featMap.filter(_._2 == feat).keys.map(_.drop(PREFIX_LEN))
@@ -59,10 +75,13 @@ case object SummaryFeat extends Phase[Map[String, Feature], SummaryFeatConfig, U
       val compFail = count(compFailCnt, files)
       val diff = compFail - origFail
       val ratio = diff * 100.0 / total
-      val origLen = getAvgLen(files, s"$DESUGAR_DIR/min-")
-      val compLen = getAvgLen(files, s"$DESUGAR_DIR/min-compiled-")
+      val NH_PREFIX = if (jsgenConfig.noHarness) "no-harness-" else ""
+      val origLen = getAvgLen(files, s"$DESUGAR_DIR/${NH_PREFIX}min-")
+      val compLen = getAvgLen(files, s"$DESUGAR_DIR/${NH_PREFIX}min-compiled-")
+      val origTime = getAvgTime(timeMap, files, NH_PREFIX)
+      val compTime = getAvgTime(timeMap, files, NH_PREFIX + "compiled-")
 
-      println(s"$feat $total $origFail $compFail $diff $ratio% $origLen $compLen")
+      println(s"$feat $total $origFail $compFail $diff $ratio% $origLen $compLen $origTime $compTime")
     })
   }
 
