@@ -37,10 +37,13 @@ case object SummaryFeat extends Phase[Map[String, Feature], SummaryFeatConfig, U
   ): Unit = {
     val features = featMap.foldLeft(Set[Feature]())({ case (features, (_, feat)) => features + feat })
 
-    val origResult = readFile(s"$DESUGAR_RESULT_DIR/test262.txt").split(LINE_SEP)
-    val compResult = readFile(s"$DESUGAR_RESULT_DIR/compiled-test262.txt").split(LINE_SEP)
-    val PREFIX_LEN = 12 // lib/desugar/
+    val origResultFile = if (jsgenConfig.noHarness) "no-harness.txt" else "test262.txt"
+    val compResultFile = if (jsgenConfig.noHarness) "no-harness-compiled.txt" else "compiled-test262.txt"
 
+    val origResult = readFile(s"$DESUGAR_RESULT_DIR/$origResultFile").split(LINE_SEP)
+    val compResult = readFile(s"$DESUGAR_RESULT_DIR/$compResultFile").split(LINE_SEP)
+
+    val PREFIX_LEN = 12 // lib/desugar/
     val jsPattern = """script/.*\.js""".r
 
     val totalCnt = toCntMap(compResult.flatMap(jsPattern.findFirstIn))
