@@ -11,7 +11,7 @@ import kr.ac.kaist.jsgen.js.ast.Script
 case class Injector(fname: String, st: State) {
   // injected script
   lazy val result: String = {
-    append(scriptStr)
+    //append(scriptStr)
     if (isAsync) startAsync
     handleVariable
     handleLet
