@@ -7,11 +7,12 @@ fi
 date +%"T"
 
 for file in `find script -name "*.injected"`; do
-  cat helper.js no-harness-compiled-${file%.injected} $file | node >/dev/null 2>/dev/null
-  if [ $? -eq 0 ]; then
+  msg=`cat helper.js no-harness-compiled-${file%.injected} $file | node 2>&1`
+  if [ -z "$msg" ]; then
     echo PASS $file
   else
     echo FAIL $file
+    echo $msg
   fi
 done
 
