@@ -12,13 +12,18 @@ case class Injector(fname: String, st: State) {
   // injected script
   lazy val result: String = {
     //append(scriptStr)
-    if (isAsync) startAsync
-    handleVariable
-    handleLet
-    if (isAsync) endAsync
+    if (isNormal) {
+      if (isAsync) startAsync
+      handleVariable
+      handleLet
+      if (isAsync) endAsync
+    } else {
+      injectError
+    }
     getString
   }
 
+  // Implcit conversion for interp.interp(str)
   implicit def str2expr(str: String): Expr = Expr(str)
 
   // script
@@ -178,6 +183,16 @@ case class Injector(fname: String, st: State) {
   }
   private def endAsync: Unit = {
     append("});")
+  }
+
+  // check if normal
+  lazy val isNormal: Boolean = {
+    interp.interp("result.Type") == CONST_NORMAL
+  }
+
+  // inject error
+  private def injectError: Unit = {
+    append("// Error")
   }
 
   // run instructions
