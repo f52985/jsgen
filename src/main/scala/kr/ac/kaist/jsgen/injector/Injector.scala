@@ -48,7 +48,7 @@ case class Injector(fname: String, st: State) {
     interp.interp(s"$globalMap.$x.Value").escaped match {
       case s: SimpleValue => append(s"$$assert.sameValue($x, ${simple2code(s)});")
       case addr: Addr => handleObject(addr, x)
-      case _ => warning;
+      case _ => warning
     }
   }
 
@@ -57,7 +57,7 @@ case class Injector(fname: String, st: State) {
     interp.interp(s"$lexRecord.$x.BoundValue").escaped match {
       case s: SimpleValue => append(s"$$assert.sameValue($x, ${simple2code(s)});")
       case addr: Addr => handleObject(addr, x)
-      case _ => warning;
+      case _ => warning
     }
   }
 
@@ -128,19 +128,23 @@ case class Injector(fname: String, st: State) {
 
   // handle property names
   private def handlePropKeys(addr: Addr, path: String): Unit = {
-    val newSt = st.copy(globals = st.globals ++ Map(Id("input") -> addr))
-    val newInterp = runInst(newSt, s"app result = (input.OwnPropertyKeys input)")
-    val result = "result.Value"
-    val len = newInterp.interp(s"$result.length").asInstanceOf[INum].long.toInt
-    val array = (0 until len)
-      .map(k => newInterp.interp(s"""$result[${k}i]"""))
-      .flatMap(_ match {
-        case Str(str) => Some(s"'$str'")
-        case addr: Addr => addrToName(addr)
-        case _ => None
-      })
-    if (array.length == len)
-      append(s"$$assert.compareArray(Reflect.ownKeys($path), ${array.mkString("[", ", ", "]")}, $path);")
+    try {
+      val newSt = st.copy(globals = st.globals ++ Map(Id("input") -> addr))
+      val newInterp = runInst(newSt, s"app result = (input.OwnPropertyKeys input)")
+      val result = "result.Value"
+      val len = newInterp.interp(s"$result.length").asInstanceOf[INum].long.toInt
+      val array = (0 until len)
+        .map(k => newInterp.interp(s"""$result[${k}i]"""))
+        .flatMap(_ match {
+          case Str(str) => Some(s"'$str'")
+          case addr: Addr => addrToName(addr)
+          case _ => None
+        })
+      if (array.length == len)
+        append(s"$$assert.compareArray(Reflect.ownKeys($path), ${array.mkString("[", ", ", "]")}, $path);")
+    } catch {
+      case _: Throwable => warning
+    }
   }
 
   // handle properties
@@ -252,5 +256,5 @@ case class Injector(fname: String, st: State) {
     case x => warning; None
   }
 
-  def warning: Unit = { println("warning"); ??? }
+  def warning: Unit = {}
 }
