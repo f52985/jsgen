@@ -45,8 +45,8 @@ case object SummaryFeat extends Phase[Map[String, Feature], SummaryFeatConfig, U
   ): Unit = {
     val features = featMap.foldLeft(Set[Feature]())({ case (features, (_, feat)) => features + feat })
 
-    val origResultFile = if (jsgenConfig.noHarness) "no-harness.txt" else "test262.txt"
-    val compResultFile = if (jsgenConfig.noHarness) "no-harness-compiled.txt" else "compiled-test262.txt"
+    val origResultFile = if (jsgenConfig.noHarness) "no-harness.txt" else "jest.txt"
+    val compResultFile = if (jsgenConfig.noHarness) "no-harness-compiled.txt" else "compiled-jest.txt"
 
     val origResult = readFile(s"$DESUGAR_RESULT_DIR/$origResultFile").split(LINE_SEP)
     val compResult = readFile(s"$DESUGAR_RESULT_DIR/$compResultFile").split(LINE_SEP)
