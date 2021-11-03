@@ -13,14 +13,15 @@ if [[ "$1" == "--compiled" ]]; then
   prefix="compiled-"
 fi
 
-for file in `find script -name "*.injected"`; do
-  if [[ `cat $file` != "// Error" ]]; then
+for assert in `find script -name "*.injected"`; do
+  script=$prefix${assert%.injected}
+  if [[ `cat $assert` != "// Error" ]]; then
     # Normal
-    msg=`cat helper.js $prefix${file%.injected} $file | timeout 1s node 2>&1`
+    msg=`cat helper.js $script $assert | timeout 1s node 2>&1`
     if [ $? -eq 0 ] && [ -z "$msg" ]; then 
-      echo PASS $file
+      echo PASS $script
     else
-      echo FAIL $file
+      echo FAIL $script
       if [ -z "$msg" ]; then
         msg="TIMEOUT"
       fi
@@ -28,12 +29,12 @@ for file in `find script -name "*.injected"`; do
     fi
   else
     #Error
-    msg=`cat $prefix${file%.injected} | timeout 1s node 2>&1`
+    msg=`(echo \"use strict\"\; ; cat $script) | timeout 1s node 2>&1`
     if [ $? -eq 0 ] && [ -z "$msg" ]; then
-      echo FAIL $file
+      echo FAIL $script
       echo "Error Expected but got no Error"
     else
-      echo PASS $file
+      echo PASS $script
     fi
   fi
 done

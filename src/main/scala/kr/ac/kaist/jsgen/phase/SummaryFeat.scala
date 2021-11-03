@@ -7,7 +7,7 @@ import kr.ac.kaist.jsgen.util._
 
 // SummaryFeat phase
 case object SummaryFeat extends Phase[Map[String, Feature], SummaryFeatConfig, Unit] {
-  val name = "sumamry-feat"
+  val name = "summary-feat"
   val help = "summarize information per feature."
 
   private def toCntMap(elems: Iterable[String]): Map[String, Int] = {
@@ -43,7 +43,7 @@ case object SummaryFeat extends Phase[Map[String, Feature], SummaryFeatConfig, U
     jsgenConfig: JSGenConfig,
     config: SummaryFeatConfig
   ): Unit = {
-    val features = featMap.foldLeft(Set[Feature]())({ case (features, (_, feat)) => features + feat })
+    val features = featMap.values.toSet
 
     val origResultFile = if (jsgenConfig.noHarness) "no-harness.txt" else "jest.txt"
     val compResultFile = if (jsgenConfig.noHarness) "no-harness-compiled.txt" else "compiled-jest.txt"
