@@ -1,0 +1,3010 @@
+22:19:36
+PASS compiled-script/1205.js
+PASS compiled-script/1483.js
+PASS compiled-script/635.js
+PASS compiled-script/365.js
+PASS compiled-script/398.js
+PASS compiled-script/207.js
+PASS compiled-script/757.js
+PASS compiled-script/481.js
+PASS compiled-script/1367.js
+PASS compiled-script/1637.js
+FAIL compiled-script/593.js
+descriptor should not be writable
+descriptor value should be "" but "_class"
+PASS compiled-script/1275.js
+PASS compiled-script/645.js
+PASS compiled-script/315.js
+FAIL compiled-script/948.js
+[stdin]:221
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:221:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+FAIL compiled-script/1591.js
+[stdin]:271
+          _iterator2 = _asyncIterator(Number(Symbol.iterator));
+                                      ^
+
+TypeError: Cannot convert a Symbol value to a number
+    at Number (<anonymous>)
+    at x$ ([stdin]:271:39)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:294:22)
+    at Generator.next (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:119:21)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at invoke (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:155:20)
+    at /Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:165:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+PASS compiled-script/727.js
+PASS compiled-script/1288.js
+PASS compiled-script/1317.js
+PASS compiled-script/1647.js
+PASS compiled-script/530.js
+PASS compiled-script/1619.js
+PASS compiled-script/65.js
+PASS compiled-script/1349.js
+PASS compiled-script/916.js
+PASS compiled-script/889.js
+PASS compiled-script/1450.js
+PASS compiled-script/229.js
+PASS compiled-script/784.js
+PASS compiled-script/874.js
+PASS compiled-script/1532.js
+PASS compiled-script/1062.js
+PASS compiled-script/98.js
+PASS compiled-script/452.js
+PASS compiled-script/102.js
+PASS compiled-script/15.js
+PASS compiled-script/1669.js
+PASS compiled-script/1339.js
+PASS compiled-script/540.js
+PASS compiled-script/696.js
+PASS compiled-script/966.js
+PASS compiled-script/709.js
+PASS compiled-script/259.js
+PASS compiled-script/1170.js
+PASS compiled-script/1420.js
+FAIL compiled-script/804.js
+descriptor should not be writable
+Expected function x() {} does not have [[Construct]] but does.
+Expected ["length", "name"] but got ["length", "name", "prototype"] in Nothing for Function.
+descriptor value should be "" but "_class"
+PASS compiled-script/1542.js
+FAIL compiled-script/1012.js
+[stdin]:207
+$assert.sameValue(Object.getPrototypeOf(x["x"]), AsyncFunction.prototype);
+                                                 ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:207:50)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/1694.js
+PASS compiled-script/172.js
+PASS compiled-script/1688.js
+PASS compiled-script/1247.js
+PASS compiled-script/818.js
+FAIL compiled-script/1191.js
+Expected function x() {} does not have [[Construct]] but does.
+Expected ["length", "name"] but got ["length", "name", "prototype"] in Nothing for Function.
+[stdin]:222
+$assert.sameValue(Object.getPrototypeOf(x["x"]), AsyncFunction.prototype);
+                                                 ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:222:50)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/327.js
+PASS compiled-script/677.js
+PASS compiled-script/715.js
+PASS compiled-script/245.js
+PASS compiled-script/193.js
+PASS compiled-script/1675.js
+PASS compiled-script/1325.js
+PASS compiled-script/84.js
+FAIL compiled-script/1237.js
+[stdin]:219
+$assert.sameValue(Object.getPrototypeOf(x["x"]), AsyncFunction.prototype);
+                                                 ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:219:50)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/868.js
+PASS compiled-script/798.js
+FAIL compiled-script/357.js
+[stdin]:196
+});$assert.sameValue(Object.getPrototypeOf(x), GeneratorFunction.prototype);
+                                               ^
+
+ReferenceError: GeneratorFunction is not defined
+    at [stdin]:196:48
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/607.js
+FAIL compiled-script/1083.js
+Error Expected but got no Error
+FAIL compiled-script/765.js
+Expected function (x) {} does not have [[Construct]] but does.
+Expected ["length", "name"] but got ["length", "name", "prototype"] in Nothing for Function.
+PASS compiled-script/235.js
+FAIL compiled-script/895.js
+[stdin]:184
+var x = Map.prototype.entries.call(new Map());$assert.sameValue(Object.getPrototypeOf(x), MapIteratorPrototype);
+                                                                                          ^
+
+ReferenceError: MapIteratorPrototype is not defined
+    at [stdin]:184:91
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/79.js
+PASS compiled-script/1605.js
+PASS compiled-script/1355.js
+PASS compiled-script/1294.js
+PASS compiled-script/572.js
+PASS compiled-script/27.js
+PASS compiled-script/954.js
+PASS compiled-script/1412.js
+PASS compiled-script/1142.js
+PASS compiled-script/296.js
+PASS compiled-script/659.js
+PASS compiled-script/309.js
+PASS compiled-script/1.js
+PASS compiled-script/1269.js
+PASS compiled-script/140.js
+PASS compiled-script/410.js
+PASS compiled-script/57.js
+PASS compiled-script/502.js
+PASS compiled-script/384.js
+PASS compiled-script/1462.js
+PASS compiled-script/1132.js
+PASS compiled-script/846.js
+PASS compiled-script/1050.js
+PASS compiled-script/1500.js
+PASS compiled-script/629.js
+PASS compiled-script/1386.js
+PASS compiled-script/130.js
+PASS compiled-script/460.js
+PASS compiled-script/1219.js
+PASS compiled-script/567.js
+PASS compiled-script/32.js
+PASS compiled-script/1281.js
+PASS compiled-script/1157.js
+PASS compiled-script/1407.js
+PASS compiled-script/1598.js
+PASS compiled-script/1565.js
+PASS compiled-script/1035.js
+PASS compiled-script/283.js
+PASS compiled-script/823.js
+FAIL compiled-script/405.js
+Error Expected but got no Error
+PASS compiled-script/155.js
+PASS compiled-script/42.js
+PASS compiled-script/517.js
+PASS compiled-script/488.js
+PASS compiled-script/1127.js
+PASS compiled-script/1477.js
+PASS compiled-script/391.js
+PASS compiled-script/931.js
+PASS compiled-script/1515.js
+PASS compiled-script/1045.js
+FAIL compiled-script/853.js
+[stdin]:203
+$assert.sameValue(Object.getPrototypeOf(x["x"]), GeneratorFunction.prototype);
+                                                 ^
+
+ReferenceError: GeneratorFunction is not defined
+    at [stdin]:203:50
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/475.js
+PASS compiled-script/125.js
+PASS compiled-script/1393.js
+PASS compiled-script/1252.js
+PASS compiled-script/662.js
+PASS compiled-script/992.js
+PASS compiled-script/1184.js
+FAIL compiled-script/1429.js
+[stdin]:256
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:256:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/1179.js
+PASS compiled-script/250.js
+PASS compiled-script/700.js
+PASS compiled-script/549.js
+PASS compiled-script/1330.js
+FAIL compiled-script/1660.js
+Error Expected but got no Error
+PASS compiled-script/186.js
+PASS compiled-script/1222.js
+FAIL compiled-script/91.js
+Expected function x(_x) {
+  return _x;
+} does not have [[Construct]] but does.
+Expected ["length", "name"] but got ["length", "name", "prototype"] in Nothing for Function.
+PASS compiled-script/612.js
+PASS compiled-script/220.js
+PASS compiled-script/770.js
+FAIL compiled-script/880.js
+[stdin]:184
+var x = Set.prototype.values.call(new Set());$assert.sameValue(Object.getPrototypeOf(x), SetIteratorPrototype);
+                                                                                         ^
+
+ReferenceError: SetIteratorPrototype is not defined
+    at [stdin]:184:90
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1459.js
+FAIL compiled-script/1109.js
+[stdin]:241
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:241:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+FAIL compiled-script/1096.js
+[stdin]:205
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:205:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/1610.js
+PASS compiled-script/539.js
+PASS compiled-script/525.js
+PASS compiled-script/903.js
+PASS compiled-script/1077.js
+PASS compiled-script/1527.js
+PASS compiled-script/791.js
+PASS compiled-script/861.js
+PASS compiled-script/117.js
+PASS compiled-script/447.js
+PASS compiled-script/555.js
+PASS compiled-script/1435.js
+FAIL compiled-script/1165.js
+undefined:1
+function () {
+^^^^^^^^
+
+SyntaxError: Function statements require a function name
+    at [stdin]:196:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/683.js
+PASS compiled-script/1007.js
+PASS compiled-script/1198.js
+PASS compiled-script/811.js
+PASS compiled-script/167.js
+PASS compiled-script/437.js
+PASS compiled-script/1681.js
+PASS compiled-script/1210.js
+PASS compiled-script/469.js
+PASS compiled-script/139.js
+PASS compiled-script/370.js
+PASS compiled-script/620.js
+PASS compiled-script/1509.js
+PASS compiled-script/1059.js
+FAIL compiled-script/1496.js
+[stdin]:210
+$assert.sameValue(Object.getPrototypeOf(x[Symbol.iterator]), GeneratorFunction.prototype);
+                                                             ^
+
+ReferenceError: GeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:210:62)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/742.js
+PASS compiled-script/212.js
+PASS compiled-script/1622.js
+PASS compiled-script/1372.js
+PASS compiled-script/494.js
+PASS compiled-script/419.js
+PASS compiled-script/149.js
+PASS compiled-script/1260.js
+PASS compiled-script/586.js
+PASS compiled-script/8.js
+PASS compiled-script/1579.js
+PASS compiled-script/1029.js
+PASS compiled-script/650.js
+PASS compiled-script/732.js
+PASS compiled-script/262.js
+FAIL compiled-script/1584.js
+undefined:1
+function () {
+^^^^^^^^
+
+SyntaxError: Function statements require a function name
+    at [stdin]:190:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/885.js
+PASS compiled-script/225.js
+PASS compiled-script/775.js
+PASS compiled-script/1093.js
+FAIL compiled-script/1345.js
+/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncIterator.js:5
+    if (Symbol.asyncIterator) method = iterable[Symbol.asyncIterator];
+                                               ^
+
+TypeError: Cannot read properties of undefined (reading 'Symbol(Symbol.asyncIterator)')
+    at _asyncIterator (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncIterator.js:5:48)
+    at x$ ([stdin]:209:23)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:294:22)
+    at Generator.next (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:119:21)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at invoke (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:155:20)
+    at /Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:190:11
+    at new Promise (<anonymous>)
+    at callInvokeWithMethodAndArg (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:189:16)
+PASS compiled-script/1615.js
+PASS compiled-script/1227.js
+PASS compiled-script/94.js
+PASS compiled-script/617.js
+PASS compiled-script/347.js
+PASS compiled-script/788.js
+PASS compiled-script/878.js
+PASS compiled-script/255.js
+PASS compiled-script/705.js
+PASS compiled-script/19.js
+PASS compiled-script/183.js
+PASS compiled-script/1257.js
+PASS compiled-script/1698.js
+PASS compiled-script/997.js
+PASS compiled-script/667.js
+PASS compiled-script/337.js
+PASS compiled-script/1181.js
+PASS compiled-script/808.js
+PASS compiled-script/369.js
+PASS compiled-script/639.js
+PASS compiled-script/1510.js
+PASS compiled-script/1040.js
+PASS compiled-script/856.js
+PASS compiled-script/1209.js
+PASS compiled-script/120.js
+PASS compiled-script/1396.js
+PASS compiled-script/512.js
+PASS compiled-script/47.js
+PASS compiled-script/1122.js
+PASS compiled-script/1472.js
+PASS compiled-script/934.js
+PASS compiled-script/394.js
+PASS compiled-script/1560.js
+PASS compiled-script/1030.js
+PASS compiled-script/319.js
+PASS compiled-script/826.js
+PASS compiled-script/286.js
+PASS compiled-script/400.js
+PASS compiled-script/150.js
+PASS compiled-script/37.js
+PASS compiled-script/562.js
+PASS compiled-script/1284.js
+PASS compiled-script/1152.js
+PASS compiled-script/944.js
+PASS compiled-script/737.js
+FAIL compiled-script/267.js
+descriptor should not be writable
+PASS compiled-script/1581.js
+FAIL compiled-script/958.js
+Error Expected but got no Error
+FAIL compiled-script/1657.js
+[stdin]:202
+          return x();
+                 ^
+
+TypeError: x is not a function
+    at _callee$ ([stdin]:202:18)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:294:22)
+    at Generator.next (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:119:21)
+    at asyncGeneratorStep (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncToGenerator.js:25:9)
+    at /Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncToGenerator.js:32:7
+    at new Promise (<anonymous>)
+    at Object.<anonymous> (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncToGenerator.js:21:12)
+    at Function.all (<anonymous>)
+PASS compiled-script/1307.js
+PASS compiled-script/1298.js
+PASS compiled-script/1265.js
+FAIL compiled-script/583.js
+[stdin]:205
+$assert.sameValue(Object.getPrototypeOf(x["0"]), AsyncFunction.prototype);
+                                                 ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:205:50)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/305.js
+PASS compiled-script/655.js
+PASS compiled-script/747.js
+PASS compiled-script/217.js
+PASS compiled-script/388.js
+PASS compiled-script/928.js
+PASS compiled-script/1627.js
+PASS compiled-script/1377.js
+PASS compiled-script/491.js
+FAIL compiled-script/1215.js
+descriptor value should be "" but "_target"
+descriptor should not be writable
+FAIL compiled-script/625.js
+[stdin]:214
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:214:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/1493.js
+PASS compiled-script/1002.js
+PASS compiled-script/1552.js
+PASS compiled-script/814.js
+PASS compiled-script/162.js
+PASS compiled-script/432.js
+PASS compiled-script/1684.js
+PASS compiled-script/550.js
+FAIL compiled-script/1329.js
+[stdin]:251
+$assert.sameValue(Object.getPrototypeOf(Object.getPrototypeOf(x)), AsyncGenerator.prototype);
+                                                                   ^
+
+ReferenceError: AsyncGenerator is not defined
+    at Timeout._onTimeout ([stdin]:251:68)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/1679.js
+PASS compiled-script/1430.js
+PASS compiled-script/1160.js
+PASS compiled-script/249.js
+FAIL compiled-script/719.js
+descriptor should not be writable
+PASS compiled-script/976.js
+PASS compiled-script/686.js
+PASS compiled-script/1072.js
+PASS compiled-script/1522.js
+PASS compiled-script/864.js
+PASS compiled-script/794.js
+PASS compiled-script/442.js
+PASS compiled-script/88.js
+PASS compiled-script/1359.js
+PASS compiled-script/1609.js
+PASS compiled-script/75.js
+PASS compiled-script/520.js
+FAIL compiled-script/239.js
+[stdin]:208
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:208:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/769.js
+PASS compiled-script/899.js
+PASS compiled-script/906.js
+PASS compiled-script/801.js
+PASS compiled-script/1188.js
+PASS compiled-script/1547.js
+PASS compiled-script/1017.js
+PASS compiled-script/1691.js
+PASS compiled-script/427.js
+PASS compiled-script/177.js
+PASS compiled-script/545.js
+PASS compiled-script/10.js
+PASS compiled-script/963.js
+PASS compiled-script/693.js
+PASS compiled-script/1175.js
+PASS compiled-script/1425.js
+PASS compiled-script/871.js
+PASS compiled-script/781.js
+PASS compiled-script/1537.js
+FAIL compiled-script/1067.js
+[stdin]:219
+$assert.sameValue(Object.getPrototypeOf(x["x"]), GeneratorFunction.prototype);
+                                                 ^
+
+ReferenceError: GeneratorFunction is not defined
+    at [stdin]:219:50
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/457.js
+PASS compiled-script/107.js
+PASS compiled-script/535.js
+PASS compiled-script/913.js
+FAIL compiled-script/1105.js
+undefined:1
+function () {
+^^^^^^^^
+
+SyntaxError: Function statements require a function name
+    at [stdin]:196:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+FAIL compiled-script/1455.js
+[stdin]:280
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:280:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/1594.js
+PASS compiled-script/272.js
+PASS compiled-script/722.js
+PASS compiled-script/596.js
+PASS compiled-script/1270.js
+PASS compiled-script/159.js
+FAIL compiled-script/409.js
+Expected [] but got ["stack"] in Nothing for Error.
+PASS compiled-script/640.js
+FAIL compiled-script/310.js
+[stdin]:208
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:208:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/1039.js
+PASS compiled-script/1569.js
+PASS compiled-script/752.js
+PASS compiled-script/484.js
+PASS compiled-script/1362.js
+PASS compiled-script/1632.js
+PASS compiled-script/129.js
+PASS compiled-script/479.js
+PASS compiled-script/1200.js
+PASS compiled-script/1486.js
+PASS compiled-script/1049.js
+FAIL compiled-script/1519.js
+[stdin]:226
+            return _context2.abrupt("return", BigInt('x'));
+                                              ^
+
+SyntaxError: Cannot convert x to a BigInt
+    at BigInt (<anonymous>)
+    at _callee2$ ([stdin]:226:47)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:294:22)
+    at Generator.next (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:119:21)
+    at asyncGeneratorStep (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncToGenerator.js:25:9)
+    at /Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncToGenerator.js:32:7
+    at new Promise (<anonymous>)
+    at /Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncToGenerator.js:21:12
+PASS compiled-script/630.js
+PASS compiled-script/360.js
+PASS compiled-script/843.js
+PASS compiled-script/1055.js
+PASS compiled-script/1505.js
+PASS compiled-script/1383.js
+FAIL compiled-script/135.js
+Expected function x() {
+  return x;
+} does not have [[Construct]] but does.
+Expected ["length", "name"] but got ["length", "name", "prototype"] in Nothing for Function.
+PASS compiled-script/465.js
+PASS compiled-script/498.js
+PASS compiled-script/507.js
+PASS compiled-script/52.js
+PASS compiled-script/1467.js
+PASS compiled-script/1137.js
+PASS compiled-script/833.js
+PASS compiled-script/293.js
+PASS compiled-script/1025.js
+PASS compiled-script/1575.js
+PASS compiled-script/4.js
+PASS compiled-script/415.js
+PASS compiled-script/1291.js
+FAIL compiled-script/22.js
+Error Expected but got no Error
+FAIL compiled-script/577.js
+[stdin]:214
+}$assert.sameValue(Object.getPrototypeOf(Object.getPrototypeOf(x)), Generator.prototype);
+                                                                    ^
+
+ReferenceError: Generator is not defined
+    at [stdin]:214:69
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1588.js
+PASS compiled-script/951.js
+PASS compiled-script/1417.js
+PASS compiled-script/1147.js
+PASS compiled-script/1086.js
+PASS compiled-script/1119.js
+PASS compiled-script/1449.js
+PASS compiled-script/890.js
+PASS compiled-script/760.js
+PASS compiled-script/230.js
+PASS compiled-script/529.js
+PASS compiled-script/1600.js
+PASS compiled-script/1350.js
+PASS compiled-script/81.js
+PASS compiled-script/1232.js
+PASS compiled-script/352.js
+PASS compiled-script/602.js
+PASS compiled-script/710.js
+PASS compiled-script/240.js
+PASS compiled-script/1169.js
+PASS compiled-script/1439.js
+PASS compiled-script/196.js
+PASS compiled-script/1670.js
+PASS compiled-script/1320.js
+PASS compiled-script/1242.js
+PASS compiled-script/1194.js
+PASS compiled-script/982.js
+PASS compiled-script/322.js
+PASS compiled-script/672.js
+PASS compiled-script/1528.js
+PASS compiled-script/1078.js
+PASS compiled-script/351.js
+PASS compiled-script/601.js
+PASS compiled-script/82.js
+PASS compiled-script/448.js
+PASS compiled-script/118.js
+PASS compiled-script/1231.js
+PASS compiled-script/1603.js
+PASS compiled-script/1353.js
+PASS compiled-script/1085.js
+PASS compiled-script/763.js
+PASS compiled-script/233.js
+PASS compiled-script/893.js
+PASS compiled-script/1197.js
+PASS compiled-script/321.js
+PASS compiled-script/671.js
+PASS compiled-script/981.js
+PASS compiled-script/1558.js
+PASS compiled-script/1008.js
+PASS compiled-script/1241.js
+PASS compiled-script/438.js
+PASS compiled-script/168.js
+PASS compiled-script/195.js
+PASS compiled-script/1673.js
+PASS compiled-script/713.js
+PASS compiled-script/243.js
+PASS compiled-script/382.js
+PASS compiled-script/922.js
+PASS compiled-script/1464.js
+FAIL compiled-script/1134.js
+[stdin]:235
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:235:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+FAIL compiled-script/51.js
+descriptor should not be writable
+FAIL compiled-script/504.js
+[stdin]:209
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:209:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/1380.js
+PASS compiled-script/136.js
+PASS compiled-script/466.js
+FAIL compiled-script/840.js
+descriptor should not be writable
+PASS compiled-script/1056.js
+FAIL compiled-script/1506.js
+[stdin]:227
+$assert.sameValue(Object.getPrototypeOf(x["x"]), AsyncFunction.prototype);
+                                                 ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:227:50)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/952.js
+PASS compiled-script/1414.js
+PASS compiled-script/1292.js
+PASS compiled-script/574.js
+PASS compiled-script/21.js
+PASS compiled-script/7.js
+PASS compiled-script/589.js
+PASS compiled-script/416.js
+PASS compiled-script/290.js
+PASS compiled-script/830.js
+PASS compiled-script/1026.js
+PASS compiled-script/1576.js
+PASS compiled-script/643.js
+PASS compiled-script/313.js
+PASS compiled-script/595.js
+PASS compiled-script/1273.js
+PASS compiled-script/1311.js
+PASS compiled-script/568.js
+PASS compiled-script/1597.js
+PASS compiled-script/271.js
+PASS compiled-script/721.js
+PASS compiled-script/1408.js
+PASS compiled-script/1158.js
+PASS compiled-script/1485.js
+PASS compiled-script/633.js
+PASS compiled-script/363.js
+PASS compiled-script/1203.js
+PASS compiled-script/518.js
+PASS compiled-script/1361.js
+PASS compiled-script/1631.js
+PASS compiled-script/1128.js
+PASS compiled-script/201.js
+PASS compiled-script/751.js
+PASS compiled-script/690.js
+PASS compiled-script/960.js
+PASS compiled-script/1176.js
+FAIL compiled-script/1426.js
+Error Expected but got no Error
+PASS compiled-script/189.js
+PASS compiled-script/13.js
+PASS compiled-script/546.js
+PASS compiled-script/1692.js
+FAIL compiled-script/424.js
+[stdin]:210
+$assert.sameValue(Object.getPrototypeOf(x["x"]), AsyncGeneratorFunction.prototype);
+                                                 ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:210:50)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/802.js
+FAIL compiled-script/1544.js
+undefined:1
+function () {
+^^^^^^^^
+
+SyntaxError: Function statements require a function name
+    at [stdin]:190:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1099.js
+PASS compiled-script/910.js
+PASS compiled-script/1106.js
+PASS compiled-script/1456.js
+FAIL compiled-script/536.js
+Error Expected but got no Error
+PASS compiled-script/63.js
+PASS compiled-script/454.js
+PASS compiled-script/104.js
+PASS compiled-script/782.js
+PASS compiled-script/872.js
+PASS compiled-script/1534.js
+PASS compiled-script/1064.js
+PASS compiled-script/1433.js
+PASS compiled-script/1163.js
+PASS compiled-script/685.js
+PASS compiled-script/975.js
+PASS compiled-script/161.js
+PASS compiled-script/431.js
+FAIL compiled-script/1248.js
+Expected function () {} does not have [[Construct]] but does.
+Expected ["length", "name"] but got ["length", "name", "prototype"] in Nothing for Function.
+descriptor value should be "x" but ""
+PASS compiled-script/1687.js
+PASS compiled-script/1001.js
+PASS compiled-script/988.js
+PASS compiled-script/1551.js
+PASS compiled-script/678.js
+PASS compiled-script/328.js
+PASS compiled-script/817.js
+FAIL compiled-script/1443.js
+Error Expected but got no Error
+FAIL compiled-script/1113.js
+Error Expected but got no Error
+PASS compiled-script/905.js
+PASS compiled-script/523.js
+PASS compiled-script/76.js
+PASS compiled-script/1238.js
+PASS compiled-script/111.js
+PASS compiled-script/441.js
+PASS compiled-script/608.js
+PASS compiled-script/358.js
+PASS compiled-script/1071.js
+PASS compiled-script/1521.js
+PASS compiled-script/797.js
+PASS compiled-script/867.js
+PASS compiled-script/306.js
+PASS compiled-script/656.js
+PASS compiled-script/839.js
+PASS compiled-script/299.js
+PASS compiled-script/1266.js
+PASS compiled-script/580.js
+PASS compiled-script/1654.js
+PASS compiled-script/28.js
+PASS compiled-script/1304.js
+PASS compiled-script/734.js
+FAIL compiled-script/264.js
+Error Expected but got no Error
+FAIL compiled-script/1582.js
+[stdin]:192
+var x = Promise.all((_Promise$all = {}, _defineProperty(_Promise$all, Symbol.asyncIterator, function (x) {}), _defineProperty(_Promise$all, Symbol.iterator, _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee() {
+                ^
+
+TypeError: undefined is not a function
+    at Function.all (<anonymous>)
+    at [stdin]:192:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS compiled-script/376.js
+PASS compiled-script/626.js
+PASS compiled-script/849.js
+PASS compiled-script/1490.js
+PASS compiled-script/1216.js
+PASS compiled-script/1389.js
+PASS compiled-script/58.js
+PASS compiled-script/1624.js
+PASS compiled-script/1374.js
+PASS compiled-script/492.js
+PASS compiled-script/744.js
+FAIL compiled-script/214.js
+descriptor should not be writable
+PASS compiled-script/758.js
+FAIL compiled-script/208.js
+Error Expected but got no Error
+PASS compiled-script/1121.js
+PASS compiled-script/397.js
+PASS compiled-script/937.js
+PASS compiled-script/1638.js
+PASS compiled-script/44.js
+PASS compiled-script/1368.js
+PASS compiled-script/511.js
+FAIL compiled-script/473.js
+[stdin]:207
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:207:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/1395.js
+PASS compiled-script/1513.js
+PASS compiled-script/1043.js
+PASS compiled-script/1151.js
+PASS compiled-script/1401.js
+PASS compiled-script/728.js
+PASS compiled-script/278.js
+PASS compiled-script/947.js
+PASS compiled-script/561.js
+PASS compiled-script/34.js
+PASS compiled-script/1648.js
+PASS compiled-script/1318.js
+PASS compiled-script/1287.js
+FAIL compiled-script/403.js
+Error Expected but got no Error
+PASS compiled-script/153.js
+PASS compiled-script/1563.js
+PASS compiled-script/1033.js
+PASS compiled-script/285.js
+PASS compiled-script/825.js
+PASS compiled-script/344.js
+PASS compiled-script/1224.js
+PASS compiled-script/97.js
+FAIL compiled-script/1346.js
+Error Expected but got no Error
+PASS compiled-script/226.js
+PASS compiled-script/776.js
+FAIL compiled-script/886.js
+undefined:1
+function () {
+^^^^^^^^
+
+SyntaxError: Function statements require a function name
+    at [stdin]:184:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/919.js
+PASS compiled-script/1090.js
+PASS compiled-script/664.js
+PASS compiled-script/334.js
+PASS compiled-script/994.js
+PASS compiled-script/1182.js
+PASS compiled-script/1254.js
+PASS compiled-script/1336.js
+PASS compiled-script/1666.js
+PASS compiled-script/180.js
+PASS compiled-script/256.js
+PASS compiled-script/706.js
+PASS compiled-script/969.js
+PASS compiled-script/699.js
+PASS compiled-script/1621.js
+PASS compiled-script/1371.js
+PASS compiled-script/508.js
+PASS compiled-script/497.js
+PASS compiled-script/741.js
+FAIL compiled-script/211.js
+Expected ["message"] but got ["stack", "message"] in Nothing for Error.
+PASS compiled-script/1138.js
+FAIL compiled-script/1468.js
+undefined:1
+function () {
+^^^^^^^^
+
+SyntaxError: Function statements require a function name
+    at [stdin]:190:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/373.js
+PASS compiled-script/623.js
+PASS compiled-script/1495.js
+PASS compiled-script/1213.js
+PASS compiled-script/578.js
+PASS compiled-script/1651.js
+PASS compiled-script/1301.js
+FAIL compiled-script/1148.js
+Error Expected but got no Error
+PASS compiled-script/1418.js
+PASS compiled-script/731.js
+PASS compiled-script/261.js
+PASS compiled-script/1587.js
+FAIL compiled-script/303.js
+Error Expected but got no Error
+PASS compiled-script/653.js
+PASS compiled-script/1263.js
+PASS compiled-script/585.js
+PASS compiled-script/114.js
+PASS compiled-script/444.js
+PASS compiled-script/1074.js
+PASS compiled-script/1524.js
+PASS compiled-script/862.js
+PASS compiled-script/792.js
+PASS compiled-script/1446.js
+PASS compiled-script/1116.js
+FAIL compiled-script/900.js
+[stdin]:184
+var x = Set.prototype.entries.call(new Set());$assert.sameValue(Object.getPrototypeOf(x), SetIteratorPrototype);
+                                                                                          ^
+
+ReferenceError: SetIteratorPrototype is not defined
+    at [stdin]:184:91
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1089.js
+PASS compiled-script/73.js
+PASS compiled-script/526.js
+PASS compiled-script/164.js
+PASS compiled-script/434.js
+PASS compiled-script/1682.js
+PASS compiled-script/1004.js
+PASS compiled-script/1554.js
+FAIL compiled-script/812.js
+Expected function (x) {} does not have [[Construct]] but does.
+Expected ["length", "name"] but got ["length", "name", "prototype"] in Nothing for Function.
+descriptor value should be "x" but ""
+PASS compiled-script/1436.js
+PASS compiled-script/1166.js
+PASS compiled-script/970.js
+PASS compiled-script/680.js
+PASS compiled-script/556.js
+PASS compiled-script/199.js
+PASS compiled-script/1333.js
+PASS compiled-script/1663.js
+PASS compiled-script/185.js
+PASS compiled-script/253.js
+PASS compiled-script/703.js
+PASS compiled-script/1018.js
+PASS compiled-script/1548.js
+PASS compiled-script/661.js
+PASS compiled-script/331.js
+PASS compiled-script/178.js
+FAIL compiled-script/1251.js
+[stdin]:208
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:208:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/1343.js
+PASS compiled-script/1613.js
+PASS compiled-script/883.js
+PASS compiled-script/223.js
+PASS compiled-script/773.js
+FAIL compiled-script/1095.js
+Expected function () { [native code] } does not have [[Construct]] but does.
+PASS compiled-script/611.js
+PASS compiled-script/341.js
+PASS compiled-script/1068.js
+PASS compiled-script/1538.js
+PASS compiled-script/1221.js
+PASS compiled-script/108.js
+PASS compiled-script/92.js
+FAIL compiled-script/406.js
+Error Expected but got no Error
+PASS compiled-script/156.js
+PASS compiled-script/599.js
+PASS compiled-script/1566.js
+PASS compiled-script/1036.js
+PASS compiled-script/820.js
+PASS compiled-script/280.js
+PASS compiled-script/1154.js
+FAIL compiled-script/1404.js
+descriptor value should be "bound " but "bound _class"
+PASS compiled-script/942.js
+PASS compiled-script/31.js
+PASS compiled-script/564.js
+PASS compiled-script/1282.js
+PASS compiled-script/476.js
+PASS compiled-script/126.js
+FAIL compiled-script/1390.js
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+PASS compiled-script/1046.js
+PASS compiled-script/1489.js
+PASS compiled-script/850.js
+PASS compiled-script/1124.js
+PASS compiled-script/1474.js
+PASS compiled-script/932.js
+FAIL compiled-script/392.js
+[stdin]:184
+var x = Promise.race(0);$delay(() => {
+                ^
+
+TypeError: number 0 is not iterable (cannot read property Symbol(Symbol.iterator))
+    at Function.race (<anonymous>)
+    at [stdin]:184:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS compiled-script/514.js
+PASS compiled-script/41.js
+PASS compiled-script/2.js
+PASS compiled-script/143.js
+PASS compiled-script/413.js
+PASS compiled-script/835.js
+PASS compiled-script/295.js
+PASS compiled-script/1023.js
+PASS compiled-script/957.js
+PASS compiled-script/268.js
+PASS compiled-script/738.js
+PASS compiled-script/1411.js
+PASS compiled-script/1141.js
+PASS compiled-script/1297.js
+PASS compiled-script/24.js
+PASS compiled-script/1658.js
+PASS compiled-script/571.js
+PASS compiled-script/1385.js
+PASS compiled-script/133.js
+PASS compiled-script/463.js
+PASS compiled-script/1503.js
+PASS compiled-script/927.js
+PASS compiled-script/387.js
+PASS compiled-script/1461.js
+PASS compiled-script/1131.js
+PASS compiled-script/218.js
+PASS compiled-script/748.js
+FAIL compiled-script/501.js
+[stdin]:184
+var x = Promise.allSettled(0);$delay(() => {
+                ^
+
+TypeError: number 0 is not iterable (cannot read property Symbol(Symbol.iterator))
+    at Function.allSettled (<anonymous>)
+    at [stdin]:184:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS compiled-script/1378.js
+PASS compiled-script/1628.js
+PASS compiled-script/54.js
+PASS compiled-script/190.js
+PASS compiled-script/1676.js
+PASS compiled-script/1326.js
+PASS compiled-script/689.js
+PASS compiled-script/979.js
+PASS compiled-script/716.js
+FAIL compiled-script/246.js
+descriptor should not be writable
+PASS compiled-script/1192.js
+PASS compiled-script/984.js
+PASS compiled-script/324.js
+FAIL compiled-script/674.js
+/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/classCallCheck.js:3
+    throw new TypeError("Cannot call a class as a function");
+          ^
+
+TypeError: Cannot call a class as a function
+    at _classCallCheck (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/classCallCheck.js:3:11)
+    at x ([stdin]:192:5)
+    at new Promise (<anonymous>)
+    at [stdin]:188:9
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+PASS compiled-script/1244.js
+PASS compiled-script/1606.js
+FAIL compiled-script/1356.js
+[stdin]:248
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:248:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/1080.js
+PASS compiled-script/909.js
+PASS compiled-script/896.js
+PASS compiled-script/766.js
+PASS compiled-script/236.js
+PASS compiled-script/354.js
+PASS compiled-script/604.js
+PASS compiled-script/87.js
+PASS compiled-script/1234.js
+PASS compiled-script/451.js
+PASS compiled-script/101.js
+PASS compiled-script/1228.js
+FAIL compiled-script/877.js
+[stdin]:184
+var x = Map.prototype.values.call(new Map());$assert.sameValue(Object.getPrototypeOf(x), MapIteratorPrototype);
+                                                                                         ^
+
+ReferenceError: MapIteratorPrototype is not defined
+    at [stdin]:184:90
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1531.js
+PASS compiled-script/1061.js
+PASS compiled-script/618.js
+PASS compiled-script/915.js
+PASS compiled-script/1103.js
+PASS compiled-script/66.js
+FAIL compiled-script/533.js
+undefined:1
+function (_x) {
+^^^^^^^^
+
+SyntaxError: Function statements require a function name
+    at [stdin]:188:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+FAIL compiled-script/1697.js
+descriptor value should be "[Symbol.toPrimitive]" but ""
+[stdin]:231
+$assert.sameValue(Object.getPrototypeOf(Object.getOwnPropertyDescriptor(x, "[object Object]").get), GeneratorFunction.prototype);
+                                                                                                    ^
+
+ReferenceError: GeneratorFunction is not defined
+    at [stdin]:231:101
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1258.js
+PASS compiled-script/421.js
+PASS compiled-script/171.js
+PASS compiled-script/807.js
+PASS compiled-script/338.js
+FAIL compiled-script/1541.js
+[stdin]:221
+          Symbol.toPrimitive = _step.value;
+                             ^
+
+TypeError: Cannot assign to read only property 'toPrimitive' of function 'function Symbol() { [native code] }'
+    at x$ ([stdin]:221:30)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:294:22)
+    at Generator.next (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:119:21)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at invoke (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:155:20)
+    at /Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:165:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+FAIL compiled-script/998.js
+[stdin]:277
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:277:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/1011.js
+PASS compiled-script/965.js
+PASS compiled-script/695.js
+PASS compiled-script/1173.js
+FAIL compiled-script/1423.js
+[stdin]:201
+$assert.sameValue(Object.getPrototypeOf(Object.getPrototypeOf(x["4"])), Generator.prototype);
+                                                                        ^
+
+ReferenceError: Generator is not defined
+    at [stdin]:201:73
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/543.js
+PASS compiled-script/16.js
+PASS compiled-script/482.js
+PASS compiled-script/1364.js
+PASS compiled-script/48.js
+PASS compiled-script/1634.js
+FAIL compiled-script/754.js
+[stdin]:217
+}$assert.sameValue(Object.getPrototypeOf(Object.getPrototypeOf(x)), Generator.prototype);
+                                                                    ^
+
+ReferenceError: Generator is not defined
+    at [stdin]:217:69
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+FAIL compiled-script/1480.js
+undefined:1
+function () {
+^^^^^^^^
+
+SyntaxError: Function statements require a function name
+    at [stdin]:186:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/859.js
+PASS compiled-script/366.js
+PASS compiled-script/1399.js
+PASS compiled-script/1314.js
+PASS compiled-script/1644.js
+PASS compiled-script/38.js
+PASS compiled-script/1592.js
+PASS compiled-script/274.js
+PASS compiled-script/724.js
+PASS compiled-script/289.js
+PASS compiled-script/829.js
+PASS compiled-script/646.js
+PASS compiled-script/316.js
+PASS compiled-script/590.js
+PASS compiled-script/1146.js
+FAIL compiled-script/23.js
+[stdin]:184
+var _await;$assert.sameValue(await, undefined);
+                             ^
+
+ReferenceError: await is not defined
+    at [stdin]:184:30
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/576.js
+FAIL compiled-script/1290.js
+Expected function () {} does not have [[Construct]] but does.
+Expected ["length", "name"] but got ["length", "name", "prototype"] in Nothing for Function.
+PASS compiled-script/414.js
+PASS compiled-script/144.js
+PASS compiled-script/5.js
+PASS compiled-script/832.js
+PASS compiled-script/292.js
+FAIL compiled-script/1136.js
+Error Expected but got no Error
+PASS compiled-script/1466.js
+PASS compiled-script/920.js
+PASS compiled-script/380.js
+PASS compiled-script/506.js
+PASS compiled-script/53.js
+PASS compiled-script/499.js
+PASS compiled-script/464.js
+FAIL compiled-script/134.js
+Expected function x(_x) {} does not have [[Construct]] but does.
+Expected ["length", "name"] but got ["length", "name", "prototype"] in Nothing for Function.
+PASS compiled-script/1504.js
+PASS compiled-script/1054.js
+FAIL compiled-script/842.js
+[stdin]:221
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:221:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/983.js
+PASS compiled-script/673.js
+PASS compiled-script/323.js
+FAIL compiled-script/1243.js
+[stdin]:242
+}$assert.sameValue(Object.getPrototypeOf(Object.getPrototypeOf(x)), Generator.prototype);
+                                                                    ^
+
+ReferenceError: Generator is not defined
+    at [stdin]:242:69
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1321.js
+PASS compiled-script/1671.js
+PASS compiled-script/558.js
+FAIL compiled-script/197.js
+Expected function x() {} does not have [[Construct]] but does.
+Expected ["length", "name"] but got ["length", "name", "prototype"] in Nothing for Function.
+descriptor should not be writable
+PASS compiled-script/241.js
+PASS compiled-script/711.js
+PASS compiled-script/1438.js
+PASS compiled-script/1168.js
+PASS compiled-script/603.js
+PASS compiled-script/353.js
+FAIL compiled-script/1233.js
+Error Expected but got no Error
+PASS compiled-script/80.js
+FAIL compiled-script/528.js
+Error Expected but got no Error
+FAIL compiled-script/1351.js
+[stdin]:192
+_objectDestructuringEmpty(_x.slice(2));$assert.sameValue(Object.getPrototypeOf(x), ArrayIteratorPrototype);
+                                                                                   ^
+
+ReferenceError: ArrayIteratorPrototype is not defined
+    at [stdin]:192:84
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1601.js
+PASS compiled-script/1448.js
+PASS compiled-script/891.js
+FAIL compiled-script/231.js
+Expected function x(_x) {} does not have [[Construct]] but does.
+Expected ["length", "name"] but got ["length", "name", "prototype"] in Nothing for Function.
+PASS compiled-script/761.js
+PASS compiled-script/1087.js
+PASS compiled-script/1454.js
+PASS compiled-script/1104.js
+FAIL compiled-script/912.js
+[stdin]:184
+var x = Array.prototype.keys.call(new Array());$assert.sameValue(Object.getPrototypeOf(x), ArrayIteratorPrototype);
+                                                                                           ^
+
+ReferenceError: ArrayIteratorPrototype is not defined
+    at [stdin]:184:92
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/61.js
+PASS compiled-script/534.js
+PASS compiled-script/106.js
+PASS compiled-script/1066.js
+PASS compiled-script/1536.js
+PASS compiled-script/870.js
+PASS compiled-script/780.js
+PASS compiled-script/1424.js
+PASS compiled-script/1174.js
+FAIL compiled-script/962.js
+[stdin]:184
+var x = Array.prototype.entries.call(new Array());$assert.sameValue(Object.getPrototypeOf(x), ArrayIteratorPrototype);
+                                                                                              ^
+
+ReferenceError: ArrayIteratorPrototype is not defined
+    at [stdin]:184:95
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/692.js
+PASS compiled-script/544.js
+PASS compiled-script/11.js
+PASS compiled-script/176.js
+PASS compiled-script/426.js
+FAIL compiled-script/1690.js
+[stdin]:305
+          return _regeneratorRuntime.awrap(_iterator2.next());
+                                                      ^
+
+TypeError: _iterator2.next is not a function
+    at x$ ([stdin]:305:55)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:294:22)
+    at Generator.next (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:119:21)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at invoke (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:155:20)
+    at /Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:165:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+PASS compiled-script/1016.js
+FAIL compiled-script/1546.js
+[stdin]:274
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:274:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/1189.js
+PASS compiled-script/800.js
+PASS compiled-script/1518.js
+PASS compiled-script/1048.js
+PASS compiled-script/361.js
+PASS compiled-script/631.js
+PASS compiled-script/1487.js
+PASS compiled-script/478.js
+PASS compiled-script/128.js
+PASS compiled-script/1201.js
+PASS compiled-script/1633.js
+PASS compiled-script/1363.js
+PASS compiled-script/753.js
+PASS compiled-script/203.js
+PASS compiled-script/311.js
+PASS compiled-script/641.js
+PASS compiled-script/1568.js
+PASS compiled-script/1038.js
+FAIL compiled-script/1271.js
+/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/inherits.js:5
+    throw new TypeError("Super expression must either be null or a function");
+          ^
+
+TypeError: Super expression must either be null or a function
+    at _inherits (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/inherits.js:5:11)
+    at [stdin]:231:15
+    at _callee$ ([stdin]:242:14)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:294:22)
+    at Generator.next (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:119:21)
+    at asyncGeneratorStep (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncToGenerator.js:25:9)
+    at /Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncToGenerator.js:32:7
+    at new Promise (<anonymous>)
+PASS compiled-script/408.js
+FAIL compiled-script/158.js
+[stdin]:184
+var x = Math.pow(0n, 42n);$assert.sameValue(x, 0n);
+             ^
+
+TypeError: Cannot convert a BigInt value to a number
+    at Math.pow (<anonymous>)
+    at [stdin]:184:14
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS compiled-script/597.js
+PASS compiled-script/1643.js
+PASS compiled-script/1313.js
+PASS compiled-script/723.js
+PASS compiled-script/273.js
+PASS compiled-script/1595.js
+PASS compiled-script/1492.js
+FAIL compiled-script/374.js
+[stdin]:184
+var x = Promise.all(0);$delay(() => {
+                ^
+
+TypeError: number 0 is not iterable (cannot read property Symbol(Symbol.iterator))
+    at Function.all (<anonymous>)
+    at [stdin]:184:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+FAIL compiled-script/1214.js
+undefined:1
+function () {
+^^^^^^^^
+
+SyntaxError: Function statements require a function name
+    at [stdin]:186:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/490.js
+PASS compiled-script/1376.js
+PASS compiled-script/1626.js
+PASS compiled-script/389.js
+FAIL compiled-script/929.js
+[stdin]:277
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:277:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/216.js
+PASS compiled-script/746.js
+PASS compiled-script/654.js
+FAIL compiled-script/304.js
+Expected ["message"] but got ["stack", "message"] in Nothing for Error.
+PASS compiled-script/582.js
+PASS compiled-script/1264.js
+FAIL compiled-script/1299.js
+[stdin]:236
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:236:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/1306.js
+PASS compiled-script/1580.js
+PASS compiled-script/959.js
+FAIL compiled-script/266.js
+[stdin]:206
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:206:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/736.js
+PASS compiled-script/907.js
+PASS compiled-script/768.js
+PASS compiled-script/238.js
+PASS compiled-script/1111.js
+PASS compiled-script/1441.js
+PASS compiled-script/898.js
+FAIL compiled-script/1608.js
+/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncIterator.js:12
+  return method.call(iterable);
+                ^
+
+TypeError: method.call is not a function
+    at _asyncIterator (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncIterator.js:12:17)
+    at x$ ([stdin]:211:23)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:294:22)
+    at Generator.next (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:119:21)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at invoke (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:155:20)
+    at /Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:190:11
+    at new Promise (<anonymous>)
+    at callInvokeWithMethodAndArg (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:189:16)
+PASS compiled-script/74.js
+PASS compiled-script/1358.js
+PASS compiled-script/89.js
+PASS compiled-script/443.js
+PASS compiled-script/113.js
+PASS compiled-script/865.js
+PASS compiled-script/795.js
+PASS compiled-script/1523.js
+PASS compiled-script/1073.js
+PASS compiled-script/977.js
+PASS compiled-script/687.js
+FAIL compiled-script/1431.js
+[stdin]:199
+$assert.sameValue(Object.getPrototypeOf(x["0"]["0"]), SetIteratorPrototype);
+                                                      ^
+
+ReferenceError: SetIteratorPrototype is not defined
+    at [stdin]:199:55
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+FAIL compiled-script/718.js
+descriptor should not be writable
+PASS compiled-script/248.js
+PASS compiled-script/551.js
+PASS compiled-script/1678.js
+PASS compiled-script/1328.js
+PASS compiled-script/1685.js
+FAIL compiled-script/433.js
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "0".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+PASS compiled-script/163.js
+FAIL compiled-script/815.js
+Expected function x() {} does not have [[Construct]] but does.
+Expected ["length", "name"] but got ["length", "name", "prototype"] in Nothing for Function.
+PASS compiled-script/1003.js
+PASS compiled-script/809.js
+PASS compiled-script/1180.js
+PASS compiled-script/996.js
+PASS compiled-script/336.js
+PASS compiled-script/666.js
+FAIL compiled-script/1699.js
+[stdin]:929
+$assert.sameValue(Object.getPrototypeOf(Object.getOwnPropertyDescriptor(x, "[object Object]").set), GeneratorFunction.prototype);
+                                                                                                    ^
+
+ReferenceError: GeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:929:101)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/1256.js
+PASS compiled-script/182.js
+PASS compiled-script/1664.js
+PASS compiled-script/704.js
+PASS compiled-script/254.js
+PASS compiled-script/789.js
+PASS compiled-script/879.js
+FAIL compiled-script/346.js
+descriptor should not be writable
+FAIL compiled-script/616.js
+Expected function () {} does not have [[Construct]] but does.
+Expected ["length", "name"] but got ["length", "name", "prototype"] in Nothing for Function.
+PASS compiled-script/95.js
+PASS compiled-script/1226.js
+PASS compiled-script/68.js
+PASS compiled-script/1614.js
+PASS compiled-script/1344.js
+PASS compiled-script/884.js
+PASS compiled-script/774.js
+PASS compiled-script/224.js
+PASS compiled-script/945.js
+PASS compiled-script/1403.js
+FAIL compiled-script/1153.js
+Expected function () {} does not have [[Construct]] but does.
+Expected ["length", "name"] but got ["length", "name", "prototype"] in Nothing for Function.
+PASS compiled-script/1285.js
+PASS compiled-script/36.js
+PASS compiled-script/563.js
+PASS compiled-script/401.js
+FAIL compiled-script/1278.js
+Expected function () { [native code] } does not have [[Construct]] but does.
+PASS compiled-script/827.js
+PASS compiled-script/287.js
+PASS compiled-script/1031.js
+PASS compiled-script/1561.js
+PASS compiled-script/648.js
+PASS compiled-script/935.js
+FAIL compiled-script/395.js
+[stdin]:196
+});$assert.sameValue(Object.getPrototypeOf(x), GeneratorFunction.prototype);
+                                               ^
+
+ReferenceError: GeneratorFunction is not defined
+    at [stdin]:196:48
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1473.js
+PASS compiled-script/1123.js
+PASS compiled-script/513.js
+PASS compiled-script/46.js
+PASS compiled-script/1397.js
+PASS compiled-script/1208.js
+PASS compiled-script/121.js
+PASS compiled-script/471.js
+PASS compiled-script/857.js
+PASS compiled-script/638.js
+PASS compiled-script/368.js
+PASS compiled-script/1041.js
+FAIL compiled-script/1511.js
+Error Expected but got no Error
+PASS compiled-script/436.js
+PASS compiled-script/166.js
+PASS compiled-script/1199.js
+PASS compiled-script/1556.js
+PASS compiled-script/1006.js
+PASS compiled-script/682.js
+PASS compiled-script/972.js
+FAIL compiled-script/1164.js
+undefined:1
+function () {
+^^^^^^^^
+
+SyntaxError: Function statements require a function name
+    at [stdin]:196:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1434.js
+PASS compiled-script/554.js
+PASS compiled-script/446.js
+PASS compiled-script/116.js
+PASS compiled-script/790.js
+PASS compiled-script/860.js
+FAIL compiled-script/1526.js
+undefined:1
+function () {
+^^^^^^^^
+
+SyntaxError: Function statements require a function name
+    at [stdin]:200:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/902.js
+PASS compiled-script/1114.js
+PASS compiled-script/1444.js
+PASS compiled-script/524.js
+PASS compiled-script/71.js
+PASS compiled-script/1303.js
+PASS compiled-script/1653.js
+PASS compiled-script/1585.js
+PASS compiled-script/733.js
+PASS compiled-script/1028.js
+PASS compiled-script/1578.js
+PASS compiled-script/587.js
+PASS compiled-script/9.js
+PASS compiled-script/148.js
+PASS compiled-script/418.js
+PASS compiled-script/1261.js
+PASS compiled-script/1373.js
+PASS compiled-script/1623.js
+PASS compiled-script/213.js
+PASS compiled-script/743.js
+PASS compiled-script/1497.js
+PASS compiled-script/621.js
+FAIL compiled-script/371.js
+Expected -1 but got -1.
+PASS compiled-script/1058.js
+PASS compiled-script/1508.js
+PASS compiled-script/138.js
+PASS compiled-script/1392.js
+PASS compiled-script/124.js
+PASS compiled-script/852.js
+PASS compiled-script/1044.js
+PASS compiled-script/1514.js
+PASS compiled-script/390.js
+FAIL compiled-script/930.js
+[stdin]:204
+var x = x(_templateObject || (_templateObject = _taggedTemplateLiteral(["", "", "", ""])), '', x, ('', ''));$assert.sameValue(Object.getPrototypeOf(Object.getPrototypeOf(x)), Generator.prototype);
+                                                                                                                                                                               ^
+
+ReferenceError: Generator is not defined
+    at [stdin]:204:176
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1476.js
+PASS compiled-script/1126.js
+PASS compiled-script/489.js
+PASS compiled-script/43.js
+PASS compiled-script/516.js
+PASS compiled-script/154.js
+FAIL compiled-script/404.js
+Error Expected but got no Error
+FAIL compiled-script/282.js
+Expected function x(_x) {
+  return _x;
+} does not have [[Construct]] but does.
+Expected ["length", "name"] but got ["length", "name", "prototype"] in Nothing for Function.
+FAIL compiled-script/822.js
+[stdin]:184
+var x = Map.prototype.keys.call(new Map());$assert.sameValue(Object.getPrototypeOf(x), MapIteratorPrototype);
+                                                                                       ^
+
+ReferenceError: MapIteratorPrototype is not defined
+    at [stdin]:184:88
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1034.js
+PASS compiled-script/1564.js
+PASS compiled-script/940.js
+FAIL compiled-script/1599.js
+[stdin]:192
+var x = Promise.allSettled((_Promise$allSettled = {}, _defineProperty(_Promise$allSettled, Symbol.asyncIterator, function (x) {}), _defineProperty(_Promise$allSettled, Symbol.iterator, _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee() {
+                ^
+
+TypeError: undefined is not a function
+    at Function.allSettled (<anonymous>)
+    at [stdin]:192:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS compiled-script/1406.js
+PASS compiled-script/1156.js
+PASS compiled-script/1280.js
+FAIL compiled-script/566.js
+Error Expected but got no Error
+PASS compiled-script/33.js
+FAIL compiled-script/1611.js
+/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/objectDestructuringEmpty.js:2
+  if (obj == null) throw new TypeError("Cannot destructure undefined");
+                         ^
+
+TypeError: Cannot destructure undefined
+    at _objectDestructuringEmpty (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/objectDestructuringEmpty.js:2:26)
+    at x$ ([stdin]:287:24)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:294:22)
+    at Generator.next (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:119:21)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at invoke (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:155:20)
+    at /Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:165:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+PASS compiled-script/1341.js
+PASS compiled-script/538.js
+PASS compiled-script/1097.js
+PASS compiled-script/771.js
+PASS compiled-script/221.js
+PASS compiled-script/881.js
+PASS compiled-script/1458.js
+PASS compiled-script/343.js
+PASS compiled-script/90.js
+PASS compiled-script/1223.js
+PASS compiled-script/187.js
+PASS compiled-script/548.js
+FAIL compiled-script/1331.js
+[stdin]:184
+$assert.sameValue(Object.getPrototypeOf(x), Array.prototype);
+                                        ^
+
+ReferenceError: x is not defined
+    at [stdin]:184:41
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1178.js
+PASS compiled-script/1428.js
+FAIL compiled-script/701.js
+[stdin]:214
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:214:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/251.js
+PASS compiled-script/1185.js
+PASS compiled-script/333.js
+PASS compiled-script/663.js
+PASS compiled-script/993.js
+PASS compiled-script/1253.js
+PASS compiled-script/1354.js
+PASS compiled-script/78.js
+PASS compiled-script/1604.js
+PASS compiled-script/234.js
+FAIL compiled-script/764.js
+[stdin]:184
+var x = Array.prototype[Symbol.unscopables];$assert.sameValue(x, Array.prototype[SYMBOL_unscopables]);
+                                                                                 ^
+
+ReferenceError: SYMBOL_unscopables is not defined
+    at [stdin]:184:82
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/894.js
+PASS compiled-script/1082.js
+PASS compiled-script/606.js
+PASS compiled-script/356.js
+PASS compiled-script/869.js
+PASS compiled-script/799.js
+FAIL compiled-script/1236.js
+Expected function () { [native code] } does not have [[Construct]] but does.
+PASS compiled-script/85.js
+PASS compiled-script/1674.js
+PASS compiled-script/192.js
+PASS compiled-script/244.js
+PASS compiled-script/714.js
+PASS compiled-script/676.js
+PASS compiled-script/326.js
+PASS compiled-script/986.js
+FAIL compiled-script/1190.js
+descriptor should not be writable
+descriptor value should be "" but "_class"
+PASS compiled-script/819.js
+PASS compiled-script/1246.js
+PASS compiled-script/461.js
+PASS compiled-script/131.js
+PASS compiled-script/1218.js
+PASS compiled-script/1387.js
+PASS compiled-script/1051.js
+PASS compiled-script/378.js
+PASS compiled-script/628.js
+PASS compiled-script/847.js
+PASS compiled-script/1133.js
+PASS compiled-script/1463.js
+PASS compiled-script/385.js
+PASS compiled-script/925.js
+PASS compiled-script/56.js
+PASS compiled-script/503.js
+PASS compiled-script/411.js
+PASS compiled-script/141.js
+FAIL compiled-script/308.js
+[stdin]:203
+$assert.sameValue(Object.getPrototypeOf(x["x"]), GeneratorFunction.prototype);
+                                                 ^
+
+ReferenceError: GeneratorFunction is not defined
+    at [stdin]:203:50
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/658.js
+PASS compiled-script/1571.js
+PASS compiled-script/1021.js
+PASS compiled-script/297.js
+FAIL compiled-script/837.js
+[stdin]:215
+}$assert.sameValue(Object.getPrototypeOf(Object.getPrototypeOf(x)), Generator.prototype);
+                                                                    ^
+
+ReferenceError: Generator is not defined
+    at [stdin]:215:69
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1143.js
+PASS compiled-script/1413.js
+PASS compiled-script/955.js
+PASS compiled-script/26.js
+PASS compiled-script/1295.js
+FAIL compiled-script/1646.js
+[stdin]:233
+          return _regeneratorRuntime.awrap(_iterator.next());
+                                                     ^
+
+TypeError: _iterator.next is not a function
+    at x$ ([stdin]:233:54)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:294:22)
+    at Generator.next (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:119:21)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at invoke (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:155:20)
+    at /Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:190:11
+    at new Promise (<anonymous>)
+    at callInvokeWithMethodAndArg (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:189:16)
+    at AsyncIterator.enqueue [as _invoke] (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:212:13)
+PASS compiled-script/1316.js
+PASS compiled-script/1289.js
+PASS compiled-script/726.js
+PASS compiled-script/276.js
+PASS compiled-script/949.js
+FAIL compiled-script/1590.js
+[stdin]:192
+var x = Promise.race((_Promise$race = {}, _defineProperty(_Promise$race, Symbol.asyncIterator, function (x) {}), _defineProperty(_Promise$race, Symbol.iterator, function () {
+                ^
+
+TypeError: undefined is not a function
+    at Function.race (<anonymous>)
+    at [stdin]:192:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS compiled-script/314.js
+PASS compiled-script/644.js
+PASS compiled-script/1274.js
+PASS compiled-script/592.js
+FAIL compiled-script/1636.js
+[stdin]:227
+          return _regeneratorRuntime.awrap(_iterator.next());
+                                                     ^
+
+TypeError: _iterator.next is not a function
+    at x$ ([stdin]:227:54)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:294:22)
+    at Generator.next (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:119:21)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at invoke (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:155:20)
+    at /Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:190:11
+    at new Promise (<anonymous>)
+    at callInvokeWithMethodAndArg (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:189:16)
+    at AsyncIterator.enqueue [as _invoke] (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:212:13)
+PASS compiled-script/480.js
+FAIL compiled-script/756.js
+[stdin]:219
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:219:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/206.js
+PASS compiled-script/939.js
+PASS compiled-script/399.js
+FAIL compiled-script/364.js
+descriptor should not be writable
+descriptor value should be "" but "_class"
+descriptor should not be writable
+PASS compiled-script/634.js
+PASS compiled-script/1204.js
+PASS compiled-script/173.js
+PASS compiled-script/423.js
+PASS compiled-script/1695.js
+FAIL compiled-script/1543.js
+[stdin]:188
+var x = Promise.allSettled((_Promise$allSettled = {}, _defineProperty(_Promise$allSettled, Symbol.asyncIterator, false), _defineProperty(_Promise$allSettled, Symbol.iterator, function () {}), _Promise$allSettled));$delay(() => {
+                ^
+
+TypeError: Result of the Symbol.iterator method is not an object
+    at Function.allSettled (<anonymous>)
+    at [stdin]:188:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS compiled-script/805.js
+FAIL compiled-script/258.js
+Error Expected but got no Error
+PASS compiled-script/708.js
+PASS compiled-script/1421.js
+PASS compiled-script/1171.js
+PASS compiled-script/697.js
+PASS compiled-script/967.js
+PASS compiled-script/1338.js
+PASS compiled-script/14.js
+FAIL compiled-script/1668.js
+/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncIterator.js:11
+  if (method == null) throw new TypeError("Object is not async iterable");
+                            ^
+
+TypeError: Object is not async iterable
+    at _asyncIterator (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncIterator.js:11:29)
+    at x$ ([stdin]:271:24)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:294:22)
+    at Generator.next (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:119:21)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at invoke (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:155:20)
+    at /Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:165:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+PASS compiled-script/541.js
+PASS compiled-script/103.js
+PASS compiled-script/453.js
+PASS compiled-script/99.js
+PASS compiled-script/1063.js
+FAIL compiled-script/1533.js
+[stdin]:213
+$assert.sameValue(Object.getPrototypeOf(x[Symbol.iterator]), GeneratorFunction.prototype);
+                                                             ^
+
+ReferenceError: GeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:213:62)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/785.js
+PASS compiled-script/875.js
+PASS compiled-script/888.js
+PASS compiled-script/1451.js
+PASS compiled-script/228.js
+PASS compiled-script/778.js
+PASS compiled-script/917.js
+FAIL compiled-script/1348.js
+Error Expected but got no Error
+PASS compiled-script/64.js
+PASS compiled-script/17.js
+PASS compiled-script/1422.js
+PASS compiled-script/1172.js
+PASS compiled-script/964.js
+PASS compiled-script/694.js
+PASS compiled-script/669.js
+PASS compiled-script/339.js
+PASS compiled-script/1010.js
+PASS compiled-script/1540.js
+FAIL compiled-script/999.js
+[stdin]:277
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:277:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/806.js
+PASS compiled-script/170.js
+PASS compiled-script/1696.js
+PASS compiled-script/67.js
+PASS compiled-script/532.js
+PASS compiled-script/1452.js
+PASS compiled-script/1102.js
+PASS compiled-script/914.js
+PASS compiled-script/1060.js
+PASS compiled-script/1530.js
+PASS compiled-script/619.js
+PASS compiled-script/349.js
+PASS compiled-script/876.js
+PASS compiled-script/786.js
+PASS compiled-script/450.js
+PASS compiled-script/1229.js
+PASS compiled-script/591.js
+PASS compiled-script/317.js
+PASS compiled-script/647.js
+PASS compiled-script/288.js
+PASS compiled-script/828.js
+PASS compiled-script/725.js
+PASS compiled-script/275.js
+FAIL compiled-script/1593.js
+undefined:1
+function () {
+^^^^^^^^
+
+SyntaxError: Function statements require a function name
+    at [stdin]:190:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1645.js
+PASS compiled-script/39.js
+PASS compiled-script/1315.js
+PASS compiled-script/1207.js
+PASS compiled-script/1398.js
+PASS compiled-script/367.js
+FAIL compiled-script/1481.js
+undefined:1
+function () {
+^^^^^^^^
+
+SyntaxError: Function statements require a function name
+    at [stdin]:186:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/858.js
+PASS compiled-script/755.js
+PASS compiled-script/49.js
+PASS compiled-script/1635.js
+FAIL compiled-script/1365.js
+[stdin]:262
+$assert.sameValue(Object.getPrototypeOf(Object.getPrototypeOf(x)), AsyncGenerator.prototype);
+                                                                   ^
+
+ReferenceError: AsyncGenerator is not defined
+    at Timeout._onTimeout ([stdin]:262:68)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/483.js
+PASS compiled-script/500.js
+FAIL compiled-script/1629.js
+undefined:1
+function () {
+^^^^^^^^
+
+SyntaxError: Function statements require a function name
+    at [stdin]:190:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/55.js
+PASS compiled-script/1379.js
+FAIL compiled-script/1130.js
+undefined:1
+function () {
+^^^^^^^^
+
+SyntaxError: Function statements require a function name
+    at [stdin]:196:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1460.js
+PASS compiled-script/749.js
+PASS compiled-script/219.js
+PASS compiled-script/926.js
+FAIL compiled-script/386.js
+descriptor should not be writable
+PASS compiled-script/1502.js
+PASS compiled-script/1052.js
+PASS compiled-script/844.js
+PASS compiled-script/462.js
+PASS compiled-script/132.js
+PASS compiled-script/1384.js
+PASS compiled-script/25.js
+PASS compiled-script/1659.js
+PASS compiled-script/1309.js
+PASS compiled-script/570.js
+PASS compiled-script/739.js
+PASS compiled-script/269.js
+PASS compiled-script/1140.js
+PASS compiled-script/1410.js
+PASS compiled-script/956.js
+PASS compiled-script/1572.js
+PASS compiled-script/1022.js
+PASS compiled-script/834.js
+PASS compiled-script/294.js
+PASS compiled-script/412.js
+PASS compiled-script/142.js
+PASS compiled-script/3.js
+PASS compiled-script/86.js
+PASS compiled-script/605.js
+PASS compiled-script/897.js
+PASS compiled-script/237.js
+PASS compiled-script/767.js
+PASS compiled-script/908.js
+PASS compiled-script/1081.js
+PASS compiled-script/1357.js
+PASS compiled-script/1607.js
+PASS compiled-script/1245.js
+PASS compiled-script/985.js
+PASS compiled-script/675.js
+PASS compiled-script/325.js
+PASS compiled-script/1193.js
+PASS compiled-script/247.js
+PASS compiled-script/717.js
+PASS compiled-script/688.js
+FAIL compiled-script/978.js
+[stdin]:219
+$assert.sameValue(Object.getPrototypeOf(x["x"]), AsyncFunction.prototype);
+                                                 ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:219:50)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/1327.js
+PASS compiled-script/191.js
+PASS compiled-script/93.js
+PASS compiled-script/1220.js
+PASS compiled-script/109.js
+PASS compiled-script/340.js
+PASS compiled-script/1539.js
+PASS compiled-script/1069.js
+PASS compiled-script/1094.js
+PASS compiled-script/882.js
+PASS compiled-script/772.js
+PASS compiled-script/222.js
+PASS compiled-script/1612.js
+PASS compiled-script/1342.js
+FAIL compiled-script/179.js
+[stdin]:198
+}$assert.sameValue(Object.getPrototypeOf(x), GeneratorFunction.prototype);
+                                             ^
+
+ReferenceError: GeneratorFunction is not defined
+    at [stdin]:198:46
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1250.js
+PASS compiled-script/1186.js
+PASS compiled-script/1019.js
+PASS compiled-script/330.js
+PASS compiled-script/660.js
+PASS compiled-script/702.js
+PASS compiled-script/252.js
+PASS compiled-script/184.js
+PASS compiled-script/1662.js
+PASS compiled-script/1332.js
+PASS compiled-script/515.js
+PASS compiled-script/40.js
+PASS compiled-script/933.js
+PASS compiled-script/1475.js
+PASS compiled-script/1125.js
+FAIL compiled-script/1488.js
+Error Expected but got no Error
+PASS compiled-script/851.js
+PASS compiled-script/1047.js
+PASS compiled-script/1517.js
+FAIL compiled-script/1391.js
+[stdin]:184
+$assert.sameValue(x, undefined);
+                  ^
+
+ReferenceError: x is not defined
+    at [stdin]:184:19
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/127.js
+PASS compiled-script/477.js
+PASS compiled-script/1283.js
+FAIL compiled-script/30.js
+descriptor should not be writable
+PASS compiled-script/565.js
+PASS compiled-script/943.js
+PASS compiled-script/1405.js
+PASS compiled-script/1155.js
+PASS compiled-script/821.js
+PASS compiled-script/281.js
+PASS compiled-script/1037.js
+PASS compiled-script/1567.js
+PASS compiled-script/598.js
+PASS compiled-script/157.js
+PASS compiled-script/407.js
+PASS compiled-script/584.js
+PASS compiled-script/1262.js
+PASS compiled-script/652.js
+PASS compiled-script/302.js
+PASS compiled-script/1586.js
+FAIL compiled-script/1419.js
+Error Expected but got no Error
+PASS compiled-script/1149.js
+PASS compiled-script/260.js
+PASS compiled-script/730.js
+PASS compiled-script/579.js
+PASS compiled-script/1300.js
+PASS compiled-script/1212.js
+PASS compiled-script/1494.js
+PASS compiled-script/622.js
+PASS compiled-script/372.js
+PASS compiled-script/210.js
+PASS compiled-script/740.js
+PASS compiled-script/1469.js
+PASS compiled-script/1139.js
+PASS compiled-script/496.js
+PASS compiled-script/1370.js
+PASS compiled-script/1620.js
+PASS compiled-script/509.js
+PASS compiled-script/198.js
+PASS compiled-script/557.js
+PASS compiled-script/971.js
+PASS compiled-script/681.js
+PASS compiled-script/1167.js
+FAIL compiled-script/1437.js
+undefined:1
+function () {
+^^^^^^^^
+
+SyntaxError: Function statements require a function name
+    at [stdin]:186:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/813.js
+PASS compiled-script/1555.js
+PASS compiled-script/1005.js
+FAIL compiled-script/435.js
+[stdin]:205
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:205:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+FAIL compiled-script/165.js
+descriptor should not be writable
+PASS compiled-script/72.js
+PASS compiled-script/527.js
+PASS compiled-script/1088.js
+PASS compiled-script/901.js
+PASS compiled-script/1447.js
+PASS compiled-script/863.js
+PASS compiled-script/793.js
+PASS compiled-script/1525.js
+PASS compiled-script/1075.js
+PASS compiled-script/115.js
+PASS compiled-script/284.js
+PASS compiled-script/824.js
+PASS compiled-script/1032.js
+PASS compiled-script/1562.js
+PASS compiled-script/152.js
+PASS compiled-script/402.js
+PASS compiled-script/1286.js
+PASS compiled-script/560.js
+PASS compiled-script/1319.js
+PASS compiled-script/35.js
+PASS compiled-script/1649.js
+PASS compiled-script/946.js
+FAIL compiled-script/1150.js
+[stdin]:280
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:280:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/279.js
+PASS compiled-script/729.js
+PASS compiled-script/854.js
+PASS compiled-script/1042.js
+PASS compiled-script/1394.js
+FAIL compiled-script/472.js
+[stdin]:207
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:207:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/1369.js
+PASS compiled-script/1639.js
+PASS compiled-script/45.js
+PASS compiled-script/510.js
+PASS compiled-script/936.js
+PASS compiled-script/209.js
+PASS compiled-script/759.js
+PASS compiled-script/1120.js
+PASS compiled-script/968.js
+PASS compiled-script/698.js
+PASS compiled-script/707.js
+PASS compiled-script/257.js
+PASS compiled-script/1337.js
+PASS compiled-script/1255.js
+PASS compiled-script/1183.js
+PASS compiled-script/335.js
+PASS compiled-script/665.js
+PASS compiled-script/995.js
+PASS compiled-script/1091.js
+PASS compiled-script/918.js
+PASS compiled-script/777.js
+PASS compiled-script/227.js
+PASS compiled-script/887.js
+PASS compiled-script/1347.js
+PASS compiled-script/96.js
+FAIL compiled-script/345.js
+descriptor should not be writable
+Expected function x() {} does not have [[Construct]] but does.
+Expected ["length", "name"] but got ["length", "name", "prototype"] in Nothing for Function.
+PASS compiled-script/796.js
+PASS compiled-script/866.js
+PASS compiled-script/609.js
+FAIL compiled-script/1520.js
+undefined:1
+function () {
+^^^^^^^^
+
+SyntaxError: Function statements require a function name
+    at [stdin]:190:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1070.js
+PASS compiled-script/1239.js
+PASS compiled-script/440.js
+PASS compiled-script/110.js
+PASS compiled-script/522.js
+PASS compiled-script/77.js
+PASS compiled-script/904.js
+PASS compiled-script/1112.js
+PASS compiled-script/816.js
+PASS compiled-script/1000.js
+PASS compiled-script/329.js
+FAIL compiled-script/679.js
+[stdin]:217
+}$assert.sameValue(Object.getPrototypeOf(Object.getPrototypeOf(x)), Generator.prototype);
+                                                                    ^
+
+ReferenceError: Generator is not defined
+    at [stdin]:217:69
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1686.js
+PASS compiled-script/430.js
+PASS compiled-script/160.js
+PASS compiled-script/1249.js
+PASS compiled-script/552.js
+PASS compiled-script/684.js
+PASS compiled-script/974.js
+PASS compiled-script/1432.js
+PASS compiled-script/215.js
+PASS compiled-script/745.js
+PASS compiled-script/493.js
+PASS compiled-script/1375.js
+PASS compiled-script/59.js
+PASS compiled-script/1625.js
+PASS compiled-script/1388.js
+FAIL compiled-script/1217.js
+[stdin]:218
+$assert.sameValue(x, false);
+                  ^
+
+ReferenceError: x is not defined
+    at Timeout._onTimeout ([stdin]:218:19)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/848.js
+PASS compiled-script/1491.js
+PASS compiled-script/627.js
+PASS compiled-script/377.js
+PASS compiled-script/1583.js
+PASS compiled-script/265.js
+PASS compiled-script/735.js
+PASS compiled-script/1305.js
+PASS compiled-script/1655.js
+PASS compiled-script/29.js
+PASS compiled-script/581.js
+PASS compiled-script/1267.js
+FAIL compiled-script/838.js
+/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/objectDestructuringEmpty.js:2
+  if (obj == null) throw new TypeError("Cannot destructure undefined");
+                         ^
+
+TypeError: Cannot destructure undefined
+    at _objectDestructuringEmpty (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/objectDestructuringEmpty.js:2:26)
+    at _callee$ ([stdin]:215:13)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:294:22)
+    at Generator.next (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:119:21)
+    at asyncGeneratorStep (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncToGenerator.js:25:9)
+    at /Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncToGenerator.js:32:7
+    at new Promise (<anonymous>)
+    at /Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncToGenerator.js:21:12
+PASS compiled-script/298.js
+PASS compiled-script/657.js
+PASS compiled-script/307.js
+PASS compiled-script/1129.js
+PASS compiled-script/1479.js
+PASS compiled-script/750.js
+PASS compiled-script/519.js
+FAIL compiled-script/1630.js
+[stdin]:215
+          return _regeneratorRuntime.awrap(_iterator.next());
+                                                     ^
+
+TypeError: Cannot read properties of undefined (reading 'next')
+    at x$ ([stdin]:215:54)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:294:22)
+    at Generator.next (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:119:21)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at invoke (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:155:20)
+    at /Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:190:11
+    at new Promise (<anonymous>)
+    at callInvokeWithMethodAndArg (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:189:16)
+    at AsyncIterator.enqueue [as _invoke] (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:212:13)
+PASS compiled-script/1360.js
+PASS compiled-script/1202.js
+PASS compiled-script/362.js
+PASS compiled-script/632.js
+PASS compiled-script/1484.js
+PASS compiled-script/720.js
+PASS compiled-script/1159.js
+FAIL compiled-script/1409.js
+/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncIterator.js:11
+  if (method == null) throw new TypeError("Object is not async iterable");
+                            ^
+
+TypeError: Object is not async iterable
+    at _asyncIterator (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/@babel/runtime/helpers/asyncIterator.js:11:29)
+    at x$ ([stdin]:209:23)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:294:22)
+    at Generator.next (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:119:21)
+    at tryCatch (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:63:40)
+    at invoke (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:155:20)
+    at /Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:190:11
+    at new Promise (<anonymous>)
+    at callInvokeWithMethodAndArg (/Users/yundongjun/PLRG/jsgen/lib/desugar/node_modules/regenerator-runtime/runtime.js:189:16)
+PASS compiled-script/1640.js
+PASS compiled-script/1310.js
+FAIL compiled-script/1272.js
+Error Expected but got no Error
+PASS compiled-script/594.js
+PASS compiled-script/312.js
+PASS compiled-script/642.js
+PASS compiled-script/1065.js
+PASS compiled-script/783.js
+PASS compiled-script/873.js
+PASS compiled-script/455.js
+PASS compiled-script/537.js
+PASS compiled-script/62.js
+PASS compiled-script/1457.js
+PASS compiled-script/1107.js
+PASS compiled-script/911.js
+PASS compiled-script/1098.js
+PASS compiled-script/1015.js
+PASS compiled-script/803.js
+PASS compiled-script/175.js
+PASS compiled-script/425.js
+PASS compiled-script/1693.js
+PASS compiled-script/12.js
+PASS compiled-script/547.js
+PASS compiled-script/188.js
+PASS compiled-script/1427.js
+PASS compiled-script/1177.js
+PASS compiled-script/961.js
+PASS compiled-script/242.js
+PASS compiled-script/712.js
+FAIL compiled-script/1322.js
+[stdin]:193
+$assert.sameValue(Object.getPrototypeOf(x["0"]), SetIteratorPrototype);
+                                                 ^
+
+ReferenceError: SetIteratorPrototype is not defined
+    at [stdin]:193:50
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1672.js
+PASS compiled-script/169.js
+PASS compiled-script/439.js
+PASS compiled-script/670.js
+PASS compiled-script/320.js
+PASS compiled-script/1009.js
+PASS compiled-script/980.js
+PASS compiled-script/1196.js
+PASS compiled-script/232.js
+PASS compiled-script/762.js
+PASS compiled-script/892.js
+PASS compiled-script/1084.js
+PASS compiled-script/1602.js
+PASS compiled-script/119.js
+PASS compiled-script/449.js
+PASS compiled-script/1230.js
+PASS compiled-script/83.js
+PASS compiled-script/1079.js
+PASS compiled-script/1529.js
+PASS compiled-script/600.js
+PASS compiled-script/350.js
+PASS compiled-script/1577.js
+PASS compiled-script/1027.js
+PASS compiled-script/291.js
+PASS compiled-script/831.js
+PASS compiled-script/417.js
+PASS compiled-script/147.js
+PASS compiled-script/6.js
+FAIL compiled-script/588.js
+Error Expected but got no Error
+PASS compiled-script/575.js
+FAIL compiled-script/20.js
+descriptor should not be writable
+PASS compiled-script/1293.js
+FAIL compiled-script/1145.js
+Expected "x => {  " but got "function (x) {".
+FAIL compiled-script/1415.js
+Expected function length() {
+  throw '';
+} does not have [[Construct]] but does.
+Expected ["length", "name"] but got ["length", "name", "prototype"] in Nothing for Function.
+PASS compiled-script/953.js
+PASS compiled-script/1507.js
+PASS compiled-script/1057.js
+PASS compiled-script/841.js
+PASS compiled-script/1498.js
+PASS compiled-script/467.js
+PASS compiled-script/137.js
+PASS compiled-script/1381.js
+PASS compiled-script/50.js
+FAIL compiled-script/505.js
+undefined:1
+function () {}
+^^^^^^^^
+
+SyntaxError: Function statements require a function name
+    at [stdin]:184:17
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS compiled-script/1135.js
+PASS compiled-script/1465.js
+FAIL compiled-script/383.js
+[stdin]:208
+$assert.sameValue(Object.getPrototypeOf(x["x"]), AsyncFunction.prototype);
+                                                 ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:208:50)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS compiled-script/923.js
+22:20:54

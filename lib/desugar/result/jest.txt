@@ -1,0 +1,2546 @@
+22:18:23
+PASS script/1205.js
+PASS script/1483.js
+PASS script/635.js
+PASS script/365.js
+PASS script/398.js
+PASS script/207.js
+PASS script/757.js
+PASS script/481.js
+PASS script/1367.js
+PASS script/1637.js
+PASS script/593.js
+PASS script/1275.js
+PASS script/645.js
+PASS script/315.js
+FAIL script/948.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+FAIL script/1591.js
+[stdin]:184
+var x = x `` ; async function x ( ... [ ] ) { ; for await ( x of '' ) ; for await ( var x of ( Number ( Symbol . iterator ) ) ) ; }$delay(() => {
+                                                                                               ^
+
+TypeError: Cannot convert a Symbol value to a number
+    at Number (<anonymous>)
+    at x ([stdin]:184:96)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+PASS script/727.js
+PASS script/1288.js
+PASS script/1317.js
+PASS script/1647.js
+PASS script/530.js
+PASS script/1619.js
+PASS script/65.js
+PASS script/1349.js
+PASS script/916.js
+PASS script/889.js
+PASS script/1450.js
+PASS script/229.js
+PASS script/784.js
+PASS script/874.js
+PASS script/1532.js
+PASS script/1062.js
+PASS script/98.js
+PASS script/452.js
+PASS script/102.js
+PASS script/15.js
+PASS script/1669.js
+PASS script/1339.js
+PASS script/540.js
+PASS script/696.js
+PASS script/966.js
+PASS script/709.js
+PASS script/259.js
+PASS script/1170.js
+PASS script/1420.js
+PASS script/804.js
+PASS script/1542.js
+FAIL script/1012.js
+[stdin]:189
+$assert.sameValue(Object.getPrototypeOf(x["x"]), AsyncFunction.prototype);
+                                                 ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:189:50)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/1694.js
+PASS script/172.js
+PASS script/1688.js
+PASS script/1247.js
+PASS script/818.js
+FAIL script/1191.js
+[stdin]:202
+$assert.sameValue(Object.getPrototypeOf(x["x"]), AsyncFunction.prototype);
+                                                 ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:202:50)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/327.js
+PASS script/677.js
+PASS script/715.js
+PASS script/245.js
+PASS script/193.js
+PASS script/1675.js
+PASS script/1325.js
+PASS script/84.js
+FAIL script/1237.js
+[stdin]:190
+$assert.sameValue(Object.getPrototypeOf(x["x"]), AsyncFunction.prototype);
+                                                 ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:190:50)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/868.js
+PASS script/798.js
+FAIL script/357.js
+[stdin]:184
+var x = function * ( ) { } ;$assert.sameValue(Object.getPrototypeOf(x), GeneratorFunction.prototype);
+                                                                        ^
+
+ReferenceError: GeneratorFunction is not defined
+    at [stdin]:184:73
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/607.js
+PASS script/1083.js
+PASS script/765.js
+PASS script/235.js
+FAIL script/895.js
+[stdin]:184
+var x = Map . prototype . entries . call ( new Map ( ) ) ;$assert.sameValue(Object.getPrototypeOf(x), MapIteratorPrototype);
+                                                                                                      ^
+
+ReferenceError: MapIteratorPrototype is not defined
+    at [stdin]:184:103
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/79.js
+PASS script/1605.js
+PASS script/1355.js
+PASS script/1294.js
+PASS script/572.js
+PASS script/27.js
+PASS script/954.js
+PASS script/1412.js
+PASS script/1142.js
+PASS script/296.js
+PASS script/659.js
+PASS script/309.js
+PASS script/1.js
+PASS script/1269.js
+PASS script/140.js
+PASS script/410.js
+PASS script/57.js
+PASS script/502.js
+PASS script/384.js
+PASS script/1462.js
+PASS script/1132.js
+PASS script/846.js
+PASS script/1050.js
+PASS script/1500.js
+PASS script/629.js
+PASS script/1386.js
+PASS script/130.js
+PASS script/460.js
+PASS script/1219.js
+PASS script/567.js
+PASS script/32.js
+PASS script/1281.js
+PASS script/1157.js
+PASS script/1407.js
+PASS script/1598.js
+PASS script/1565.js
+PASS script/1035.js
+PASS script/283.js
+PASS script/823.js
+PASS script/405.js
+PASS script/155.js
+PASS script/42.js
+PASS script/517.js
+PASS script/488.js
+PASS script/1127.js
+PASS script/1477.js
+PASS script/391.js
+PASS script/931.js
+PASS script/1515.js
+PASS script/1045.js
+FAIL script/853.js
+[stdin]:189
+$assert.sameValue(Object.getPrototypeOf(x["x"]), GeneratorFunction.prototype);
+                                                 ^
+
+ReferenceError: GeneratorFunction is not defined
+    at [stdin]:189:50
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/475.js
+PASS script/125.js
+PASS script/1393.js
+PASS script/1252.js
+PASS script/662.js
+PASS script/992.js
+PASS script/1184.js
+FAIL script/1429.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/1179.js
+PASS script/250.js
+PASS script/700.js
+PASS script/549.js
+PASS script/1330.js
+PASS script/1660.js
+PASS script/186.js
+PASS script/1222.js
+PASS script/91.js
+PASS script/612.js
+PASS script/220.js
+PASS script/770.js
+FAIL script/880.js
+[stdin]:184
+var x = Set . prototype . values . call ( new Set ( ) ) ;$assert.sameValue(Object.getPrototypeOf(x), SetIteratorPrototype);
+                                                                                                     ^
+
+ReferenceError: SetIteratorPrototype is not defined
+    at [stdin]:184:102
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/1459.js
+FAIL script/1109.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+FAIL script/1096.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/1610.js
+PASS script/539.js
+PASS script/525.js
+PASS script/903.js
+PASS script/1077.js
+PASS script/1527.js
+PASS script/791.js
+PASS script/861.js
+PASS script/117.js
+PASS script/447.js
+PASS script/555.js
+PASS script/1435.js
+PASS script/1165.js
+PASS script/683.js
+PASS script/1007.js
+PASS script/1198.js
+PASS script/811.js
+PASS script/167.js
+PASS script/437.js
+PASS script/1681.js
+PASS script/1210.js
+PASS script/469.js
+PASS script/139.js
+PASS script/370.js
+PASS script/620.js
+PASS script/1509.js
+PASS script/1059.js
+FAIL script/1496.js
+[stdin]:190
+$assert.sameValue(Object.getPrototypeOf(x[Symbol.iterator]), GeneratorFunction.prototype);
+                                                             ^
+
+ReferenceError: GeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:190:62)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/742.js
+PASS script/212.js
+PASS script/1622.js
+PASS script/1372.js
+PASS script/494.js
+PASS script/419.js
+PASS script/149.js
+PASS script/1260.js
+PASS script/586.js
+PASS script/8.js
+PASS script/1579.js
+PASS script/1029.js
+PASS script/650.js
+PASS script/732.js
+PASS script/262.js
+PASS script/1584.js
+PASS script/885.js
+PASS script/225.js
+PASS script/775.js
+PASS script/1093.js
+FAIL script/1345.js
+[stdin]:184
+var x = x `` ; async function x ( ... [ ] ) { ; for await ( x of undefined ) x : ; }$delay(() => {
+                                                                 ^
+
+TypeError: Cannot read properties of undefined (reading 'Symbol(Symbol.asyncIterator)')
+    at x ([stdin]:184:66)
+    at [stdin]:184:11
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS script/1615.js
+PASS script/1227.js
+PASS script/94.js
+PASS script/617.js
+PASS script/347.js
+PASS script/788.js
+PASS script/878.js
+PASS script/255.js
+PASS script/705.js
+PASS script/19.js
+PASS script/183.js
+PASS script/1257.js
+PASS script/1698.js
+PASS script/997.js
+PASS script/667.js
+PASS script/337.js
+PASS script/1181.js
+PASS script/808.js
+PASS script/369.js
+PASS script/639.js
+PASS script/1510.js
+PASS script/1040.js
+PASS script/856.js
+PASS script/1209.js
+PASS script/120.js
+PASS script/1396.js
+PASS script/512.js
+PASS script/47.js
+PASS script/1122.js
+PASS script/1472.js
+PASS script/934.js
+PASS script/394.js
+PASS script/1560.js
+PASS script/1030.js
+PASS script/319.js
+PASS script/826.js
+PASS script/286.js
+PASS script/400.js
+PASS script/150.js
+PASS script/37.js
+PASS script/562.js
+PASS script/1284.js
+PASS script/1152.js
+PASS script/944.js
+PASS script/737.js
+PASS script/267.js
+PASS script/1581.js
+PASS script/958.js
+FAIL script/1657.js
+[stdin]:184
+var x = Promise . all ( { [ Symbol . asyncIterator ] : function ( x ) { ; var x = x [ '' , '' ] ; } , [ Symbol . iterator ] : async function ( ) { ; await x ( ) ; } } ) ;$delay(() => {
+                                                                                                                                                           ^
+
+TypeError: x is not a function
+    at Object.[Symbol.iterator] ([stdin]:184:156)
+    at Function.all (<anonymous>)
+    at [stdin]:184:19
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+PASS script/1307.js
+PASS script/1298.js
+PASS script/1265.js
+FAIL script/583.js
+[stdin]:191
+$assert.sameValue(Object.getPrototypeOf(x["0"]), AsyncFunction.prototype);
+                                                 ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:191:50)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/305.js
+PASS script/655.js
+PASS script/747.js
+PASS script/217.js
+PASS script/388.js
+PASS script/928.js
+PASS script/1627.js
+PASS script/1377.js
+PASS script/491.js
+PASS script/1215.js
+FAIL script/625.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/1493.js
+PASS script/1002.js
+PASS script/1552.js
+PASS script/814.js
+PASS script/162.js
+PASS script/432.js
+PASS script/1684.js
+PASS script/550.js
+FAIL script/1329.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(Object.getPrototypeOf(x)), AsyncGenerator.prototype);
+                                                                   ^
+
+ReferenceError: AsyncGenerator is not defined
+    at Timeout._onTimeout ([stdin]:185:68)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/1679.js
+PASS script/1430.js
+PASS script/1160.js
+PASS script/249.js
+PASS script/719.js
+PASS script/976.js
+PASS script/686.js
+PASS script/1072.js
+PASS script/1522.js
+PASS script/864.js
+PASS script/794.js
+PASS script/442.js
+PASS script/88.js
+PASS script/1359.js
+PASS script/1609.js
+PASS script/75.js
+PASS script/520.js
+FAIL script/239.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/769.js
+PASS script/899.js
+PASS script/906.js
+PASS script/801.js
+PASS script/1188.js
+PASS script/1547.js
+PASS script/1017.js
+PASS script/1691.js
+PASS script/427.js
+PASS script/177.js
+PASS script/545.js
+PASS script/10.js
+PASS script/963.js
+PASS script/693.js
+PASS script/1175.js
+PASS script/1425.js
+PASS script/871.js
+PASS script/781.js
+PASS script/1537.js
+FAIL script/1067.js
+[stdin]:189
+$assert.sameValue(Object.getPrototypeOf(x["x"]), GeneratorFunction.prototype);
+                                                 ^
+
+ReferenceError: GeneratorFunction is not defined
+    at [stdin]:189:50
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/457.js
+PASS script/107.js
+PASS script/535.js
+PASS script/913.js
+PASS script/1105.js
+FAIL script/1455.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/1594.js
+PASS script/272.js
+PASS script/722.js
+PASS script/596.js
+PASS script/1270.js
+PASS script/159.js
+FAIL script/409.js
+Expected [] but got ["stack"] in Nothing for Error.
+PASS script/640.js
+FAIL script/310.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/1039.js
+PASS script/1569.js
+PASS script/752.js
+PASS script/484.js
+PASS script/1362.js
+PASS script/1632.js
+PASS script/129.js
+PASS script/479.js
+PASS script/1200.js
+PASS script/1486.js
+PASS script/1049.js
+FAIL script/1519.js
+[stdin]:184
+async function * x ( ) { return ; } ; for ( ; '' , '' ; '' , '' ) ; var x = async x => BigInt ( 'x' ) ; x ( ) ;$delay(() => {
+                                                                                       ^
+
+SyntaxError: Cannot convert x to a BigInt
+    at BigInt (<anonymous>)
+    at x ([stdin]:184:88)
+    at [stdin]:184:105
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+PASS script/630.js
+PASS script/360.js
+PASS script/843.js
+PASS script/1055.js
+PASS script/1505.js
+PASS script/1383.js
+PASS script/135.js
+PASS script/465.js
+PASS script/498.js
+PASS script/507.js
+PASS script/52.js
+PASS script/1467.js
+PASS script/1137.js
+PASS script/833.js
+PASS script/293.js
+PASS script/1025.js
+PASS script/1575.js
+PASS script/4.js
+PASS script/415.js
+PASS script/1291.js
+PASS script/22.js
+FAIL script/577.js
+[stdin]:184
+var x = x `` ; function * x ( ... x ) { }$assert.sameValue(Object.getPrototypeOf(Object.getPrototypeOf(x)), Generator.prototype);
+                                                                                                            ^
+
+ReferenceError: Generator is not defined
+    at [stdin]:184:109
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/1588.js
+PASS script/951.js
+PASS script/1417.js
+PASS script/1147.js
+PASS script/1086.js
+PASS script/1119.js
+PASS script/1449.js
+PASS script/890.js
+PASS script/760.js
+PASS script/230.js
+PASS script/529.js
+PASS script/1600.js
+PASS script/1350.js
+PASS script/81.js
+PASS script/1232.js
+PASS script/352.js
+PASS script/602.js
+PASS script/710.js
+PASS script/240.js
+PASS script/1169.js
+PASS script/1439.js
+PASS script/196.js
+PASS script/1670.js
+PASS script/1320.js
+PASS script/1242.js
+PASS script/1194.js
+PASS script/982.js
+PASS script/322.js
+PASS script/672.js
+PASS script/1528.js
+PASS script/1078.js
+PASS script/351.js
+PASS script/601.js
+PASS script/82.js
+PASS script/448.js
+PASS script/118.js
+PASS script/1231.js
+PASS script/1603.js
+PASS script/1353.js
+PASS script/1085.js
+PASS script/763.js
+PASS script/233.js
+PASS script/893.js
+PASS script/1197.js
+PASS script/321.js
+PASS script/671.js
+PASS script/981.js
+PASS script/1558.js
+PASS script/1008.js
+PASS script/1241.js
+PASS script/438.js
+PASS script/168.js
+PASS script/195.js
+PASS script/1673.js
+PASS script/713.js
+PASS script/243.js
+PASS script/382.js
+PASS script/922.js
+PASS script/1464.js
+FAIL script/1134.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/51.js
+FAIL script/504.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/1380.js
+PASS script/136.js
+PASS script/466.js
+PASS script/840.js
+PASS script/1056.js
+FAIL script/1506.js
+[stdin]:190
+$assert.sameValue(Object.getPrototypeOf(x["x"]), AsyncFunction.prototype);
+                                                 ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:190:50)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/952.js
+PASS script/1414.js
+PASS script/1292.js
+PASS script/574.js
+PASS script/21.js
+PASS script/7.js
+PASS script/589.js
+PASS script/416.js
+PASS script/290.js
+PASS script/830.js
+PASS script/1026.js
+PASS script/1576.js
+PASS script/643.js
+PASS script/313.js
+PASS script/595.js
+PASS script/1273.js
+PASS script/1311.js
+PASS script/568.js
+PASS script/1597.js
+PASS script/271.js
+PASS script/721.js
+PASS script/1408.js
+PASS script/1158.js
+PASS script/1485.js
+PASS script/633.js
+PASS script/363.js
+PASS script/1203.js
+PASS script/518.js
+PASS script/1361.js
+PASS script/1631.js
+PASS script/1128.js
+PASS script/201.js
+PASS script/751.js
+PASS script/690.js
+PASS script/960.js
+PASS script/1176.js
+PASS script/1426.js
+PASS script/189.js
+PASS script/13.js
+PASS script/546.js
+PASS script/1692.js
+FAIL script/424.js
+[stdin]:190
+$assert.sameValue(Object.getPrototypeOf(x["x"]), AsyncGeneratorFunction.prototype);
+                                                 ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:190:50)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/802.js
+PASS script/1544.js
+PASS script/1099.js
+PASS script/910.js
+PASS script/1106.js
+PASS script/1456.js
+PASS script/536.js
+PASS script/63.js
+PASS script/454.js
+PASS script/104.js
+PASS script/782.js
+PASS script/872.js
+PASS script/1534.js
+PASS script/1064.js
+PASS script/1433.js
+PASS script/1163.js
+PASS script/685.js
+PASS script/975.js
+PASS script/161.js
+PASS script/431.js
+PASS script/1248.js
+PASS script/1687.js
+PASS script/1001.js
+PASS script/988.js
+PASS script/1551.js
+PASS script/678.js
+PASS script/328.js
+PASS script/817.js
+PASS script/1443.js
+PASS script/1113.js
+PASS script/905.js
+PASS script/523.js
+PASS script/76.js
+PASS script/1238.js
+PASS script/111.js
+PASS script/441.js
+PASS script/608.js
+PASS script/358.js
+PASS script/1071.js
+PASS script/1521.js
+PASS script/797.js
+PASS script/867.js
+PASS script/306.js
+PASS script/656.js
+PASS script/839.js
+PASS script/299.js
+PASS script/1266.js
+PASS script/580.js
+PASS script/1654.js
+PASS script/28.js
+PASS script/1304.js
+PASS script/734.js
+PASS script/264.js
+FAIL script/1582.js
+[stdin]:184
+var x = Promise . all ( { [ Symbol . asyncIterator ] : function ( x ) { } , [ Symbol . iterator ] : async function ( ) { } } ) ;$delay(() => {
+                  ^
+
+TypeError: undefined is not a function
+    at Function.all (<anonymous>)
+    at [stdin]:184:19
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS script/376.js
+PASS script/626.js
+PASS script/849.js
+PASS script/1490.js
+PASS script/1216.js
+PASS script/1389.js
+PASS script/58.js
+PASS script/1624.js
+PASS script/1374.js
+PASS script/492.js
+PASS script/744.js
+PASS script/214.js
+PASS script/758.js
+PASS script/208.js
+PASS script/1121.js
+PASS script/397.js
+PASS script/937.js
+PASS script/1638.js
+PASS script/44.js
+PASS script/1368.js
+PASS script/511.js
+FAIL script/473.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/1395.js
+PASS script/1513.js
+PASS script/1043.js
+PASS script/1151.js
+PASS script/1401.js
+PASS script/728.js
+PASS script/278.js
+PASS script/947.js
+PASS script/561.js
+PASS script/34.js
+PASS script/1648.js
+PASS script/1318.js
+PASS script/1287.js
+PASS script/403.js
+PASS script/153.js
+PASS script/1563.js
+PASS script/1033.js
+PASS script/285.js
+PASS script/825.js
+PASS script/344.js
+PASS script/1224.js
+PASS script/97.js
+PASS script/1346.js
+PASS script/226.js
+PASS script/776.js
+PASS script/886.js
+PASS script/919.js
+PASS script/1090.js
+PASS script/664.js
+PASS script/334.js
+PASS script/994.js
+PASS script/1182.js
+PASS script/1254.js
+PASS script/1336.js
+PASS script/1666.js
+PASS script/180.js
+PASS script/256.js
+PASS script/706.js
+PASS script/969.js
+PASS script/699.js
+PASS script/1621.js
+PASS script/1371.js
+PASS script/508.js
+PASS script/497.js
+PASS script/741.js
+FAIL script/211.js
+Expected ["message"] but got ["stack", "message"] in Nothing for Error.
+PASS script/1138.js
+PASS script/1468.js
+PASS script/373.js
+PASS script/623.js
+PASS script/1495.js
+PASS script/1213.js
+PASS script/578.js
+PASS script/1651.js
+PASS script/1301.js
+PASS script/1148.js
+PASS script/1418.js
+PASS script/731.js
+PASS script/261.js
+PASS script/1587.js
+PASS script/303.js
+PASS script/653.js
+PASS script/1263.js
+PASS script/585.js
+PASS script/114.js
+PASS script/444.js
+PASS script/1074.js
+PASS script/1524.js
+PASS script/862.js
+PASS script/792.js
+PASS script/1446.js
+PASS script/1116.js
+FAIL script/900.js
+[stdin]:184
+var x = Set . prototype . entries . call ( new Set ( ) ) ;$assert.sameValue(Object.getPrototypeOf(x), SetIteratorPrototype);
+                                                                                                      ^
+
+ReferenceError: SetIteratorPrototype is not defined
+    at [stdin]:184:103
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/1089.js
+PASS script/73.js
+PASS script/526.js
+PASS script/164.js
+PASS script/434.js
+PASS script/1682.js
+PASS script/1004.js
+PASS script/1554.js
+PASS script/812.js
+PASS script/1436.js
+PASS script/1166.js
+PASS script/970.js
+PASS script/680.js
+PASS script/556.js
+PASS script/199.js
+PASS script/1333.js
+PASS script/1663.js
+PASS script/185.js
+PASS script/253.js
+PASS script/703.js
+PASS script/1018.js
+PASS script/1548.js
+PASS script/661.js
+PASS script/331.js
+PASS script/178.js
+FAIL script/1251.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/1343.js
+PASS script/1613.js
+PASS script/883.js
+PASS script/223.js
+PASS script/773.js
+PASS script/1095.js
+PASS script/611.js
+PASS script/341.js
+PASS script/1068.js
+PASS script/1538.js
+PASS script/1221.js
+PASS script/108.js
+PASS script/92.js
+PASS script/406.js
+PASS script/156.js
+PASS script/599.js
+PASS script/1566.js
+PASS script/1036.js
+PASS script/820.js
+PASS script/280.js
+PASS script/1154.js
+PASS script/1404.js
+PASS script/942.js
+PASS script/31.js
+PASS script/564.js
+PASS script/1282.js
+PASS script/476.js
+PASS script/126.js
+FAIL script/1390.js
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+PASS script/1046.js
+PASS script/1489.js
+PASS script/850.js
+PASS script/1124.js
+PASS script/1474.js
+PASS script/932.js
+FAIL script/392.js
+[stdin]:184
+var x = Promise . race ( 0 ) ;$delay(() => {
+                  ^
+
+TypeError: number 0 is not iterable (cannot read property Symbol(Symbol.iterator))
+    at Function.race (<anonymous>)
+    at [stdin]:184:19
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS script/514.js
+PASS script/41.js
+PASS script/2.js
+PASS script/143.js
+PASS script/413.js
+PASS script/835.js
+PASS script/295.js
+PASS script/1023.js
+PASS script/957.js
+PASS script/268.js
+PASS script/738.js
+PASS script/1411.js
+PASS script/1141.js
+PASS script/1297.js
+PASS script/24.js
+PASS script/1658.js
+PASS script/571.js
+PASS script/1385.js
+PASS script/133.js
+PASS script/463.js
+PASS script/1503.js
+PASS script/927.js
+PASS script/387.js
+PASS script/1461.js
+PASS script/1131.js
+PASS script/218.js
+PASS script/748.js
+FAIL script/501.js
+[stdin]:184
+var x = Promise . allSettled ( 0 ) ;$delay(() => {
+                  ^
+
+TypeError: number 0 is not iterable (cannot read property Symbol(Symbol.iterator))
+    at Function.allSettled (<anonymous>)
+    at [stdin]:184:19
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS script/1378.js
+PASS script/1628.js
+PASS script/54.js
+PASS script/190.js
+PASS script/1676.js
+PASS script/1326.js
+PASS script/689.js
+PASS script/979.js
+PASS script/716.js
+PASS script/246.js
+PASS script/1192.js
+PASS script/984.js
+PASS script/324.js
+FAIL script/674.js
+[stdin]:184
+var x = new Promise ( class x { x ( ) { } } ) ;$delay(() => {
+        ^
+
+TypeError: Class constructor x cannot be invoked without 'new'
+    at new Promise (<anonymous>)
+    at [stdin]:184:9
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS script/1244.js
+PASS script/1606.js
+FAIL script/1356.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/1080.js
+PASS script/909.js
+PASS script/896.js
+PASS script/766.js
+PASS script/236.js
+PASS script/354.js
+PASS script/604.js
+PASS script/87.js
+PASS script/1234.js
+PASS script/451.js
+PASS script/101.js
+PASS script/1228.js
+FAIL script/877.js
+[stdin]:184
+var x = Map . prototype . values . call ( new Map ( ) ) ;$assert.sameValue(Object.getPrototypeOf(x), MapIteratorPrototype);
+                                                                                                     ^
+
+ReferenceError: MapIteratorPrototype is not defined
+    at [stdin]:184:102
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/1531.js
+PASS script/1061.js
+PASS script/618.js
+PASS script/915.js
+PASS script/1103.js
+PASS script/66.js
+FAIL script/533.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+FAIL script/1697.js
+[stdin]:205
+$assert.sameValue(Object.getPrototypeOf(Object.getOwnPropertyDescriptor(x, "[object Object]").get), GeneratorFunction.prototype);
+                                                                                                    ^
+
+ReferenceError: GeneratorFunction is not defined
+    at [stdin]:205:101
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/1258.js
+PASS script/421.js
+PASS script/171.js
+PASS script/807.js
+PASS script/338.js
+FAIL script/1541.js
+[stdin]:184
+var x = x `` ; async function x ( ... [ ] ) { ; for await ( ( Symbol . toPrimitive ) of [ 42 , 'str' , true ] ) ; }$delay(() => {
+                                                              ^
+
+TypeError: Cannot assign to read only property 'toPrimitive' of function 'function Symbol() { [native code] }'
+    at x ([stdin]:184:63)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+FAIL script/998.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/1011.js
+PASS script/965.js
+PASS script/695.js
+PASS script/1173.js
+FAIL script/1423.js
+[stdin]:189
+$assert.sameValue(Object.getPrototypeOf(Object.getPrototypeOf(x["4"])), Generator.prototype);
+                                                                        ^
+
+ReferenceError: Generator is not defined
+    at [stdin]:189:73
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/543.js
+PASS script/16.js
+PASS script/482.js
+PASS script/1364.js
+PASS script/48.js
+PASS script/1634.js
+FAIL script/754.js
+[stdin]:184
+var x = x `` ; function * x ( ... [ , ... x ] ) { }$assert.sameValue(Object.getPrototypeOf(Object.getPrototypeOf(x)), Generator.prototype);
+                                                                                                                      ^
+
+ReferenceError: Generator is not defined
+    at [stdin]:184:119
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/1480.js
+PASS script/859.js
+PASS script/366.js
+PASS script/1399.js
+PASS script/1314.js
+PASS script/1644.js
+PASS script/38.js
+PASS script/1592.js
+PASS script/274.js
+PASS script/724.js
+PASS script/289.js
+PASS script/829.js
+PASS script/646.js
+PASS script/316.js
+PASS script/590.js
+PASS script/1146.js
+PASS script/23.js
+PASS script/576.js
+PASS script/1290.js
+PASS script/414.js
+PASS script/144.js
+PASS script/5.js
+PASS script/832.js
+PASS script/292.js
+PASS script/1136.js
+PASS script/1466.js
+PASS script/920.js
+PASS script/380.js
+PASS script/506.js
+PASS script/53.js
+PASS script/499.js
+PASS script/464.js
+PASS script/134.js
+PASS script/1504.js
+PASS script/1054.js
+FAIL script/842.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/983.js
+PASS script/673.js
+PASS script/323.js
+FAIL script/1243.js
+[stdin]:184
+var x = x `` ; function * x ( ... x ) { } function * x ( ... { ... x } ) { }$assert.sameValue(Object.getPrototypeOf(Object.getPrototypeOf(x)), Generator.prototype);
+                                                                                                                                               ^
+
+ReferenceError: Generator is not defined
+    at [stdin]:184:144
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/1321.js
+PASS script/1671.js
+PASS script/558.js
+PASS script/197.js
+PASS script/241.js
+PASS script/711.js
+PASS script/1438.js
+PASS script/1168.js
+PASS script/603.js
+PASS script/353.js
+PASS script/1233.js
+PASS script/80.js
+PASS script/528.js
+FAIL script/1351.js
+[stdin]:184
+var x = Array . prototype . keys . call ( new Array ( ) ) ; var [ , , ... { } ] = x ;$assert.sameValue(Object.getPrototypeOf(x), ArrayIteratorPrototype);
+                                                                                                                                 ^
+
+ReferenceError: ArrayIteratorPrototype is not defined
+    at [stdin]:184:130
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/1601.js
+PASS script/1448.js
+PASS script/891.js
+PASS script/231.js
+PASS script/761.js
+PASS script/1087.js
+PASS script/1454.js
+PASS script/1104.js
+FAIL script/912.js
+[stdin]:184
+var x = Array . prototype . keys . call ( new Array ( ) ) ;$assert.sameValue(Object.getPrototypeOf(x), ArrayIteratorPrototype);
+                                                                                                       ^
+
+ReferenceError: ArrayIteratorPrototype is not defined
+    at [stdin]:184:104
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/61.js
+PASS script/534.js
+PASS script/106.js
+PASS script/1066.js
+PASS script/1536.js
+PASS script/870.js
+PASS script/780.js
+PASS script/1424.js
+PASS script/1174.js
+FAIL script/962.js
+[stdin]:184
+var x = Array . prototype . entries . call ( new Array ( ) ) ;$assert.sameValue(Object.getPrototypeOf(x), ArrayIteratorPrototype);
+                                                                                                          ^
+
+ReferenceError: ArrayIteratorPrototype is not defined
+    at [stdin]:184:107
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/692.js
+PASS script/544.js
+PASS script/11.js
+PASS script/176.js
+PASS script/426.js
+FAIL script/1690.js
+[stdin]:184
+var x = x `` ; async function x ( ... [ ] ) { ; for await ( x of '' ) ; for await ( let x of { [ Symbol . asyncIterator ] : async function ( x ) { } , [ Symbol . iterator ] : async function ( ) { } } ) ; for await ( var x of { [ Symbol . asyncIterator ] : async function ( x ) { } , [ Symbol . iterator ] : async function ( ) { } } ) ; }$delay(() => {
+                                                                                        ^
+
+TypeError: undefined is not a function
+    at x ([stdin]:184:89)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+PASS script/1016.js
+FAIL script/1546.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/1189.js
+PASS script/800.js
+PASS script/1518.js
+PASS script/1048.js
+PASS script/361.js
+PASS script/631.js
+PASS script/1487.js
+PASS script/478.js
+PASS script/128.js
+PASS script/1201.js
+PASS script/1633.js
+PASS script/1363.js
+PASS script/753.js
+PASS script/203.js
+PASS script/311.js
+PASS script/641.js
+PASS script/1568.js
+PASS script/1038.js
+FAIL script/1271.js
+[stdin]:184
+var x = x `` ; async function x ( ... [ ] ) { ; class x extends x ?. ( ) { } }$delay(() => {
+                                                                ^
+
+ReferenceError: Cannot access 'x' before initialization
+    at x ([stdin]:184:65)
+    at [stdin]:184:11
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS script/408.js
+PASS script/158.js
+PASS script/597.js
+PASS script/1643.js
+PASS script/1313.js
+PASS script/723.js
+PASS script/273.js
+PASS script/1595.js
+PASS script/1492.js
+FAIL script/374.js
+[stdin]:184
+var x = Promise . all ( 0 ) ;$delay(() => {
+                  ^
+
+TypeError: number 0 is not iterable (cannot read property Symbol(Symbol.iterator))
+    at Function.all (<anonymous>)
+    at [stdin]:184:19
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS script/1214.js
+PASS script/490.js
+PASS script/1376.js
+PASS script/1626.js
+PASS script/389.js
+FAIL script/929.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/216.js
+PASS script/746.js
+PASS script/654.js
+FAIL script/304.js
+Expected ["message"] but got ["stack", "message"] in Nothing for Error.
+PASS script/582.js
+PASS script/1264.js
+FAIL script/1299.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/1306.js
+PASS script/1580.js
+PASS script/959.js
+FAIL script/266.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/736.js
+PASS script/907.js
+PASS script/768.js
+PASS script/238.js
+PASS script/1111.js
+PASS script/1441.js
+PASS script/898.js
+FAIL script/1608.js
+[stdin]:184
+var x = x `` ; async function x ( ... [ ] ) { ; for await ( x of { [ Symbol . asyncIterator ] : null , [ Symbol . iterator ] : '' } ) ; }$delay(() => {
+                                                                                                                               ^
+
+TypeError: string "" is not a function
+    at x ([stdin]:184:128)
+    at [stdin]:184:11
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS script/74.js
+PASS script/1358.js
+PASS script/89.js
+PASS script/443.js
+PASS script/113.js
+PASS script/865.js
+PASS script/795.js
+PASS script/1523.js
+PASS script/1073.js
+PASS script/977.js
+PASS script/687.js
+FAIL script/1431.js
+[stdin]:196
+$assert.sameValue(Object.getPrototypeOf(x["0"]["0"]), SetIteratorPrototype);
+                                                      ^
+
+ReferenceError: SetIteratorPrototype is not defined
+    at [stdin]:196:55
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/718.js
+PASS script/248.js
+PASS script/551.js
+PASS script/1678.js
+PASS script/1328.js
+PASS script/1685.js
+FAIL script/433.js
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "0".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+PASS script/163.js
+PASS script/815.js
+PASS script/1003.js
+PASS script/809.js
+PASS script/1180.js
+PASS script/996.js
+PASS script/336.js
+PASS script/666.js
+FAIL script/1699.js
+[stdin]:191
+$assert.sameValue(Object.getPrototypeOf(Object.getOwnPropertyDescriptor(x, "[object Object]").set), GeneratorFunction.prototype);
+                                                                                                    ^
+
+ReferenceError: GeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:191:101)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/1256.js
+PASS script/182.js
+PASS script/1664.js
+PASS script/704.js
+PASS script/254.js
+PASS script/789.js
+PASS script/879.js
+PASS script/346.js
+PASS script/616.js
+PASS script/95.js
+PASS script/1226.js
+PASS script/68.js
+PASS script/1614.js
+PASS script/1344.js
+PASS script/884.js
+PASS script/774.js
+PASS script/224.js
+PASS script/945.js
+PASS script/1403.js
+PASS script/1153.js
+PASS script/1285.js
+PASS script/36.js
+PASS script/563.js
+PASS script/401.js
+PASS script/1278.js
+PASS script/827.js
+PASS script/287.js
+PASS script/1031.js
+PASS script/1561.js
+PASS script/648.js
+PASS script/935.js
+FAIL script/395.js
+[stdin]:184
+var x = function * x ( ) { } ;$assert.sameValue(Object.getPrototypeOf(x), GeneratorFunction.prototype);
+                                                                          ^
+
+ReferenceError: GeneratorFunction is not defined
+    at [stdin]:184:75
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/1473.js
+PASS script/1123.js
+PASS script/513.js
+PASS script/46.js
+PASS script/1397.js
+PASS script/1208.js
+PASS script/121.js
+PASS script/471.js
+PASS script/857.js
+PASS script/638.js
+PASS script/368.js
+PASS script/1041.js
+PASS script/1511.js
+PASS script/436.js
+PASS script/166.js
+PASS script/1199.js
+PASS script/1556.js
+PASS script/1006.js
+PASS script/682.js
+PASS script/972.js
+PASS script/1164.js
+PASS script/1434.js
+PASS script/554.js
+PASS script/446.js
+PASS script/116.js
+PASS script/790.js
+PASS script/860.js
+PASS script/1526.js
+PASS script/902.js
+PASS script/1114.js
+PASS script/1444.js
+PASS script/524.js
+PASS script/71.js
+PASS script/1303.js
+PASS script/1653.js
+PASS script/1585.js
+PASS script/733.js
+PASS script/1028.js
+PASS script/1578.js
+PASS script/587.js
+PASS script/9.js
+PASS script/148.js
+PASS script/418.js
+PASS script/1261.js
+PASS script/1373.js
+PASS script/1623.js
+PASS script/213.js
+PASS script/743.js
+PASS script/1497.js
+PASS script/621.js
+FAIL script/371.js
+Expected -1 but got -1.
+PASS script/1058.js
+PASS script/1508.js
+PASS script/138.js
+PASS script/1392.js
+PASS script/124.js
+PASS script/852.js
+PASS script/1044.js
+PASS script/1514.js
+PASS script/390.js
+FAIL script/930.js
+[stdin]:184
+function * x ( ) { } var x = x `${ '' }${ x }${ '' , '' }` ;$assert.sameValue(Object.getPrototypeOf(Object.getPrototypeOf(x)), Generator.prototype);
+                                                                                                                               ^
+
+ReferenceError: Generator is not defined
+    at [stdin]:184:128
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/1476.js
+PASS script/1126.js
+PASS script/489.js
+PASS script/43.js
+PASS script/516.js
+PASS script/154.js
+PASS script/404.js
+PASS script/282.js
+FAIL script/822.js
+[stdin]:184
+var x = Map . prototype . keys . call ( new Map ( ) ) ;$assert.sameValue(Object.getPrototypeOf(x), MapIteratorPrototype);
+                                                                                                   ^
+
+ReferenceError: MapIteratorPrototype is not defined
+    at [stdin]:184:100
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/1034.js
+PASS script/1564.js
+PASS script/940.js
+FAIL script/1599.js
+[stdin]:184
+var x = Promise . allSettled ( { [ Symbol . asyncIterator ] : function ( x ) { } , [ Symbol . iterator ] : async function ( ) { } } ) ;$delay(() => {
+                  ^
+
+TypeError: undefined is not a function
+    at Function.allSettled (<anonymous>)
+    at [stdin]:184:19
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS script/1406.js
+PASS script/1156.js
+PASS script/1280.js
+PASS script/566.js
+PASS script/33.js
+FAIL script/1611.js
+[stdin]:184
+var x = x `` ; async function x ( ... [ ] ) { ; for await ( x of '' ) ; for await ( var x of [ x , , ] ) for ( var { } = x ; '' ; '' ) ; }$delay(() => {
+                                                                                                                         ^
+
+TypeError: Cannot destructure 'x' as it is undefined.
+    at x ([stdin]:184:116)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+PASS script/1341.js
+PASS script/538.js
+PASS script/1097.js
+PASS script/771.js
+PASS script/221.js
+PASS script/881.js
+PASS script/1458.js
+PASS script/343.js
+PASS script/90.js
+PASS script/1223.js
+PASS script/187.js
+PASS script/548.js
+PASS script/1331.js
+PASS script/1178.js
+PASS script/1428.js
+FAIL script/701.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/251.js
+PASS script/1185.js
+PASS script/333.js
+PASS script/663.js
+PASS script/993.js
+PASS script/1253.js
+PASS script/1354.js
+PASS script/78.js
+PASS script/1604.js
+PASS script/234.js
+FAIL script/764.js
+[stdin]:184
+var x = Array . prototype [ Symbol . unscopables ] ;$assert.sameValue(x, Array.prototype[SYMBOL_unscopables]);
+                                                                                         ^
+
+ReferenceError: SYMBOL_unscopables is not defined
+    at [stdin]:184:90
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/894.js
+PASS script/1082.js
+PASS script/606.js
+PASS script/356.js
+PASS script/869.js
+PASS script/799.js
+PASS script/1236.js
+PASS script/85.js
+PASS script/1674.js
+PASS script/192.js
+PASS script/244.js
+PASS script/714.js
+PASS script/676.js
+PASS script/326.js
+PASS script/986.js
+PASS script/1190.js
+PASS script/819.js
+PASS script/1246.js
+PASS script/461.js
+PASS script/131.js
+PASS script/1218.js
+PASS script/1387.js
+PASS script/1051.js
+PASS script/378.js
+PASS script/628.js
+PASS script/847.js
+PASS script/1133.js
+PASS script/1463.js
+PASS script/385.js
+PASS script/925.js
+PASS script/56.js
+PASS script/503.js
+PASS script/411.js
+PASS script/141.js
+FAIL script/308.js
+[stdin]:189
+$assert.sameValue(Object.getPrototypeOf(x["x"]), GeneratorFunction.prototype);
+                                                 ^
+
+ReferenceError: GeneratorFunction is not defined
+    at [stdin]:189:50
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/658.js
+PASS script/1571.js
+PASS script/1021.js
+PASS script/297.js
+FAIL script/837.js
+[stdin]:184
+var x = x ?. ( ) ; function * x ( ... [ , ... x ] ) { }$assert.sameValue(Object.getPrototypeOf(Object.getPrototypeOf(x)), Generator.prototype);
+                                                                                                                          ^
+
+ReferenceError: Generator is not defined
+    at [stdin]:184:123
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/1143.js
+PASS script/1413.js
+PASS script/955.js
+PASS script/26.js
+PASS script/1295.js
+FAIL script/1646.js
+[stdin]:184
+var x = x `` ; async function x ( ... [ ] ) { ; for await ( x of { [ Symbol . asyncIterator ] : null , [ Symbol . iterator ] : async function ( x ) { } } ) ; }$delay(() => {
+                                                            ^
+
+TypeError: undefined is not a function
+    at Async-from-Sync Iterator.next (<anonymous>)
+    at x ([stdin]:184:61)
+    at [stdin]:184:11
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+PASS script/1316.js
+PASS script/1289.js
+PASS script/726.js
+PASS script/276.js
+PASS script/949.js
+FAIL script/1590.js
+[stdin]:184
+var x = Promise . race ( { [ Symbol . asyncIterator ] : function ( x ) { } , [ Symbol . iterator ] : async function ( x ) { } } ) ;$delay(() => {
+                  ^
+
+TypeError: undefined is not a function
+    at Function.race (<anonymous>)
+    at [stdin]:184:19
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS script/314.js
+PASS script/644.js
+PASS script/1274.js
+PASS script/592.js
+FAIL script/1636.js
+[stdin]:184
+var x = x `` ; async function x ( ... [ ] ) { ; for await ( x of { [ Symbol . asyncIterator ] : async function ( ) { } , [ Symbol . iterator ] : 0 } ) ; }$delay(() => {
+                                                            ^
+
+TypeError: undefined is not a function
+    at x ([stdin]:184:61)
+    at [stdin]:184:11
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS script/480.js
+FAIL script/756.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/206.js
+PASS script/939.js
+PASS script/399.js
+PASS script/364.js
+PASS script/634.js
+PASS script/1204.js
+PASS script/173.js
+PASS script/423.js
+PASS script/1695.js
+FAIL script/1543.js
+[stdin]:184
+var x = Promise . allSettled ( { [ Symbol . asyncIterator ] : false , [ Symbol . iterator ] : function ( ) { } } ) ;$delay(() => {
+                  ^
+
+TypeError: Result of the Symbol.iterator method is not an object
+    at Function.allSettled (<anonymous>)
+    at [stdin]:184:19
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS script/805.js
+PASS script/258.js
+PASS script/708.js
+PASS script/1421.js
+PASS script/1171.js
+PASS script/697.js
+PASS script/967.js
+PASS script/1338.js
+PASS script/14.js
+FAIL script/1668.js
+[stdin]:184
+var x = x `` ; async function x ( ... [ ] ) { ; for await ( x of '' ) ; for await ( let x of Symbol . asyncIterator ) for ( ; '' , '' ; '' , '' ) ; for await ( var x of '' ) ; }$delay(() => {
+                                                                                                      ^
+
+TypeError: Symbol.asyncIterator is not async iterable
+    at x ([stdin]:184:103)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+PASS script/541.js
+PASS script/103.js
+PASS script/453.js
+PASS script/99.js
+PASS script/1063.js
+FAIL script/1533.js
+[stdin]:190
+$assert.sameValue(Object.getPrototypeOf(x[Symbol.iterator]), GeneratorFunction.prototype);
+                                                             ^
+
+ReferenceError: GeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:190:62)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/785.js
+PASS script/875.js
+PASS script/888.js
+PASS script/1451.js
+PASS script/228.js
+PASS script/778.js
+PASS script/917.js
+PASS script/1348.js
+PASS script/64.js
+PASS script/17.js
+PASS script/1422.js
+PASS script/1172.js
+PASS script/964.js
+PASS script/694.js
+PASS script/669.js
+PASS script/339.js
+PASS script/1010.js
+PASS script/1540.js
+FAIL script/999.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/806.js
+PASS script/170.js
+PASS script/1696.js
+PASS script/67.js
+PASS script/532.js
+PASS script/1452.js
+PASS script/1102.js
+PASS script/914.js
+PASS script/1060.js
+PASS script/1530.js
+PASS script/619.js
+PASS script/349.js
+PASS script/876.js
+PASS script/786.js
+PASS script/450.js
+PASS script/1229.js
+PASS script/591.js
+PASS script/317.js
+PASS script/647.js
+PASS script/288.js
+PASS script/828.js
+PASS script/725.js
+PASS script/275.js
+PASS script/1593.js
+PASS script/1645.js
+PASS script/39.js
+PASS script/1315.js
+PASS script/1207.js
+PASS script/1398.js
+PASS script/367.js
+PASS script/1481.js
+PASS script/858.js
+PASS script/755.js
+PASS script/49.js
+PASS script/1635.js
+FAIL script/1365.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(Object.getPrototypeOf(x)), AsyncGenerator.prototype);
+                                                                   ^
+
+ReferenceError: AsyncGenerator is not defined
+    at Timeout._onTimeout ([stdin]:185:68)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/483.js
+PASS script/500.js
+PASS script/1629.js
+PASS script/55.js
+PASS script/1379.js
+PASS script/1130.js
+PASS script/1460.js
+PASS script/749.js
+PASS script/219.js
+PASS script/926.js
+PASS script/386.js
+PASS script/1502.js
+PASS script/1052.js
+PASS script/844.js
+PASS script/462.js
+PASS script/132.js
+PASS script/1384.js
+PASS script/25.js
+PASS script/1659.js
+PASS script/1309.js
+PASS script/570.js
+PASS script/739.js
+PASS script/269.js
+PASS script/1140.js
+PASS script/1410.js
+PASS script/956.js
+PASS script/1572.js
+PASS script/1022.js
+PASS script/834.js
+PASS script/294.js
+PASS script/412.js
+PASS script/142.js
+PASS script/3.js
+PASS script/86.js
+PASS script/605.js
+PASS script/897.js
+PASS script/237.js
+PASS script/767.js
+PASS script/908.js
+PASS script/1081.js
+PASS script/1357.js
+PASS script/1607.js
+PASS script/1245.js
+PASS script/985.js
+PASS script/675.js
+PASS script/325.js
+PASS script/1193.js
+PASS script/247.js
+PASS script/717.js
+PASS script/688.js
+FAIL script/978.js
+[stdin]:190
+$assert.sameValue(Object.getPrototypeOf(x["x"]), AsyncFunction.prototype);
+                                                 ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:190:50)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/1327.js
+PASS script/191.js
+PASS script/93.js
+PASS script/1220.js
+PASS script/109.js
+PASS script/340.js
+PASS script/1539.js
+PASS script/1069.js
+PASS script/1094.js
+PASS script/882.js
+PASS script/772.js
+PASS script/222.js
+PASS script/1612.js
+PASS script/1342.js
+FAIL script/179.js
+[stdin]:184
+function * x ( ) { }$assert.sameValue(Object.getPrototypeOf(x), GeneratorFunction.prototype);
+                                                                ^
+
+ReferenceError: GeneratorFunction is not defined
+    at [stdin]:184:65
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/1250.js
+PASS script/1186.js
+PASS script/1019.js
+PASS script/330.js
+PASS script/660.js
+PASS script/702.js
+PASS script/252.js
+PASS script/184.js
+PASS script/1662.js
+PASS script/1332.js
+PASS script/515.js
+PASS script/40.js
+PASS script/933.js
+PASS script/1475.js
+PASS script/1125.js
+PASS script/1488.js
+PASS script/851.js
+PASS script/1047.js
+PASS script/1517.js
+PASS script/1391.js
+PASS script/127.js
+PASS script/477.js
+PASS script/1283.js
+PASS script/30.js
+PASS script/565.js
+PASS script/943.js
+PASS script/1405.js
+PASS script/1155.js
+PASS script/821.js
+PASS script/281.js
+PASS script/1037.js
+PASS script/1567.js
+PASS script/598.js
+PASS script/157.js
+PASS script/407.js
+PASS script/584.js
+PASS script/1262.js
+PASS script/652.js
+PASS script/302.js
+PASS script/1586.js
+PASS script/1419.js
+PASS script/1149.js
+PASS script/260.js
+PASS script/730.js
+PASS script/579.js
+PASS script/1300.js
+PASS script/1212.js
+PASS script/1494.js
+PASS script/622.js
+PASS script/372.js
+PASS script/210.js
+PASS script/740.js
+PASS script/1469.js
+PASS script/1139.js
+PASS script/496.js
+PASS script/1370.js
+PASS script/1620.js
+PASS script/509.js
+PASS script/198.js
+PASS script/557.js
+PASS script/971.js
+PASS script/681.js
+PASS script/1167.js
+PASS script/1437.js
+PASS script/813.js
+PASS script/1555.js
+PASS script/1005.js
+FAIL script/435.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/165.js
+PASS script/72.js
+PASS script/527.js
+PASS script/1088.js
+PASS script/901.js
+PASS script/1447.js
+PASS script/863.js
+PASS script/793.js
+PASS script/1525.js
+PASS script/1075.js
+PASS script/115.js
+PASS script/284.js
+PASS script/824.js
+PASS script/1032.js
+PASS script/1562.js
+PASS script/152.js
+PASS script/402.js
+PASS script/1286.js
+PASS script/560.js
+PASS script/1319.js
+PASS script/35.js
+PASS script/1649.js
+PASS script/946.js
+FAIL script/1150.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/279.js
+PASS script/729.js
+PASS script/854.js
+PASS script/1042.js
+PASS script/1394.js
+FAIL script/472.js
+[stdin]:185
+$assert.sameValue(Object.getPrototypeOf(x), AsyncGeneratorFunction.prototype);
+                                            ^
+
+ReferenceError: AsyncGeneratorFunction is not defined
+    at Timeout._onTimeout ([stdin]:185:45)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/1369.js
+PASS script/1639.js
+PASS script/45.js
+PASS script/510.js
+PASS script/936.js
+PASS script/209.js
+PASS script/759.js
+PASS script/1120.js
+PASS script/968.js
+PASS script/698.js
+PASS script/707.js
+PASS script/257.js
+PASS script/1337.js
+PASS script/1255.js
+PASS script/1183.js
+PASS script/335.js
+PASS script/665.js
+PASS script/995.js
+PASS script/1091.js
+PASS script/918.js
+PASS script/777.js
+PASS script/227.js
+PASS script/887.js
+PASS script/1347.js
+PASS script/96.js
+PASS script/345.js
+PASS script/796.js
+PASS script/866.js
+PASS script/609.js
+PASS script/1520.js
+PASS script/1070.js
+PASS script/1239.js
+PASS script/440.js
+PASS script/110.js
+PASS script/522.js
+PASS script/77.js
+PASS script/904.js
+PASS script/1112.js
+PASS script/816.js
+PASS script/1000.js
+PASS script/329.js
+FAIL script/679.js
+[stdin]:184
+var x = x `` ; function * x ( ... { x , } ) { }$assert.sameValue(Object.getPrototypeOf(Object.getPrototypeOf(x)), Generator.prototype);
+                                                                                                                  ^
+
+ReferenceError: Generator is not defined
+    at [stdin]:184:115
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/1686.js
+PASS script/430.js
+PASS script/160.js
+PASS script/1249.js
+PASS script/552.js
+PASS script/684.js
+PASS script/974.js
+PASS script/1432.js
+PASS script/215.js
+PASS script/745.js
+PASS script/493.js
+PASS script/1375.js
+PASS script/59.js
+PASS script/1625.js
+PASS script/1388.js
+PASS script/1217.js
+PASS script/848.js
+PASS script/1491.js
+PASS script/627.js
+PASS script/377.js
+PASS script/1583.js
+PASS script/265.js
+PASS script/735.js
+PASS script/1305.js
+PASS script/1655.js
+PASS script/29.js
+PASS script/581.js
+PASS script/1267.js
+FAIL script/838.js
+[stdin]:184
+var x = x `` ; async function x ( ... { x : { } } ) { }$delay(() => {
+                                        ^
+
+TypeError: Cannot destructure property 'x' of 'undefined' as it is undefined.
+    at x ([stdin]:184:45)
+    at [stdin]:184:11
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS script/298.js
+PASS script/657.js
+PASS script/307.js
+PASS script/1129.js
+PASS script/1479.js
+PASS script/750.js
+PASS script/519.js
+FAIL script/1630.js
+[stdin]:184
+var x = x `` ; async function x ( ... [ ] ) { ; for await ( x of { [ Symbol . asyncIterator ] : function ( ) { } , [ Symbol . iterator ] : 0 } ) ; }$delay(() => {
+                                                                                                                                           ^
+
+TypeError: Result of the Symbol.asyncIterator method is not an object
+    at x ([stdin]:184:140)
+    at [stdin]:184:11
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS script/1360.js
+PASS script/1202.js
+PASS script/362.js
+PASS script/632.js
+PASS script/1484.js
+PASS script/720.js
+PASS script/1159.js
+FAIL script/1409.js
+[stdin]:184
+var x = x `` ; async function x ( ... [ ] ) { ; for await ( x of ( Symbol . species ) ) ; }$delay(() => {
+                                                                            ^
+
+TypeError: Symbol.species is not async iterable
+    at x ([stdin]:184:77)
+    at [stdin]:184:11
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+PASS script/1640.js
+PASS script/1310.js
+PASS script/1272.js
+PASS script/594.js
+PASS script/312.js
+PASS script/642.js
+PASS script/1065.js
+PASS script/783.js
+PASS script/873.js
+PASS script/455.js
+PASS script/537.js
+PASS script/62.js
+PASS script/1457.js
+PASS script/1107.js
+PASS script/911.js
+PASS script/1098.js
+PASS script/1015.js
+PASS script/803.js
+PASS script/175.js
+PASS script/425.js
+PASS script/1693.js
+PASS script/12.js
+PASS script/547.js
+PASS script/188.js
+PASS script/1427.js
+PASS script/1177.js
+PASS script/961.js
+PASS script/242.js
+PASS script/712.js
+FAIL script/1322.js
+[stdin]:190
+$assert.sameValue(Object.getPrototypeOf(x["0"]), SetIteratorPrototype);
+                                                 ^
+
+ReferenceError: SetIteratorPrototype is not defined
+    at [stdin]:190:50
+    at Script.runInThisContext (node:vm:129:12)
+    at Object.runInThisContext (node:vm:305:38)
+    at node:internal/process/execution:81:19
+    at [stdin]-wrapper:6:22
+    at evalScript (node:internal/process/execution:80:60)
+    at node:internal/main/eval_stdin:29:5
+    at Socket.<anonymous> (node:internal/process/execution:212:5)
+    at Socket.emit (node:events:406:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+PASS script/1672.js
+PASS script/169.js
+PASS script/439.js
+PASS script/670.js
+PASS script/320.js
+PASS script/1009.js
+PASS script/980.js
+PASS script/1196.js
+PASS script/232.js
+PASS script/762.js
+PASS script/892.js
+PASS script/1084.js
+PASS script/1602.js
+PASS script/119.js
+PASS script/449.js
+PASS script/1230.js
+PASS script/83.js
+PASS script/1079.js
+PASS script/1529.js
+PASS script/600.js
+PASS script/350.js
+PASS script/1577.js
+PASS script/1027.js
+PASS script/291.js
+PASS script/831.js
+PASS script/417.js
+PASS script/147.js
+PASS script/6.js
+PASS script/588.js
+PASS script/575.js
+PASS script/20.js
+PASS script/1293.js
+FAIL script/1145.js
+Expected "x => {  " but got "x => { ".
+PASS script/1415.js
+PASS script/953.js
+PASS script/1507.js
+PASS script/1057.js
+PASS script/841.js
+PASS script/1498.js
+PASS script/467.js
+PASS script/137.js
+PASS script/1381.js
+PASS script/50.js
+PASS script/505.js
+PASS script/1135.js
+PASS script/1465.js
+FAIL script/383.js
+[stdin]:190
+$assert.sameValue(Object.getPrototypeOf(x["x"]), AsyncFunction.prototype);
+                                                 ^
+
+ReferenceError: AsyncFunction is not defined
+    at Timeout._onTimeout ([stdin]:190:50)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+PASS script/923.js
+22:19:36
