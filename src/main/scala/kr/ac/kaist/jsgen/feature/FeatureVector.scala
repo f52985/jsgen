@@ -20,13 +20,23 @@ case class FeatureVector(var featureVector: List[Feature]) {
     }
   }
 
+  private var cache: Option[Set[Feature]] = None
+
   def traverse(ast: AST): Unit = {
     new NonTerminalExtractor().walk(ast)
+    cache = None
   }
 
   def update(visitFunctions: List[String]): Unit = {
     featureVector = visitFunctions.map(Feature) ++ featureVector
+    cache = None
   }
+
+  def toSet: Set[Feature] = cache.getOrElse({
+    val ret = featureVector.toSet
+    cache = Some(ret)
+    ret
+  })
 }
 
 object FeatureVector {

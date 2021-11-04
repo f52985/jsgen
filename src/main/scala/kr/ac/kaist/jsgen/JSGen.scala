@@ -96,6 +96,7 @@ object JSGen {
     // Feature
     CmdExtractFeat,
     CmdSummaryFeat,
+    CmdRankFeat,
   )
   val cmdMap = commands.foldLeft[Map[String, Command[_]]](Map()) {
     case (map, cmd) => map + (cmd.name -> cmd)
@@ -134,6 +135,7 @@ object JSGen {
     // Feature
     ExtractFeat,
     SummaryFeat,
+    RankFeat,
   )
 
   // global options
