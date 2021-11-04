@@ -141,7 +141,8 @@ class Interp(
     }
     if (FEATURE && node.isInstanceOf[Entry]) {
       val func = cfg.funcOf(node).name
-      if (func.contains("prototype.")) {
+      println(func)
+      if (func.contains("prototype.") || func == "PerformEval") {
         visitFunctions = func :: visitFunctions
       }
     }
