@@ -56,9 +56,7 @@ case object RankFeat extends Phase[Unit, RankFeatConfig, Unit] {
         .flatMap(parseLine)
         .toMap
 
-    //def formula(ep: Double, ef: Double, np: Double, nf: Double): Double = ef - ep / (ep + np + 1)
-    //def formula(ep: Double, ef: Double, np: Double, nf: Double): Double = ef / (ef + ep + nf)
-    def formula(ep: Double, ef: Double, np: Double, nf: Double): Double = ef / (ef + ep) + ef / (ef + nf)
+    def formula(ep: Double, ef: Double, np: Double, nf: Double): Double = ef / (ef + ep + 1) * np / (nf + np + 1)
 
     def semanticScore(feat: Feature): Double = {
       var (ep, ef, np, nf) = (0.0, 0.0, 0.0, 0.0)
@@ -98,6 +96,8 @@ case object RankFeat extends Phase[Unit, RankFeatConfig, Unit] {
           }
         }
       })
+
+      //println(feat, ep, ef, np, nf)
 
       formula(ep, ef, np, nf)
     }
