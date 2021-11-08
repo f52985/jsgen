@@ -1,0 +1,94 @@
+91.js	ANON
+134.js	ANON
+135.js	ANON
+197.js	ANON
+231.js	ANON
+282.js	ANON
+566.js	ANON
+616.js	ANON
+765.js	ANON
+812.js	ANON
+815.js	ANON
+1095.js	ANON
+1153.js	ANON
+1236.js	ANON
+1248.js	ANON
+1278.js	ANON
+1290.js	ANON
+1415.js	ANON
+158.js	BI
+403.js	CF
+404.js	CF
+405.js	CF
+406.js	CF
+528.js	CF
+536.js	CF
+1148.js	CF
+1233.js	CF
+1272.js	CF
+1331.js	CF
+1346.js	CF
+1348.js	CF
+1391.js	CF
+1419.js	CF
+1443.js	CF
+1488.js	CF
+1511.js	CF
+1660.js	CF
+20.js	CLS
+30.js	CLS
+51.js	CLS
+165.js	CLS
+214.js	CLS
+246.js	CLS
+267.js	CLS
+345.js	CLS
+346.js	CLS
+364.js	CLS
+386.js	CLS
+593.js	CLS
+718.js	CLS
+719.js	CLS
+804.js	CLS
+840.js	CLS
+1190.js	CLS
+1215.js	CLS
+1404.js	CLS
+22.js	E2N
+208.js	E2N
+258.js	E2N
+264.js	E2N
+303.js	E2N
+588.js	E2N
+958.js	E2N
+1083.js	E2N
+1113.js	E2N
+1136.js	E2N
+1426.js	E2N
+505.js	ETA
+886.js	ETA
+1105.js	ETA
+1130.js	ETA
+1164.js	ETA
+1165.js	ETA
+1214.js	ETA
+1437.js	ETA
+1468.js	ETA
+1480.js	ETA
+1481.js	ETA
+1520.js	ETA
+1526.js	ETA
+1544.js	ETA
+1584.js	ETA
+1593.js	ETA
+1629.js	ETA
+1217.js	VRN
+23.js	VRN 
+
+18	CF	Compile Fail
+18	ANON	anon -> func: consturtable, prototype
+17	ETA	eval(`${()=>{}}`);
+2	VRN	x -> _x / yield->_yield
+19	CLS	class Related
+11	E2N	Error to Normal
+1	BI	bigint
